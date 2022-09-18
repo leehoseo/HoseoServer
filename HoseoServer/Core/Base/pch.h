@@ -9,4 +9,12 @@
 
 // 여기에 미리 컴파일하려는 헤더 추가
 
+// 컨테이너 헤더
+#include <unordered_map>
+
+using namespace std;
+
+// 공용 헤더
+#include "ECS/ComponentId.h"
+
 #endif //PCH_H

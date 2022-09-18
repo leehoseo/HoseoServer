@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ebc3cc2d-113d-4d89-9e09-7614182e1860}</ProjectGuid>
-    <RootNamespace>BaseServer</RootNamespace>
+    <ProjectGuid>{ff6d711e-404a-4ef8-90fd-8f470f2d47c7}</ProjectGuid>
+    <RootNamespace>Base</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,11 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Iocp.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ECS\Entity.h" />
+    <ClInclude Include="ECS\System.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Iocp.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="ECS\Entity.cpp" />
+    <ClCompile Include="ECS\System.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
