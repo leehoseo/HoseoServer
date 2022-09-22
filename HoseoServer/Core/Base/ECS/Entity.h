@@ -1,5 +1,8 @@
 #pragma once
-#include "pch.h"
+#include "Component.h"
+
+class CComponent;
+
 /// <summary>
 /// \brief Entity의 최상위 클래스 
 /// ECS 페턴에서 E를 담당한다.
@@ -7,11 +10,10 @@
 /// </summary>
 class CEntity
 {
-// 생성자, 소멸자
 public:
 	CEntity();
 	virtual ~CEntity();
 
 protected:
+	unordered_map<int, CComponent*> m_ComponentList;
 };
-

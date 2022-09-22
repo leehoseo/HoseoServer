@@ -21,9 +21,6 @@
     <Filter Include="소스 파일\Pool">
       <UniqueIdentifier>{87af4c6c-2cc6-4a43-8a6b-255a534234df}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Memory">
-      <UniqueIdentifier>{991ad616-9e57-4e6c-b212-f61c4e573053}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\ECS">
       <UniqueIdentifier>{a1a5c5db-d47c-44ed-8854-5504ffa07729}</UniqueIdentifier>
     </Filter>
@@ -38,7 +35,18 @@
     <ClInclude Include="pch.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h" />
+    <ClInclude Include="Memory\MemorySystem.h">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\AllocComponent.h">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\MemoryEntity.h">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ECS\Component.h">
+      <Filter>소스 파일\ECS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -50,8 +58,17 @@
     <ClCompile Include="ECS\System.cpp">
       <Filter>소스 파일\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Memory\MemorySystem.cpp">
+      <Filter>소스 파일\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\MemoryEntity.cpp">
+      <Filter>소스 파일\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\AllocComponent.cpp">
+      <Filter>소스 파일\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="ECS\Component.cpp">
+      <Filter>소스 파일\ECS</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

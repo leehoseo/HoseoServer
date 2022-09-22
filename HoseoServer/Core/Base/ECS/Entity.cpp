@@ -1,2 +1,10 @@
+#include "pch.h"
+#include "Entity.h"
 
-#include "CEntity.h"
+CEntity::CEntity()
+{
+}
+
+CEntity::~CEntity()
+{
+}
