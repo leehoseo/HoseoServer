@@ -5,9 +5,10 @@
 CMemoryEntity::CMemoryEntity()
 {
 	// 기본 Component  설정
-	m_ComponentList.insert(std::make_pair(CAllocComponent::GetInstance()->GetHash() , CAllocComponent::GetInstance()));
+	InsertComponent<CAllocComponent>();
 }
 
 CMemoryEntity::~CMemoryEntity()
 {
+
 }

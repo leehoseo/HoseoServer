@@ -1,10 +1,13 @@
 #include "pch.h"
 #include "System.h"
 
-CSystem::CSystem()
+template< typename T>
+CSystem<T>::CSystem()
 {
+	CSystem::GetInstance();
 }
 
-CSystem::~CSystem()
+template< typename T>
+CSystem<T>::~CSystem()
 {
 }

@@ -10,22 +10,15 @@ class CComponent
 public:
 	CComponent();
 	virtual ~CComponent();
-	string	GetName() const { return ""; }
-	int		GetHash() const { return 0; }
 };
 
-#define MAKE_COMPONENT_FOUNDATION(name)\
+#define COMPONENT_FOUNDATION(name)\
 public:\
 	C##name##Component() {} \
 	virtual ~C##name##Component() {} \
-	string GetName() const { return #name; }\
-	int	  GetHash() const { return hash<string>()(#name); } \
-	static CComponent* GetInstance() \
+	static string	GetName() { return #name; }\
+	static int		GetHash() { return hash<string>()(#name); } \
+	static CComponent* GetClone() \
 	{ \
-		static CComponent* instance = nullptr; \
-		if (nullptr == instance) \
-		{ \
-			instance = new C##name##Component(); \
-		} \
-		return instance; \
+		return new C##name##Component(); \
 	}

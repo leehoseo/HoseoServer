@@ -1,5 +1,6 @@
 #pragma once
 #include "Component.h"
+#include <unordered_map>
 
 class CComponent;
 
@@ -14,6 +15,28 @@ public:
 	CEntity();
 	virtual ~CEntity();
 
+private:
+	std::unordered_map<int, CComponent*> m_ComponentList;
+
+public:
+	template< typename T>
+	CComponent* GetComponent()
+	{
+		const int hash = T::GetHash();
+		auto findItor = m_ComponentList.find(hash);
+
+		if (m_ComponentList.end() == findItor)
+		{
+			return nullptr;
+		}
+
+		return findItor->second;
+	}
+
 protected:
-	unordered_map<int, CComponent*> m_ComponentList;
+	template< typename T>
+	void InsertComponent()
+	{
+		m_ComponentList.insert(std::make_pair(T::GetHash(), T::GetClone()));
+	}
 };

@@ -4,6 +4,9 @@
 
 class CAllocComponent : public CComponent
 {
-MAKE_COMPONENT_FOUNDATION(Alloc);
+COMPONENT_FOUNDATION(Alloc);
+
+public:
+
 };
 

@@ -24,6 +24,9 @@
     <Filter Include="소스 파일\ECS">
       <UniqueIdentifier>{a1a5c5db-d47c-44ed-8854-5504ffa07729}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Pattern">
+      <UniqueIdentifier>{576ef60e-a06a-4d4a-ada5-d3c7e6f498ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ECS\Entity.h">
@@ -47,6 +50,7 @@
     <ClInclude Include="ECS\Component.h">
       <Filter>소스 파일\ECS</Filter>
     </ClInclude>
+    <ClInclude Include="Pattern\Singleton.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -69,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="ECS\Component.cpp">
       <Filter>소스 파일\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Pattern\Singleton.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

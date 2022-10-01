@@ -7,4 +7,8 @@ CEntity::CEntity()
 
 CEntity::~CEntity()
 {
+	for (auto component : m_ComponentList)
+	{
+		delete component.second;
+	}
 }

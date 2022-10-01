@@ -8,4 +8,3 @@ public:
 	CMemoryEntity();
 	virtual ~CMemoryEntity();
 };
-
