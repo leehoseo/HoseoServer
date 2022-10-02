@@ -4,6 +4,8 @@
 
 class CPeer : public CEntity
 {
-
+public:
+	CPeer();
+	~CPeer();
 };
 

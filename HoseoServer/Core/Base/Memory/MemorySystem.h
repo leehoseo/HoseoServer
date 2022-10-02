@@ -16,6 +16,7 @@ public:
 	{
 		return m_MemoryEntity->Alloc<T>(std::forward<Types>(args)...);
 	}
+
 private:
 	CMemoryEntity* m_MemoryEntity;
 };

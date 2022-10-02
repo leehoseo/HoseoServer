@@ -39,8 +39,11 @@
     <ClInclude Include="Event.h">
       <Filter>Event</Filter>
     </ClInclude>
-    <ClInclude Include="Icop.h">
+    <ClInclude Include="Iocp.h">
       <Filter>Iocp</Filter>
+    </ClInclude>
+    <ClInclude Include="Dispatcher.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -59,8 +62,11 @@
     <ClCompile Include="Event.cpp">
       <Filter>Event</Filter>
     </ClCompile>
-    <ClCompile Include="Icop.cpp">
+    <ClCompile Include="Iocp.cpp">
       <Filter>Iocp</Filter>
+    </ClCompile>
+    <ClCompile Include="Dispatcher.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -59,6 +59,9 @@
     <ClInclude Include="Memory\MemoryUtil.hpp">
       <Filter>소스 파일\Memory</Filter>
     </ClInclude>
+    <ClInclude Include="TaskComponent.h">
+      <Filter>소스 파일\Task</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -84,6 +87,9 @@
     </ClCompile>
     <ClCompile Include="Pattern\Singleton.cpp">
       <Filter>소스 파일\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskComponent.cpp">
+      <Filter>소스 파일\Task</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
