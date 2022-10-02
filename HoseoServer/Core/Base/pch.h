@@ -15,6 +15,10 @@
 using namespace std;
 
 // 공용 헤더
-#include "ECS/ComponentId.h"
+#include "ECS/Component.h"
+#include "ECS/Entity.h"
+#include "ECS/System.h"
+
+#include "Memory/MemorySystem.h"
 
 #endif //PCH_H

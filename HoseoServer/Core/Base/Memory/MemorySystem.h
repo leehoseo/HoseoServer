@@ -3,7 +3,6 @@
 
 #include "ECS/System.h"
 #include "MemoryEntity.h"
-#include "AllocComponent.h"
 
 class CMemorySystem : public CSystem<CMemorySystem>
 {
@@ -20,6 +19,3 @@ public:
 private:
 	CMemoryEntity* m_MemoryEntity;
 };
-
-
-#define New(name , ...) CMemorySystem::GetInstance()->Alloc<name>(##__VA_ARGS__);

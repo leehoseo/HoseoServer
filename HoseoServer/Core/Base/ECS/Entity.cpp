@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Entity.h"
+#include "Memory/MemoryUtil.h"
 
 CEntity::CEntity()
 {

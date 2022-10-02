@@ -89,7 +89,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
@@ -158,6 +158,8 @@
     <ClInclude Include="Memory\AllocComponent.h" />
     <ClInclude Include="Memory\MemoryEntity.h" />
     <ClInclude Include="Memory\MemorySystem.h" />
+    <ClInclude Include="Memory\MemoryUtil.h" />
+    <ClInclude Include="Memory\MemoryUtil.hpp" />
     <ClInclude Include="Pattern\Singleton.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>

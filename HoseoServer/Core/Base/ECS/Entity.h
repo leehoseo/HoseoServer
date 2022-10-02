@@ -1,5 +1,6 @@
 #pragma once
 #include "Component.h"
+
 #include <unordered_map>
 
 class CComponent;
@@ -37,6 +38,6 @@ protected:
 	template< typename T>
 	void InsertComponent()
 	{
-		m_ComponentList.insert(std::make_pair(T::GetHash(), T::GetClone()));
+		m_ComponentList.insert(std::make_pair(T::GetHash(), T::GetClone(this)));
 	}
 };

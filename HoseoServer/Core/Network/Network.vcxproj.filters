@@ -13,15 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Peer">
+      <UniqueIdentifier>{fbea2afb-82ae-4587-a05f-0c51c289006d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{8dba0ea1-9c59-4851-86a5-6e1ac75a13f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Iocp">
+      <UniqueIdentifier>{ff6a1c93-dec1-414d-ab99-29626084677e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Peer.h">
+      <Filter>Peer</Filter>
+    </ClInclude>
+    <ClInclude Include="PeerListener.h">
+      <Filter>Peer</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncTcpComponent.h">
+      <Filter>Peer</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Icop.h">
+      <Filter>Iocp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Peer.cpp">
+      <Filter>Peer</Filter>
+    </ClCompile>
+    <ClCompile Include="PeerListener.cpp">
+      <Filter>Peer</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncTcpComponent.cpp">
+      <Filter>Peer</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Icop.cpp">
+      <Filter>Iocp</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
