@@ -142,6 +142,20 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Base\Base.vcxproj">
+      <Project>{ff6d711e-404a-4ef8-90fd-8f470f2d47c7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Common\Common.vcxproj">
+      <Project>{c3fbed9d-4170-47de-97ab-1b124d821158}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Network\Network.vcxproj">
+      <Project>{d6caf8e9-9604-4ba2-8136-a6bb4abc9db4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Server\Lobby\Lobby.vcxproj">
+      <Project>{5d2b7b94-32c8-464a-a6d1-c07863d392c2}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

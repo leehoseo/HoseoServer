@@ -2,16 +2,21 @@
 
 #include "Base/Memory/MemorySystem.h"
 
-class testClass : public CSingleton<testClass>
+class testClass
 {
+private:
+	int num1;
+	int num2;
 public:
-	testClass() {}
+	testClass(int t1, int t2) 
+	{
+		num1 = t1;
+	}
 	virtual ~testClass() {}
 };
 
 int main()
 {
-	testClass::GetInstance();
-	CMemorySystem::GetInstance();
+	testClass* newClass = New(testClass, 1, 2);
 	return 0;
 }

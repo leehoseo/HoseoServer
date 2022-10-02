@@ -3,6 +3,7 @@
 
 #include "ECS/System.h"
 #include "MemoryEntity.h"
+#include "AllocComponent.h"
 
 class CMemorySystem : public CSystem<CMemorySystem>
 {
@@ -12,11 +13,9 @@ public:
 
 public:
 	template<typename T, typename... Types>
-	static T* Alloc(Types&&... args)
+	T* Alloc(Types&&... args)
 	{
-		CMemorySystem::GetInstance();
-
-		return new T(std::forward<Types>(args)...);
+		return m_MemoryEntity->Alloc<T>(std::forward<Types>(args)...);
 	}
 private:
 	CMemoryEntity* m_MemoryEntity;

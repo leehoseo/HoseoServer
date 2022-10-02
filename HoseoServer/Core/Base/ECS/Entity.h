@@ -20,7 +20,7 @@ private:
 
 public:
 	template< typename T>
-	CComponent* GetComponent()
+	T* GetComponent()
 	{
 		const int hash = T::GetHash();
 		auto findItor = m_ComponentList.find(hash);
@@ -30,7 +30,7 @@ public:
 			return nullptr;
 		}
 
-		return findItor->second;
+		return static_cast<T*>(findItor->second);
 	}
 
 protected:

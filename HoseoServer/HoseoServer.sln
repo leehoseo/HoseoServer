@@ -53,6 +53,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Field", "Core\Server\Field\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TradingServer", "Contents\TradingServer\TradingServer.vcxproj", "{609AABD1-48A7-4B05-8337-D76F091E9126}"
 	ProjectSection(ProjectDependencies) = postProject
+		{FF6D711E-404A-4EF8-90FD-8F470F2D47C7} = {FF6D711E-404A-4EF8-90FD-8F470F2D47C7}
 		{5D2B7B94-32C8-464A-A6D1-C07863D392C2} = {5D2B7B94-32C8-464A-A6D1-C07863D392C2}
 	EndProjectSection
 EndProject

@@ -1,6 +1,5 @@
 #pragma once
-
-template< typename T>
+template<typename T>
 class CSingleton
 {
 protected:
@@ -8,19 +7,14 @@ protected:
 	virtual ~CSingleton() {};
 
 public:
-	static T* GetInstance() // 동적할당할 필요는 없어보인다.
+	static T* GetInstance()
 	{
-		static T instance;
-
-		if (nullptr == m_pInstance)
+		static T* instance;
+		if (nullptr == instance)
 		{
-			//m_pInstance = new T;
+			instance = new T;
 		}
 
-		return m_pInstance;
+		return instance;
 	}
-private:
-	static T* m_pInstance;
 };
-
-template <typename T> T* CSingleton<T>::m_pInstance = 0;

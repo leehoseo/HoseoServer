@@ -14,11 +14,11 @@ public:
 
 #define COMPONENT_FOUNDATION(name)\
 public:\
-	C##name##Component() {} \
-	virtual ~C##name##Component() {} \
-	static string	GetName() { return #name; }\
-	static int		GetHash() { return hash<string>()(#name); } \
+	name() {} \
+	virtual ~name() {} \
+	static std::string	GetName() { return #name; }\
+	static int			GetHash() { return std::hash<std::string>()(#name); } \
 	static CComponent* GetClone() \
 	{ \
-		return new C##name##Component(); \
+		return new name(); \
 	}
