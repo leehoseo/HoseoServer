@@ -1,22 +1,25 @@
 #include <iostream>
 
-#include "Base/Memory/MemoryUtil.hpp"
+#include "Network/AsyncDispatcher.h"
+#include "Network/AsyncEvent.h"
 
-class testClass
-{
-private:
-	int num1;
-	int num2;
-public:
-	testClass(int t1, int t2) 
-	{
-		num1 = t1;
-	}
-	virtual ~testClass() {}
-};
-
+#include <thread>
 int main()
 {
-	testClass* newClass = New(testClass, 1, 2);
+	//std::thread thread = std::thread(&CThread::Run);
+
+	CAsyncDispatcher::GetInstance()->Start();
+
+	CAsyncEventSink* sink = new CAsyncEventSink();
+	sink->m_Num = 3;
+	CAsyncEvent* event = new CAsyncEvent();
+	event->m_Num = 7;
+	CAsyncDispatcher::GetInstance()->Enqueue(sink, &event->GetBuffer());
+
+	while (true)
+	{
+
+	}
+
 	return 0;
 }

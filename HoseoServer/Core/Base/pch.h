@@ -19,6 +19,6 @@ using namespace std;
 #include "ECS/Entity.h"
 #include "ECS/System.h"
 
-#include "Memory/MemorySystem.h"
+#include "Memory/MemoryUtil.h"
 
 #endif //PCH_H

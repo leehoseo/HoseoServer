@@ -1,10 +1,18 @@
 #pragma once
-#include "ECS/Component.h"
+#include "Base/ECS/Component.h"
+#include "Socket.h"
 
 class CAsyncTcpComponent : public CComponent
 {
 	COMPONENT_FOUNDATION(CAsyncTcpComponent);
-public:
 
+public:
+	CSocket* GetSocket();
+
+protected:
+	virtual void Init();
+
+private:
+	CSocket* m_Socket;
 };
 

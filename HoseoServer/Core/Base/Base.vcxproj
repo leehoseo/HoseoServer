@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Core\Base;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Core\Base;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -163,6 +163,7 @@
     <ClInclude Include="Pattern\Singleton.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="TaskComponent.h" />
+    <ClInclude Include="Thread.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ECS\Component.cpp" />
@@ -179,6 +180,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TaskComponent.cpp" />
+    <ClCompile Include="Thread.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

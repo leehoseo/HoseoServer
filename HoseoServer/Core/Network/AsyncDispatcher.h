@@ -1,0 +1,41 @@
+#pragma once
+#include <vector>
+
+#include "Base/ECS/System.h"
+#include "Base/Thread.h"
+
+#include "AsyncEvent.h"
+#include "Iocp.h"
+
+class CPeer;
+
+class CAsyncDispatcher : public CSystem<CAsyncDispatcher>
+{
+public:
+	CAsyncDispatcher();
+	virtual ~CAsyncDispatcher();
+
+public:
+	void Start();
+
+	bool Associate(CAsyncEventSink* sink, HANDLE& socket);
+	void Enqueue(CAsyncEventSink* sink, CAsyncEvent::Buffer* buffer);
+	void Dequeue(CAsyncEventSink** sink, CAsyncEvent::Buffer** buffer);
+
+private:
+	class CIocpThread : public CThread
+	{
+	public:
+		CIocpThread();
+		~CIocpThread();
+
+	public:
+		virtual void Run();
+		virtual const wchar_t* GetName() { return L"Iocp Thread"; }
+	};
+
+private:
+	CIocp* m_Iocp;
+	std::vector<CIocpThread*> m_ThreadList;
+};
+

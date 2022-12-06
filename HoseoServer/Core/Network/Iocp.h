@@ -6,7 +6,7 @@
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib,"mswsock.lib")
 
-class CIocp : public CPeer
+class CIocp
 {
 public:
 	CIocp();
@@ -14,9 +14,11 @@ public:
 
 public:
 	void Start();
+	HANDLE& GetHandle() { return m_IocpHandle; }
 
 private:
 	void Accept();
+
 private:
 	HANDLE m_IocpHandle;
 };

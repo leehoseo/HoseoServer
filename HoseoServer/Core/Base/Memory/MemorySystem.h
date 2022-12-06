@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdarg>
 
-#include "ECS/System.h"
+#include "Base/ECS/System.h"
 #include "MemoryEntity.h"
 
 class CMemorySystem : public CSystem<CMemorySystem>

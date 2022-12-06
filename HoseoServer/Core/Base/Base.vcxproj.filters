@@ -62,6 +62,9 @@
     <ClInclude Include="TaskComponent.h">
       <Filter>소스 파일\Task</Filter>
     </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>소스 파일\Thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -90,6 +93,9 @@
     </ClCompile>
     <ClCompile Include="TaskComponent.cpp">
       <Filter>소스 파일\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>소스 파일\Thread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

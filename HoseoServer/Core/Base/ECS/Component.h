@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Entity.h"
-#include "Memory/MemoryUtil.h"
+
 class CEntity;
 
 /// <summary>
@@ -14,12 +14,15 @@ public:
 	virtual ~CComponent();
 
 protected:
+	virtual void Init() {};
+
+protected:
 	CEntity* m_Owner;
 };
 
 #define COMPONENT_FOUNDATION(name)\
 public:\
-	name( CEntity* owner ) : CComponent(owner) {} \
+	name( CEntity* owner ) : CComponent(owner) { Init(); } \
 	virtual ~name() {} \
 	static std::string	GetName() { return #name; }\
 	static int			GetHash() { return std::hash<std::string>()(#name); } \

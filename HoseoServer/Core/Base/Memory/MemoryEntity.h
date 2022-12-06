@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ECS/Entity.h"
+#include "Base/ECS/Entity.h"
 #include "AllocComponent.h"
 
 class CMemoryEntity : public CEntity

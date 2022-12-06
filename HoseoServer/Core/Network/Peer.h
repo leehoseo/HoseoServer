@@ -1,6 +1,7 @@
 #pragma once
 
-#include "ECS/Entity.h"
+#include "Base/ECS/Entity.h"
+#include "AsyncEventSink.h"
 
 class CPeer : public CEntity
 {
