@@ -23,6 +23,7 @@ public:
 
 	void Init();
 	void Start();
+	void Join();
 	virtual void Run() = 0;
 	virtual const wchar_t* GetName() { return L"Default Thread"; }
 private:

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "AsyncEventSink.h"
 #include <WS2tcpip.h>
 
+class CAsyncEventSink;
 class CAsyncEvent
 {
 public:
@@ -21,7 +21,6 @@ public:
 public:
 	virtual void Execute(CAsyncEventSink* sink);
 
-	int m_Num;
 private:
 	Buffer m_Buffer;
 };

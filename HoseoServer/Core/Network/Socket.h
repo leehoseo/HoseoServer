@@ -14,6 +14,7 @@ public:
 	SOCKET& GetSocket();
 
 private:
+
 	SOCKET m_Socket; // 소켓 핸들
 };
 

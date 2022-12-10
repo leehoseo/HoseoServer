@@ -1,10 +1,11 @@
 #pragma once
 
-#include "Peer.h"
 #include <WinSock2.h>
 
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib,"mswsock.lib")
+
+class CAsyncTcpEventSink;
 
 class CIocp
 {
@@ -14,6 +15,7 @@ public:
 
 public:
 	void Start();
+	bool Assosiate(CAsyncTcpEventSink* sink, HANDLE& socket);
 	HANDLE& GetHandle() { return m_IocpHandle; }
 
 private:
@@ -21,5 +23,6 @@ private:
 
 private:
 	HANDLE m_IocpHandle;
+	int m_ProcessCount;
 };
 

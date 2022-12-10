@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "AsyncEvent.h"
+#include "AsyncEventSink.h"
 
 CAsyncEvent::CAsyncEvent()
 {

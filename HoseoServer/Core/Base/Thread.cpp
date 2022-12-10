@@ -24,3 +24,8 @@ void CThread::Start()
 
 	Run();
 }
+
+void CThread::Join()
+{
+	m_Thread.join();
+}

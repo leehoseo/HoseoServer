@@ -90,6 +90,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -160,6 +161,17 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\Base.vcxproj">
+      <Project>{ff6d711e-404a-4ef8-90fd-8f470f2d47c7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Network\Network.vcxproj">
+      <Project>{d6caf8e9-9604-4ba2-8136-a6bb4abc9db4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Server\Server.vcxproj">
+      <Project>{2fc3d6e8-1c27-4d27-9b9d-11a4f84b9ae2}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,6 +8,8 @@
 #include "Iocp.h"
 
 class CPeer;
+class CAsyncTcpEventSink;
+class CAsyncEventSink;
 
 class CAsyncDispatcher : public CSystem<CAsyncDispatcher>
 {
@@ -17,8 +19,8 @@ public:
 
 public:
 	void Start();
-
-	bool Associate(CAsyncEventSink* sink, HANDLE& socket);
+	void Join();
+	bool Associate(CAsyncTcpEventSink* sink, HANDLE& socket);
 	void Enqueue(CAsyncEventSink* sink, CAsyncEvent::Buffer* buffer);
 	void Dequeue(CAsyncEventSink** sink, CAsyncEvent::Buffer** buffer);
 

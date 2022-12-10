@@ -1,10 +1,12 @@
 #include "pch.h"
 #include "Iocp.h"
+#include "Peer.h"
 #include <WS2tcpip.h>
 #include <thread>
 
 CIocp::CIocp()
 	: m_IocpHandle()
+	, m_ProcessCount(0)
 {
 }
 
@@ -15,8 +17,11 @@ CIocp::~CIocp()
 
 void CIocp::Start()
 {
-	const int processCount = std::thread::hardware_concurrency();
-	m_IocpHandle = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, processCount);
+	WSADATA w;
+	WSAStartup(MAKEWORD(2, 2), &w);
+
+	m_ProcessCount = std::thread::hardware_concurrency();
+	m_IocpHandle = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, m_ProcessCount);
 
 	//sockaddr_in server_addr;
 	//memset(&server_addr, 0, sizeof(server_addr));
@@ -43,6 +48,18 @@ void CIocp::Start()
 	//{
 	//	// 로그를 넣을거에요~
 	//}
+}
+
+bool CIocp::Assosiate(CAsyncTcpEventSink* sink, HANDLE& socket)
+{
+	const bool result = CreateIoCompletionPort(socket, GetHandle(), (ULONG_PTR)&sink, m_ProcessCount);
+
+	/*if (false == result)
+	{
+		DWORD error = GetLastError();
+	}*/
+
+	return result;
 }
 
 void CIocp::Accept()

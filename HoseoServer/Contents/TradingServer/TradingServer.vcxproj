@@ -90,6 +90,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,6 +156,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Server\Lobby\Lobby.vcxproj">
       <Project>{5d2b7b94-32c8-464a-a6d1-c07863d392c2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Server\Server\Server.vcxproj">
+      <Project>{2fc3d6e8-1c27-4d27-9b9d-11a4f84b9ae2}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

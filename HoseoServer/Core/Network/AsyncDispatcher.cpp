@@ -4,6 +4,7 @@
 #include <WS2tcpip.h>
 #include <thread>
 #include "AsyncEvent.h"
+#include "AsyncTcpEventSink.h"
 
 CAsyncDispatcher::CAsyncDispatcher()
 {
@@ -28,8 +29,20 @@ void CAsyncDispatcher::Start()
 	}
 }
 
-bool CAsyncDispatcher::Associate(CAsyncEventSink* sink, HANDLE& socket)
+void CAsyncDispatcher::Join()
 {
+	const int count = m_ThreadList.size();
+
+	for (auto thread : m_ThreadList)
+	{
+		thread->Join();
+	}
+}
+
+
+bool CAsyncDispatcher::Associate(CAsyncTcpEventSink* sink, HANDLE& socket)
+{
+	//m_Iocp->Assosiate(peer);
 	return CreateIoCompletionPort(socket, m_Iocp->GetHandle(), (ULONG_PTR)sink, 0);
 }
 
@@ -58,8 +71,6 @@ void CAsyncDispatcher::CIocpThread::Run()
 {
 	while (true)
 	{
-		//CAsyncEventSink* sink = New(CAsyncEventSink);
-		//CAsyncEvent* event = New(CAsyncEvent);
 		CAsyncEventSink* sink = nullptr;
 		CAsyncEvent::Buffer* buffer = nullptr;
 
