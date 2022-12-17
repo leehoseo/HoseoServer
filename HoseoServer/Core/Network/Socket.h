@@ -3,7 +3,9 @@
 #define _WINSOCKAPI_
 #include <windows.h>
 #include <WinSock2.h>
+#include <winsock.h>
 
+class CAsyncTcpEvent;
 class CSocket
 {
 public:
@@ -11,10 +13,14 @@ public:
 	~CSocket();
 
 public:
-	SOCKET& GetSocket();
+	SOCKET& GetHandle();
+	void Close();
+
+	bool Listen();
+	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
+	bool Connect();
 
 private:
-
-	SOCKET m_Socket; // 家南 勤甸
+	SOCKET m_Handle; // 家南 勤甸
 };
 

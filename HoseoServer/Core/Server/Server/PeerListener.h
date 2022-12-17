@@ -14,6 +14,6 @@ public:
 
 public:
 	void Start();
-	void Accept();
+	virtual CPeer* CreatePeer();
 };
 

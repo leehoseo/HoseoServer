@@ -10,3 +10,8 @@ CPeer::CPeer()
 CPeer::~CPeer()
 {
 }
+
+CSocket* CPeer::GetHandle()
+{
+	return GetComponent<CAsyncTcpComponent>()->GetSocket();
+}
