@@ -51,11 +51,11 @@ void CAsyncDispatcher::Enqueue(CAsyncEventSink* sink, CAsyncEvent::Buffer* buffe
 	PostQueuedCompletionStatus(m_Iocp->GetHandle(), 0, (ULONG_PTR)sink, (LPOVERLAPPED)(buffer));
 }
 
-void CAsyncDispatcher::Dequeue(CAsyncEventSink** sink, CAsyncEvent::Buffer** buffer)
+void CAsyncDispatcher::Dequeue(ULONG_PTR* sink, LPOVERLAPPED* buffer)
 {
 	DWORD ioByte = 0;
 
-	GetQueuedCompletionStatus(m_Iocp->GetHandle(), &ioByte, (PULONG_PTR)&*sink, reinterpret_cast<LPOVERLAPPED*>(&*buffer), INFINITE);
+	GetQueuedCompletionStatus(m_Iocp->GetHandle(), &ioByte, sink, buffer, INFINITE);
 }
 
 
@@ -74,7 +74,9 @@ void CAsyncDispatcher::CIocpThread::Run()
 		CAsyncEventSink* sink = nullptr;
 		CAsyncEvent::Buffer* buffer = nullptr;
 
-		CAsyncDispatcher::GetInstance()->Dequeue(&sink, &buffer);
+		CAsyncDispatcher::GetInstance()->Dequeue(
+												 reinterpret_cast<ULONG_PTR*>(&sink)
+												,reinterpret_cast<LPOVERLAPPED*>(&buffer));
 
 		buffer->m_Owner->Execute(sink);
 	}

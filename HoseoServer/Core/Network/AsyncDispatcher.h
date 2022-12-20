@@ -22,7 +22,7 @@ public:
 	void Join();
 	bool Associate(CAsyncTcpEventSink* sink, HANDLE& socket);
 	void Enqueue(CAsyncEventSink* sink, CAsyncEvent::Buffer* buffer);
-	void Dequeue(CAsyncEventSink** sink, CAsyncEvent::Buffer** buffer);
+	void Dequeue(ULONG_PTR* sink, LPOVERLAPPED* buffer);
 
 private:
 	class CIocpThread : public CThread
