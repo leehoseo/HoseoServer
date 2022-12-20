@@ -12,7 +12,7 @@ CSocket* CAsyncTcpComponent::GetSocket()
 
 void CAsyncTcpComponent::Assosiate()
 {
-    CAsyncDispatcher::GetInstance()->Associate(reinterpret_cast<CAsyncTcpEventSink*>(m_Owner), m_Socket->GetHandle());
+    CAsyncDispatcher::GetInstance()->Associate(reinterpret_cast<CAsyncTcpEventSink*>(m_Owner), GetSocket());
 }
 
 void CAsyncTcpComponent::Init()

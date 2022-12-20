@@ -2,6 +2,7 @@
 #include "Socket.h"
 #include "AsyncTcpEvent.h"
 
+
 CSocket::CSocket()
 {
 	m_Handle = WSASocket(AF_INET, SOCK_STREAM, 0, NULL, 0, WSA_FLAG_OVERLAPPED);	// windows

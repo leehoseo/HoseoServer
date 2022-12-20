@@ -8,6 +8,8 @@ public:
 	CListenSystem();
 	virtual ~CListenSystem();
 
+	void Init(CPeerListener* listener);
+	void Start();
 private:
 	CPeerListener* m_Listener;
 };

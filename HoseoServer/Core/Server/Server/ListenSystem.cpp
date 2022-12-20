@@ -2,11 +2,20 @@
 #include "ListenSystem.h"
 
 CListenSystem::CListenSystem()
+	: m_Listener(nullptr)
 {
-	// 나중에 서버 타입별로 나뉠거다
-	m_Listener = New(CPeerListener);
 }
 
 CListenSystem::~CListenSystem()
 {
+}
+
+void CListenSystem::Init(CPeerListener* listener)
+{
+	m_Listener = listener;
+}
+
+void CListenSystem::Start()
+{
+	m_Listener->Start();
 }

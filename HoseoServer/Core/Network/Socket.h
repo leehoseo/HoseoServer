@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <WinSock2.h>
 #include <winsock.h>
+#include <MSWSock.h>
 
 class CAsyncTcpEvent;
 class CSocket
