@@ -2,8 +2,9 @@
 #include "PeerListener.h"
 
 #include "Network/AsyncDispatcher.h"
-#include "Network/AsyncEvent.h"
+//#include "Network/AsyncEvent.h"
 #include "Network/AsyncTcpComponent.h"
+#include "Network/AsyncTcpEvent.h"
 
 class CPeerListener::CPeerListenEvent : public CAsyncEvent
 {
@@ -35,31 +36,36 @@ void CPeerListener::Start()
 		return;
 	}
 
+	component->Listen();
+
 	component->Assosiate();
-	component
-	//CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &m_listenEvent->GetBuffer());
+
+	// 한번에 받을 수 있는 클라이언트의 수
+	for (int index = 0; index < 4; ++index)
+	{
+		CPeer* newPeer = CreatePeer();
+		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent);
+		if (true == component->Accept(newPeer->GetHandle(), acceptEvent))
+		{
+			// 추가 처리를 위해 이벤트를 Enqueue
+			CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetBuffer());
+		}
+		else
+		{
+			DWORD lastError = GetLastError();
+			if (ERROR_SIGNAL_PENDING == lastError)
+			{
+				// 성공
+			}
+			else
+			{
+				// 실패
+			}
+		}
+	}
 }
 
-void CPeerListener::Accept()
+CPeer* CPeerListener::CreatePeer()
 {
-	/*OverlappedBuffer* overlappedBuffer = PoolManager::getInstance()->getOverlappedBufferPool().pop();
-	Session* newSession = PoolManager::getInstance()->getSessionPool().pop();
-	addSession(newSession);
-
-	overlappedBuffer->_sessionKey = newSession->getSessionKey();
-	overlappedBuffer->_type = BufferType::ACCEPT;
-
-	LPFN_ACCEPTEX acceptFunc = nullptr;
-
-	DWORD dwbyte{ 0 };
-	GUID GuidAccept = WSAID_ACCEPTEX;
-	WSAIoctl(_mainSession->getSocketHandle(), SIO_GET_EXTENSION_FUNCTION_POINTER,
-		&GuidAccept, sizeof(GuidAccept),
-		&acceptFunc, sizeof(acceptFunc),
-		&dwbyte, NULL, NULL);
-
-
-	acceptFunc(_mainSession->getSocketHandle(), newSession->getSocketHandle(), &overlappedBuffer->_buffer, sizeof(TrNetworkConnectReq)
-		, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &dwbyte, reinterpret_cast<LPOVERLAPPED>(&overlappedBuffer->_overlapped));*/
-
+	return New(CPeer);
 }

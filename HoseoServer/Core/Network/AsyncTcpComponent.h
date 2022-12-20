@@ -13,6 +13,10 @@ public:
 protected:
 	virtual void Init();
 
+public:
+	bool Listen();
+	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
+	bool Connect();
 private:
 	CSocket* m_Socket;
 	CAsyncTcpEvent* m_RecvEvent;

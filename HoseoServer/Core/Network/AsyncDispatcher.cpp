@@ -5,6 +5,7 @@
 #include <thread>
 #include "AsyncEvent.h"
 #include "AsyncTcpEventSink.h"
+#include "Socket.h"
 
 CAsyncDispatcher::CAsyncDispatcher()
 {
@@ -40,10 +41,9 @@ void CAsyncDispatcher::Join()
 }
 
 
-bool CAsyncDispatcher::Associate(CAsyncTcpEventSink* sink, HANDLE& socket)
+bool CAsyncDispatcher::Associate(CAsyncTcpEventSink* sink, CSocket* socket)
 {
-	//m_Iocp->Assosiate(peer);
-	return CreateIoCompletionPort(socket, m_Iocp->GetHandle(), (ULONG_PTR)sink, 0);
+	return nullptr != CreateIoCompletionPort((HANDLE)socket->GetHandle(), m_Iocp->GetHandle(), (ULONG_PTR)sink, 0);
 }
 
 void CAsyncDispatcher::Enqueue(CAsyncEventSink* sink, CAsyncEvent::Buffer* buffer)
