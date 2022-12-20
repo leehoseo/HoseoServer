@@ -45,10 +45,30 @@ bool CSocket::Listen()
 	return true;
 }
 
+bool CSocket::Bind(const int port)
+{
+	sockaddr_in socketAddr;
+	memset(&socketAddr, 0, sizeof(socketAddr));
+	socketAddr.sin_family = AF_INET;
+	socketAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+	socketAddr.sin_port = htons(port);
+
+	if (SOCKET_ERROR == ::bind(GetHandle(), reinterpret_cast<sockaddr*>(&socketAddr), sizeof(socketAddr)))
+	{
+		//Logger::getInstance()->log(Logger::Level::WARNING, "Error_Bind");
+		return false;
+	}
+	return true;
+}
+
 bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 {
-	return ::AcceptEx(GetHandle(), newSocket->GetHandle(), 0,
-		sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, 0, 0, (LPOVERLAPPED)(&acceptEvent->GetBuffer()));
+	DWORD outputBuffer{ 0 };
+	DWORD receivedByte{ 0 };
+	const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
+		0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetBuffer()));
+
+	return result;
 }
 
 bool CSocket::Connect()

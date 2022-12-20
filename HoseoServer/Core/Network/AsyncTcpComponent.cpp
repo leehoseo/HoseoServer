@@ -12,13 +12,24 @@ CSocket* CAsyncTcpComponent::GetSocket()
 
 void CAsyncTcpComponent::Assosiate()
 {
-    CAsyncDispatcher::GetInstance()->Associate(reinterpret_cast<CAsyncTcpEventSink*>(m_Owner), GetSocket());
+    const bool result = CAsyncDispatcher::GetInstance()->Associate(reinterpret_cast<CAsyncTcpEventSink*>(m_Owner), GetSocket());
+    if (false == result)
+    {
+        int num = 0;
+        ++num;
+    }
 }
 
 void CAsyncTcpComponent::Init()
 {
-    m_Socket = New(CSocket);
+    //m_Socket = New(CSocket);
+    m_Socket =  new CSocket();
     m_RecvEvent = New(CAsyncTcpEvent);
+}
+
+bool CAsyncTcpComponent::Bind(const int port)
+{
+    return m_Socket->Bind(port);
 }
 
 bool CAsyncTcpComponent::Listen()

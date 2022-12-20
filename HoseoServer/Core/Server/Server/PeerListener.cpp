@@ -36,6 +36,7 @@ void CPeerListener::Start()
 		return;
 	}
 
+	component->Bind(13480);
 	component->Listen();
 
 	component->Assosiate();
@@ -53,14 +54,19 @@ void CPeerListener::Start()
 		else
 		{
 			DWORD lastError = GetLastError();
-			if (ERROR_SIGNAL_PENDING == lastError)
+			if (ERROR_IO_PENDING == lastError)
 			{
+				int num = 0;
+				++num;
 				// 성공
 			}
 			else
 			{
+				int num = 0;
+				++num;
 				// 실패
 			}
+
 		}
 	}
 }
