@@ -10,6 +10,11 @@ CSocket* CAsyncTcpComponent::GetSocket()
     return m_Socket;
 }
 
+void CAsyncTcpComponent::SetSocket(CSocket* socket)
+{
+    m_Socket = socket;
+}
+
 void CAsyncTcpComponent::Assosiate()
 {
     const bool result = CAsyncDispatcher::GetInstance()->Associate(reinterpret_cast<CAsyncTcpEventSink*>(m_Owner), GetSocket());
@@ -23,7 +28,7 @@ void CAsyncTcpComponent::Assosiate()
 void CAsyncTcpComponent::Init()
 {
     //m_Socket = New(CSocket);
-    m_Socket =  new CSocket();
+    //m_Socket =  new CSocket();
     m_RecvEvent = New(CAsyncTcpEvent);
 }
 
@@ -47,6 +52,11 @@ bool CAsyncTcpComponent::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 }
 
 bool CAsyncTcpComponent::Connect()
+{
+    return m_Socket->Connect();
+}
+
+bool CAsyncTcpComponent::PostRecv()
 {
     return m_Socket->Connect();
 }

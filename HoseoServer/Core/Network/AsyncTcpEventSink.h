@@ -1,11 +1,14 @@
 #pragma once
 #include "AsyncEventSink.h"
-#include "Peer.h"
 
-class CAsyncTcpEventSink : public CAsyncEventSink , CPeer
+class CAsyncTcpEvent;
+class CAsyncTcpEventSink : public CAsyncEventSink
 {
 public:
 	CAsyncTcpEventSink();
 	virtual ~CAsyncTcpEventSink();
+
+public:
+	virtual void ExecuteTcpEvent(CAsyncTcpEvent* tcpEvent);
 };
 
