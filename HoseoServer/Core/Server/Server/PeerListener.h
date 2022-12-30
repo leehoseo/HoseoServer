@@ -20,6 +20,6 @@ public:
 	virtual CPeer* CreatePeer();
 
 public:
-	virtual void ExecuteTcpEvent(CAsyncTcpEvent* tcpEvent);
+	virtual void OnAcceptEvent(CAsyncTcpEvent* tcpEvent);
 };
 

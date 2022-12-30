@@ -7,15 +7,24 @@ class CAsyncEventSink;
 class CAsyncTcpEvent : public CAsyncEvent
 {
 public:
-	CAsyncTcpEvent();
+	enum EventType
+	{
+		  ACCEPT = 0
+		, SEND
+		, RECEIVE
+		, COUNT
+	};
+public:
+	CAsyncTcpEvent(const EventType type);
 	virtual ~CAsyncTcpEvent();
 public:
 	virtual void Execute(CAsyncEventSink* sink);
+	EventType GetType() { return m_Type; }
 
 public:
 	CSocket* m_Socket;
-	int m_Num;
 
-
+private:
+	EventType m_Type;
 };
 

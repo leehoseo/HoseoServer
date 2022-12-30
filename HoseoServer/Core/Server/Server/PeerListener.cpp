@@ -46,7 +46,7 @@ void CPeerListener::Start()
 	for (int index = 0; index < 4; ++index)
 	{
 		CSocket* newSocket = new CSocket();
-		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent);
+		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::ACCEPT);
 		acceptEvent->m_Socket = newSocket;
 		
 		if (true == component->Accept(newSocket, acceptEvent))
@@ -79,7 +79,7 @@ CPeer* CPeerListener::CreatePeer()
 	return New(CPeer);
 }
 
-void CPeerListener::ExecuteTcpEvent(CAsyncTcpEvent* tcpEvent)
+void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 {
 	CPeer* newPeer = CreatePeer();
 	newPeer->SetSocket(tcpEvent->m_Socket);
