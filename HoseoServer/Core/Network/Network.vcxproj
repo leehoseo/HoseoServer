@@ -160,6 +160,7 @@
     <ClInclude Include="AsyncTcpEvent.h" />
     <ClInclude Include="AsyncTcpEventSink.h" />
     <ClInclude Include="Iocp.h" />
+    <ClInclude Include="PacketBase.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Peer.h" />
     <ClInclude Include="Socket.h" />
