@@ -34,6 +34,9 @@
     <Filter Include="Sink">
       <UniqueIdentifier>{2a463e30-f96b-4ff1-8468-a6c781984624}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Task">
+      <UniqueIdentifier>{dfad9956-3aa6-47d8-b706-5941818700d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -42,20 +45,8 @@
     <ClInclude Include="Peer.h">
       <Filter>Peer</Filter>
     </ClInclude>
-    <ClInclude Include="AsyncEvent.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="Iocp.h">
-      <Filter>Iocp</Filter>
-    </ClInclude>
     <ClInclude Include="AsyncTcpComponent.h">
       <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="AsyncEventSink.h">
-      <Filter>Sink</Filter>
-    </ClInclude>
-    <ClInclude Include="AsyncDispatcher.h">
-      <Filter>Dispatcher</Filter>
     </ClInclude>
     <ClInclude Include="Socket.h">
       <Filter>Socket</Filter>
@@ -69,6 +60,21 @@
     <ClInclude Include="PacketBase.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="AsyncTask.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncEventSink.h">
+      <Filter>Sink</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncDispatcher.h">
+      <Filter>Dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="Iocp.h">
+      <Filter>Iocp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -77,20 +83,8 @@
     <ClCompile Include="Peer.cpp">
       <Filter>Peer</Filter>
     </ClCompile>
-    <ClCompile Include="AsyncEvent.cpp">
-      <Filter>Event</Filter>
-    </ClCompile>
-    <ClCompile Include="Iocp.cpp">
-      <Filter>Iocp</Filter>
-    </ClCompile>
     <ClCompile Include="AsyncTcpComponent.cpp">
       <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="AsyncEventSink.cpp">
-      <Filter>Sink</Filter>
-    </ClCompile>
-    <ClCompile Include="AsyncDispatcher.cpp">
-      <Filter>Dispatcher</Filter>
     </ClCompile>
     <ClCompile Include="Socket.cpp">
       <Filter>Socket</Filter>
@@ -100,6 +94,21 @@
     </ClCompile>
     <ClCompile Include="AsyncTcpEvent.cpp">
       <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncTask.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncEventSink.cpp">
+      <Filter>Sink</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncDispatcher.cpp">
+      <Filter>Dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="Iocp.cpp">
+      <Filter>Iocp</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -29,7 +29,7 @@ void CAsyncTcpComponent::Init()
 {
     //m_Socket = New(CSocket);
     //m_Socket =  new CSocket();
-    m_RecvEvent = New(CAsyncTcpEvent);
+    m_RecvEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::RECEIVE);
 }
 
 bool CAsyncTcpComponent::Bind(const int port)

@@ -78,6 +78,9 @@ void CAsyncDispatcher::CIocpThread::Run()
 												 reinterpret_cast<ULONG_PTR*>(&sink)
 												,reinterpret_cast<LPOVERLAPPED*>(&buffer));
 
-		buffer->m_Owner->Execute(sink);
+		if (nullptr != buffer)
+		{
+			buffer->m_Owner->Execute(sink);
+		}
 	}
 }

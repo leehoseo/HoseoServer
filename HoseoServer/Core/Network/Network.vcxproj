@@ -153,10 +153,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AsyncTcpComponent.h" />
-    <ClInclude Include="AsyncEventSink.h" />
     <ClInclude Include="AsyncDispatcher.h" />
     <ClInclude Include="AsyncEvent.h" />
+    <ClInclude Include="AsyncEventSink.h" />
+    <ClInclude Include="AsyncTask.h" />
+    <ClInclude Include="AsyncTcpComponent.h" />
     <ClInclude Include="AsyncTcpEvent.h" />
     <ClInclude Include="AsyncTcpEventSink.h" />
     <ClInclude Include="Iocp.h" />
@@ -166,10 +167,11 @@
     <ClInclude Include="Socket.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AsyncTcpComponent.cpp" />
-    <ClCompile Include="AsyncEventSink.cpp" />
     <ClCompile Include="AsyncDispatcher.cpp" />
     <ClCompile Include="AsyncEvent.cpp" />
+    <ClCompile Include="AsyncEventSink.cpp" />
+    <ClCompile Include="AsyncTask.cpp" />
+    <ClCompile Include="AsyncTcpComponent.cpp" />
     <ClCompile Include="AsyncTcpEvent.cpp" />
     <ClCompile Include="AsyncTcpEventSink.cpp" />
     <ClCompile Include="Iocp.cpp" />

@@ -7,7 +7,7 @@ class CAsyncEventSink;
 class CAsyncTcpEvent : public CAsyncEvent
 {
 public:
-	enum EventType
+	enum class EventType
 	{
 		  ACCEPT = 0
 		, SEND

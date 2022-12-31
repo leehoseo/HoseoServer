@@ -18,16 +18,16 @@ void CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 
 	switch (GetType())
 	{
-	case ACCEPT:
+	case EventType::ACCEPT:
 	{
-		tcpEventSink->
+		//tcpEventSink->
 		break;
 	}
-	case SEND:
+	case EventType::SEND:
 	{
 		break;
 	}
-	case RECEIVE:
+	case EventType::RECEIVE:
 	{
 		break;
 	}

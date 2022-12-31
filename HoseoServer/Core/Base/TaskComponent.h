@@ -4,5 +4,8 @@
 class CTaskComponent : public CComponent
 {
 	COMPONENT_FOUNDATION(CTaskComponent)
+
+private:
+
 };
 
