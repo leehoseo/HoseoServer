@@ -75,6 +75,15 @@
     <ClInclude Include="Iocp.h">
       <Filter>Iocp</Filter>
     </ClInclude>
+    <ClInclude Include="MarshalerComponent.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketHandler.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketRegistry.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -109,6 +118,15 @@
     </ClCompile>
     <ClCompile Include="Iocp.cpp">
       <Filter>Iocp</Filter>
+    </ClCompile>
+    <ClCompile Include="MarshalerComponent.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketHandler.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketRegistry.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

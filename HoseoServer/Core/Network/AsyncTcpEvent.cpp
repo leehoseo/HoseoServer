@@ -20,15 +20,17 @@ void CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 	{
 	case EventType::ACCEPT:
 	{
-		//tcpEventSink->
+		tcpEventSink->OnAcceptEvent(this);
 		break;
 	}
 	case EventType::SEND:
 	{
+		tcpEventSink->OnSendEvent(this);
 		break;
 	}
 	case EventType::RECEIVE:
 	{
+		tcpEventSink->OnReceiveEvent(this);
 		break;
 	}
 	default:

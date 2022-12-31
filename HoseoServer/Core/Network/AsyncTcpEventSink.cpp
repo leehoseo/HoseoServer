@@ -9,14 +9,14 @@ CAsyncTcpEventSink::~CAsyncTcpEventSink()
 {
 }
 
-void CAsyncTcpEventSink::OnAccept(CAsyncTcpEvent* tcpEvent)
+void CAsyncTcpEventSink::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 {
 }
 
-void CAsyncTcpEventSink::OnReceive(CAsyncTcpEvent* tcpEvent)
+void CAsyncTcpEventSink::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 {
 }
 
-void CAsyncTcpEventSink::OnSend(CAsyncTcpEvent* tcpEvent)
+void CAsyncTcpEventSink::OnSendEvent(CAsyncTcpEvent* tcpEvent)
 {
 }

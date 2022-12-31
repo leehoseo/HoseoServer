@@ -17,6 +17,7 @@ public:
 public:
 	CAsyncTcpEvent(const EventType type);
 	virtual ~CAsyncTcpEvent();
+
 public:
 	virtual void Execute(CAsyncEventSink* sink);
 	EventType GetType() { return m_Type; }

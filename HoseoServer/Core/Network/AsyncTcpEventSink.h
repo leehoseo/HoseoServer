@@ -9,8 +9,8 @@ public:
 	virtual ~CAsyncTcpEventSink();
 
 public:
-	virtual void OnAccept(CAsyncTcpEvent* tcpEvent);
-	virtual void OnReceive(CAsyncTcpEvent* tcpEvent);
-	virtual void OnSend(CAsyncTcpEvent* tcpEvent);
+	virtual void OnAcceptEvent(CAsyncTcpEvent* tcpEvent);
+	virtual void OnReceiveEvent(CAsyncTcpEvent* tcpEvent);
+	virtual void OnSendEvent(CAsyncTcpEvent* tcpEvent);
 };
 

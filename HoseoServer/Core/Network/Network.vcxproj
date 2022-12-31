@@ -161,7 +161,10 @@
     <ClInclude Include="AsyncTcpEvent.h" />
     <ClInclude Include="AsyncTcpEventSink.h" />
     <ClInclude Include="Iocp.h" />
+    <ClInclude Include="MarshalerComponent.h" />
     <ClInclude Include="PacketBase.h" />
+    <ClInclude Include="PacketHandler.h" />
+    <ClInclude Include="PacketRegistry.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Peer.h" />
     <ClInclude Include="Socket.h" />
@@ -175,6 +178,9 @@
     <ClCompile Include="AsyncTcpEvent.cpp" />
     <ClCompile Include="AsyncTcpEventSink.cpp" />
     <ClCompile Include="Iocp.cpp" />
+    <ClCompile Include="MarshalerComponent.cpp" />
+    <ClCompile Include="PacketHandler.cpp" />
+    <ClCompile Include="PacketRegistry.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
