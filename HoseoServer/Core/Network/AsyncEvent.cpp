@@ -17,7 +17,8 @@ CAsyncEvent::Buffer& CAsyncEvent::GetBuffer()
 	return m_Buffer;
 }
 
-void CAsyncEvent::Execute(CAsyncEventSink* sink)
+int CAsyncEvent::Execute(CAsyncEventSink* sink)
 {
 	// ¹¹ ¾ø´ç
+	return 0;
 }

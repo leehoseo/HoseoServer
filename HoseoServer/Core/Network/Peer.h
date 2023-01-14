@@ -12,7 +12,7 @@ public:
 	~CPeer();
 
 public:
-	virtual void OnReceiveEvent(CAsyncTcpEvent* tcpEvent);
+	virtual int OnReceiveEvent(CAsyncTcpEvent* tcpEvent);
 
 public:
 	CSocket* GetSocket();

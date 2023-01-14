@@ -3,7 +3,6 @@
 
 class CSocket;
 class CAsyncEventSink;
-
 class CAsyncTcpEvent : public CAsyncEvent
 {
 public:
@@ -19,13 +18,16 @@ public:
 	virtual ~CAsyncTcpEvent();
 
 public:
-	virtual void Execute(CAsyncEventSink* sink);
-	EventType GetType() { return m_Type; }
-
+	virtual int Execute(CAsyncEventSink* sink);
+	
 public:
-	CSocket* m_Socket;
+	EventType GetType() { return m_Type; }
+	CSocket* GetSocket() const { return m_Socket; };
+	void SetSocket(CSocket* socket) { m_Socket = socket; }
 
 private:
+	CSocket* m_Socket;
 	EventType m_Type;
-};
 
+	char* m_Buffer;
+};

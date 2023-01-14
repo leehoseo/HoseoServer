@@ -8,7 +8,7 @@ void CMarshalerComponent::Init()
 {
 }
 
-void CMarshalerComponent::UnMarshal(CAsyncTcpEvent* tcpEvent)
+int CMarshalerComponent::UnMarshal(char* buffer)
 {
 	// 암호화 여부
 

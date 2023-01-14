@@ -12,6 +12,6 @@ protected:
 	virtual void Init();
 
 public:
-	void UnMarshal(CAsyncTcpEvent* tcpEvent);
+	int UnMarshal(char* buffer);
 };
 

@@ -12,10 +12,10 @@ CAsyncTcpEvent::~CAsyncTcpEvent()
 {
 }
 
-void CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
+int CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 {
 	CAsyncTcpEventSink* tcpEventSink = static_cast<CAsyncTcpEventSink*>(sink);
-
+	int byte = 0;
 	switch (GetType())
 	{
 	case EventType::ACCEPT:
@@ -30,10 +30,12 @@ void CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 	}
 	case EventType::RECEIVE:
 	{
-		tcpEventSink->OnReceiveEvent(this);
+		byte = tcpEventSink->OnReceiveEvent(this);
 		break;
 	}
 	default:
 		break;
 	}
+
+	return byte;
 }

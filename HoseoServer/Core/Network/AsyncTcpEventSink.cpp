@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "AsyncTcpEventSink.h"
 #include "AsyncTcpEvent.h"
+
 CAsyncTcpEventSink::CAsyncTcpEventSink()
 {
 }
@@ -13,8 +14,9 @@ void CAsyncTcpEventSink::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 {
 }
 
-void CAsyncTcpEventSink::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
+int CAsyncTcpEventSink::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 {
+	return 0;
 }
 
 void CAsyncTcpEventSink::OnSendEvent(CAsyncTcpEvent* tcpEvent)

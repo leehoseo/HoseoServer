@@ -19,7 +19,7 @@ public:
 	Buffer& GetBuffer();
 
 public:
-	virtual void Execute(CAsyncEventSink* sink);
+	virtual int Execute(CAsyncEventSink* sink);
 
 private:
 	Buffer m_Buffer;

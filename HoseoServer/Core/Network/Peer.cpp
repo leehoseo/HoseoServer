@@ -14,9 +14,16 @@ CPeer::~CPeer()
 {
 }
 
-void CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
+int CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 {
-	
+	CMarshalerComponent* marshaler = GetComponent<CMarshalerComponent>();
+
+	if (nullptr == marshaler)
+	{
+		return 0;
+	}
+
+	return marshaler->UnMarshal();
 }
 
 CSocket* CPeer::GetSocket()
