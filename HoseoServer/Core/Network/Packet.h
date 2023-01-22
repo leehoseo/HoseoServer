@@ -5,7 +5,7 @@ typedef unsigned short PacketId_t;
 typedef unsigned char CompressType_t;
 typedef unsigned char EncryptionType_t;
 
-struct SPacketHeader
+struct PacketHeader
 {
 	PacketSize_t m_Size;
 	PacketId_t m_Id;
@@ -16,11 +16,7 @@ struct SPacketHeader
 class CPacket
 {
 public:
-	CPacket();
-	~CPacket() {};
-
-public:
-	static void GetSize(const char* buffer, PacketSize_t& outSize);
+	static void GetSize(char* buffer, PacketSize_t& outSize);
 	static void SetSize(char* outBuffer, const PacketSize_t& size);
 
 	static void GetId(const char* buffer, PacketId_t& outSize);
@@ -32,7 +28,7 @@ public:
 	static void GetEncryptionType(const char* buffer, EncryptionType_t& outSize);
 	static void SetEncryptionType(char* outBuffer, const EncryptionType_t& size);
 
-public:
-	SPacketHeader m_Header;
+	static void GetBody(const char* buffer, char* outBody, const int len);
+	static void SetBody(char* outBuffer, const char* body, const int len);
 };
 

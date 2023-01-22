@@ -4,21 +4,18 @@
 #include "Network/AsyncEvent.h"
 #include "Base/Task.h"
 #include "Network/AsyncTask.h"
+#include "Network/Packet.h"
+#include "Network/PacketWriter.h"
+#include "TradePacket.h"
+
 int main()
 {
-	CAsyncTask* task = new CAsyncTask([]()
-		{
-			CAsyncDispatcher::GetInstance()->Start();
-		});
-
+	CPacketWriter<CLogin> packet();
 	CAsyncDispatcher::GetInstance()->Start();
 
 	// 데이터 세팅
 	CListenSystem::GetInstance()->Init(new CLobbyPeerListener());
 	CListenSystem::GetInstance()->Start();
-
-
-	CAsyncTask::PostTask(task);
 
 	CAsyncDispatcher::GetInstance()->Join();
 

@@ -14,10 +14,12 @@ CAsyncTask::~CAsyncTask()
 
 void CAsyncTask::PostTask(CAsyncTask* task)
 {
-	CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &task->GetBuffer());
+	CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &task->GetBody());
 }
 
-void CAsyncTask::Execute(CAsyncEventSink* sink)
+int CAsyncTask::Execute(CAsyncEventSink* sink)
 {
 	OnCallbackEvent();
+
+	return 0;
 }

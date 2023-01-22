@@ -13,6 +13,6 @@ public:
 	static void PostTask( CAsyncTask* task );
 
 public:
-	virtual void Execute(CAsyncEventSink* sink);
+	virtual int Execute(CAsyncEventSink* sink);
 };
 

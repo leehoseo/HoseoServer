@@ -6,7 +6,7 @@ class CAsyncEventSink;
 class CAsyncEvent
 {
 public:
-	struct Buffer : public OVERLAPPED
+	struct Body : public OVERLAPPED
 	{
 	public:
 		CAsyncEvent* m_Owner;
@@ -16,12 +16,12 @@ public:
 	virtual ~CAsyncEvent();
 
 public:
-	Buffer& GetBuffer();
+	Body& GetBody();
 
 public:
 	virtual int Execute(CAsyncEventSink* sink);
 
 private:
-	Buffer m_Buffer;
+	Body m_Body;
 };
 

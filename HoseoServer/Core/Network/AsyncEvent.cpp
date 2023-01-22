@@ -4,17 +4,17 @@
 
 CAsyncEvent::CAsyncEvent()
 {
-	ZeroMemory(&m_Buffer, sizeof(m_Buffer));
-	m_Buffer.m_Owner = this;
+	ZeroMemory(&m_Body, sizeof(m_Body));
+	m_Body.m_Owner = this;
 }
 
 CAsyncEvent::~CAsyncEvent()
 {
 }
 
-CAsyncEvent::Buffer& CAsyncEvent::GetBuffer()
+CAsyncEvent::Body& CAsyncEvent::GetBody()
 {
-	return m_Buffer;
+	return m_Body;
 }
 
 int CAsyncEvent::Execute(CAsyncEventSink* sink)

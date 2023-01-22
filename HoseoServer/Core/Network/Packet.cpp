@@ -1,43 +1,53 @@
 #include "pch.h"
 #include "Packet.h"
+#include <string>
 
-CPacket::CPacket()
+void CPacket::GetSize(char* buffer, PacketSize_t& outValue)
 {
-	m_Header.m_Size = 0;
-	m_Header.m_Id = 0;
-	m_Header.m_CompressType = 0;
-	m_Header.m_EncryptionType = 0;
+	memcpy(&outValue, buffer, sizeof(PacketSize_t));
 }
 
-void CPacket::GetSize(const char* buffer, PacketSize_t& outSize)
+void CPacket::SetSize(char* outBuffer, const PacketSize_t& value)
 {
+	memcpy(outBuffer, &value, sizeof(PacketSize_t));
 }
 
-void CPacket::SetSize(char* outBuffer, const PacketSize_t& size)
+void CPacket::GetId(const char* buffer, PacketId_t& outValue)
 {
+	memcpy(&outValue, buffer + 2, sizeof(PacketId_t));
 }
 
-void CPacket::GetId(const char* buffer, PacketId_t& outSize)
+void CPacket::SetId(char* outBuffer, const PacketId_t& value)
 {
+	memcpy(outBuffer + 2, &value, sizeof(PacketId_t));
 }
 
-void CPacket::SetId(char* outBuffer, const PacketId_t& size)
+void CPacket::GetCompressType(const char* buffer, CompressType_t& outValue)
 {
+	memcpy(&outValue, buffer + 4, sizeof(CompressType_t));
 }
 
-void CPacket::GetCompressType(const char* buffer, CompressType_t& outSize)
+void CPacket::SetCompressType(char* outBuffer, const CompressType_t& value)
 {
+	memcpy(outBuffer + 4, &value, sizeof(CompressType_t));
 }
 
-void CPacket::SetCompressType(char* outBuffer, const CompressType_t& size)
+void CPacket::GetEncryptionType(const char* buffer, EncryptionType_t& outValue)
 {
+	memcpy(&outValue, buffer + 5, sizeof(EncryptionType_t));
 }
 
-void CPacket::GetEncryptionType(const char* buffer, EncryptionType_t& outSize)
+void CPacket::SetEncryptionType(char* outBuffer, const EncryptionType_t& value)
 {
+	memcpy(outBuffer + 5, &value, sizeof(EncryptionType_t));
 }
 
-
-void CPacket::SetEncryptionType(char* outBuffer, const EncryptionType_t& size)
+void CPacket::GetBody(const char* buffer, char* outBody, const int len)
 {
+	memcpy(&outBody, buffer + 6, len);
+}
+
+void CPacket::SetBody(char* outBuffer, const char* body, const int len)
+{
+	memcpy(outBuffer + 6, &body, len);
 }

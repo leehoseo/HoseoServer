@@ -166,6 +166,7 @@
     <ClInclude Include="PacketBase.h" />
     <ClInclude Include="PacketHandler.h" />
     <ClInclude Include="PacketRegistry.h" />
+    <ClInclude Include="PacketWriter.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Peer.h" />
     <ClInclude Include="Socket.h" />
@@ -195,9 +196,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Base\Base.vcxproj">
       <Project>{ff6d711e-404a-4ef8-90fd-8f470f2d47c7}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\Common.vcxproj">
-      <Project>{c3fbed9d-4170-47de-97ab-1b124d821158}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

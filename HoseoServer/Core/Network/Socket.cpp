@@ -66,7 +66,7 @@ bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 	DWORD outputBuffer{ 0 };
 	DWORD receivedByte{ 0 };
 	const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
-		0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetBuffer()));
+		0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetBody()));
 
 	return result;
 }

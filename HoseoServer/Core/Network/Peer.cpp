@@ -23,7 +23,7 @@ int CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 		return 0;
 	}
 
-	return marshaler->UnMarshal();
+	return marshaler->UnMarshal(tcpEvent->GetBuffer());
 }
 
 CSocket* CPeer::GetSocket()

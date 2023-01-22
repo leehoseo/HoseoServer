@@ -14,9 +14,11 @@ public:
 	virtual ~CPeerListenEvent() {};
 
 public:
-	void Execute(CAsyncEventSink* sink)
+	int Execute(CAsyncEventSink* sink)
 	{
-		CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &GetBuffer());
+		CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &GetBody());
+
+		return 0;
 	}
 };
 
@@ -52,7 +54,7 @@ void CPeerListener::Start()
 		if (true == component->Accept(newSocket, acceptEvent))
 		{
 			// 추가 처리를 위해 이벤트를 Enqueue
-			CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetBuffer());
+			CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetBody());
 		}
 		else
 		{
