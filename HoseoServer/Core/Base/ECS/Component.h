@@ -1,6 +1,7 @@
 #pragma once
+#include <string>
 
-#include "Entity.h"
+//#include "Entity.h"
 
 class CEntity;
 

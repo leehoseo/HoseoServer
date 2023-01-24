@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+#include "PacketBase.h"
 
 typedef unsigned short PacketSize_t;
 typedef unsigned short PacketId_t;
@@ -30,5 +32,6 @@ public:
 
 	static void GetBody(const char* buffer, char* outBody, const int len);
 	static void SetBody(char* outBuffer, const char* body, const int len);
+	
+	static int FindPacket(int value);
 };
-

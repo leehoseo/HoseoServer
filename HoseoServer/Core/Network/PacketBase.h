@@ -1,3 +1,38 @@
+#pragma once
+
+template <typename T>
+struct IsPod { enum { Value = std::is_arithmetic<T>::value || std::is_enum<T>::value }; };
+
+template <typename T>
+void ConvertToBuffer(char* outBuffer, int size, T& value)
+{
+	char* buffer = new char[size];
+	memcpy(buffer, &value, size);
+
+	outBuffere = buffer;
+}
+
+#define PACKET_BEGIN(name)\
+class name\
+{\
+public:\
+	static std::string	GetName() { return #name; }\
+	static int			GetHash() { return std::hash<std::string>()(#name); 
+
+
+#define PACKET_MEMBER( type, name )\
+	type name;\
+	void Set##name(type value ) { name = value; }\
+	type Get##name() const { return name; }\
+	const int GetBuffer()\
+	{\
+		if ( true == IsPod<type>::Value ) { return static_cast<int>(sizeof(type); }\
+		else { return type.GetByte(); }\
+	}
+
+#define PACKET_END \
+};\
+
 //#pragma once
 //
 //#define PACKET_ENCRYPT_NONE 0

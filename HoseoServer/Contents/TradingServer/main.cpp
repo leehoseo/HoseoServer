@@ -10,7 +10,7 @@
 
 int main()
 {
-	CPacketWriter<CLogin> packet();
+	//CPacketWriter<CLogin> packet();
 	CAsyncDispatcher::GetInstance()->Start();
 
 	// 데이터 세팅

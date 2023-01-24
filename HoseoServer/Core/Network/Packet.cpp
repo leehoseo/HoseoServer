@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Packet.h"
 #include <string>
+#include <Windows.h>
 
 void CPacket::GetSize(char* buffer, PacketSize_t& outValue)
 {
@@ -50,4 +51,10 @@ void CPacket::GetBody(const char* buffer, char* outBody, const int len)
 void CPacket::SetBody(char* outBuffer, const char* body, const int len)
 {
 	memcpy(outBuffer + 6, &body, len);
+}
+
+int CPacket::FindPacket(int value)
+{
+	HMODULE hMod;
+	return 0;
 }

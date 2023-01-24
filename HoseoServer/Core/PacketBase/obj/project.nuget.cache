@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2hsRDMMBn3UW6z0nVG+JbkfXAhayAR5zIKV/21TTn+zBQP6YD/7ZqxHvH1NjaUDBSpNBiau8UHF7V4rqFOUc+Q==",
+  "success": true,
+  "projectFilePath": "C:\\Programming\\HoseoServer\\HoseoServer\\Core\\PacketBase\\PacketBase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\dllexport\\1.7.4\\dllexport.1.7.4.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -12,11 +12,10 @@ public:
 		const int size = sizeof(T) + sizeof(PacketHeader);
 		m_Buffer = new char[size];
 
-	/*	CPacket::SetSize();
-		CPacket::SetId();
-		CPacket::SetCompressType();
-		CPacket::SetEncryptionType();
-		CPacket::SetBody();*/
+		CPacket::SetSize(m_Buffer, size);
+		CPacket::SetId(m_Buffer);
+		CPacket::SetCompressType(0);
+		CPacket::SetEncryptionType(0);
 	}
 
 	inline ~CPacketWriter()
