@@ -12,9 +12,6 @@ public:
 	virtual ~CTask();
 
 public:
-	virtual void Execute();
-
-
 	void OnCallbackEvent();
 
 private:

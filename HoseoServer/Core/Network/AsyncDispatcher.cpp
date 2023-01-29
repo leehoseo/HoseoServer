@@ -79,7 +79,31 @@ void CAsyncDispatcher::CIocpThread::Run()
 												, ioByte);
 
 		int byte = 0;
-		
+
+		// 이 개념은 아니다 손봐야함
+		int handled = 0;
+		// 처리 가능한 바이트 수
+		int total = 0; //m_RecvEvent->TotalBytes + ioByte;
+		while (handled < total)
+		{
+			int result = buffer->m_Owner->Execute(sink);  
+			//int result = m_Marshaller->Unmarshall(this, m_RecvEvent->Buffer + handled, total - handled);
+			if (result <= 0)
+			{
+				break; // 더 이상 읽을 수 있는 것이 없거나, 에러가 발생
+			}
+			else if (result > 0)
+			{
+				handled += result; // 정상 처리
+			}
+		}
+
+		// 남은 것이 있다면 앞쪽으로 옮겨준다.
+		//if (mySocket->GetErrorCount() == 0 && 0 < handled && handled < total)
+		//{
+		//	memmove(m_RecvEvent->Buffer, m_RecvEvent->Buffer + handled, total - handled);
+		//}
+
 		if (nullptr != buffer)
 		{
 			byte = buffer->m_Owner->Execute(sink);

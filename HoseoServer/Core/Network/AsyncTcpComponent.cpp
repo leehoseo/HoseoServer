@@ -58,5 +58,15 @@ bool CAsyncTcpComponent::Connect()
 
 bool CAsyncTcpComponent::PostRecv()
 {
+//       evt->TotalBytes = offset;
+//
+//#ifdef ZERO_BYTE_RECV_ENABLED
+//   evt->WsaBuf.buf = nullptr;
+//   evt->WsaBuf.len = 0;
+//#else
+//   evt->WsaBuf.buf = evt->Buffer + offset;
+//   evt->WsaBuf.len = evt->Capacity - offset;
+//#endif
+
     return m_Socket->Connect();
 }

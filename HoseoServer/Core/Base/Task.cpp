@@ -15,8 +15,3 @@ void CTask::OnCallbackEvent()
 {
 	m_Callback();
 }
-
-void CTask::Execute()
-{
-	OnCallbackEvent();
-}

@@ -27,6 +27,9 @@
     <Filter Include="소스 파일\Pattern">
       <UniqueIdentifier>{576ef60e-a06a-4d4a-ada5-d3c7e6f498ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Atomic">
+      <UniqueIdentifier>{758f8c7e-87e8-49b6-90d0-8fc48b5ff77a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ECS\Entity.h">
@@ -68,6 +71,7 @@
     <ClInclude Include="Task.h">
       <Filter>소스 파일\Task</Filter>
     </ClInclude>
+    <ClInclude Include="Atomic.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -102,6 +106,9 @@
     </ClCompile>
     <ClCompile Include="Task.cpp">
       <Filter>소스 파일\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Atomic.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
