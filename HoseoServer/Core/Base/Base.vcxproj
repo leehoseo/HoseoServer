@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Atomic.h" />
+    <ClInclude Include="Delegate.h" />
     <ClInclude Include="ECS\Component.h" />
     <ClInclude Include="ECS\Entity.h" />
     <ClInclude Include="ECS\System.h" />
@@ -185,6 +186,11 @@
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="TaskComponent.cpp" />
     <ClCompile Include="Thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Delegate.inl">
+      <FileType>Document</FileType>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

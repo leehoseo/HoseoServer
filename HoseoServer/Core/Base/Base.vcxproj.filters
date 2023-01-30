@@ -72,6 +72,12 @@
       <Filter>소스 파일\Task</Filter>
     </ClInclude>
     <ClInclude Include="Atomic.h" />
+    <ClInclude Include="Delegate.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegate.inl">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
