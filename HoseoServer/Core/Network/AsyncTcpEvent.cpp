@@ -3,9 +3,10 @@
 #include "Socket.h"
 #include "AsyncTcpEventSink.h"
 
-CAsyncTcpEvent::CAsyncTcpEvent(const EventType type)
+CAsyncTcpEvent::CAsyncTcpEvent(const EventType type, const int size)
 	: m_Type(type)
 {
+	
 }
 
 CAsyncTcpEvent::~CAsyncTcpEvent()

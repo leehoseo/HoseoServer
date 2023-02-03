@@ -73,5 +73,15 @@ bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 
 bool CSocket::Connect()
 {
-	return false;
+	return true;
+}
+
+bool CSocket::Recv(CAsyncTcpEvent* recvtEvent)
+{
+	return true;
+}
+
+bool CSocket::Send(CAsyncTcpEvent* sendEvent)
+{
+	return true;
 }

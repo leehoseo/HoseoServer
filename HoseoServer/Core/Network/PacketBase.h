@@ -9,7 +9,7 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 	char* buffer = new char[size];
 	memcpy(buffer, &value, size);
 
-	outBuffere = buffer;
+	outBuffer = buffer;
 }
 
 #define PACKET_BEGIN(name)\

@@ -55,6 +55,5 @@ void CPacket::SetBody(char* outBuffer, const char* body, const int len)
 
 int CPacket::FindPacket(int value)
 {
-	HMODULE hMod;
 	return 0;
 }
