@@ -7,21 +7,6 @@
 #include "Network/AsyncTcpEvent.h"
 #include "Network/Socket.h"
 
-class CPeerListener::CPeerListenEvent : public CAsyncEvent
-{
-public:
-	CPeerListenEvent() {};
-	virtual ~CPeerListenEvent() {};
-
-public:
-	int Execute(CAsyncEventSink* sink)
-	{
-		CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &GetBody());
-
-		return 0;
-	}
-};
-
 CPeerListener::CPeerListener()
 {
 
@@ -45,7 +30,7 @@ void CPeerListener::Start()
 	component->Assosiate();
 
 	// 한번에 받을 수 있는 클라이언트의 수
-	for (int index = 0; index < 4; ++index)
+	for (int index = 0; index < 1; ++index)
 	{
 		CSocket* newSocket = new CSocket();
 		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::ACCEPT);
@@ -54,7 +39,7 @@ void CPeerListener::Start()
 		if (true == component->Accept(newSocket, acceptEvent))
 		{
 			// 추가 처리를 위해 이벤트를 Enqueue
-			CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetBody());
+			CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetTag());
 		}
 		else
 		{
@@ -78,13 +63,14 @@ void CPeerListener::Start()
 
 CPeer* CPeerListener::CreatePeer()
 {
-	return New(CPeer);
+	// 여긴 들어오면 안된다.
+	return nullptr;
 }
 
 void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 {
 	CPeer* newPeer = CreatePeer();
-	newPeer->SetSocket(tcpEvent->GetSocket());
+	//newPeer->SetSocket(tcpEvent->GetSocket());
 
 	CAsyncTcpComponent* component = newPeer->GetComponent<CAsyncTcpComponent>();
 	if (nullptr == component)
@@ -93,6 +79,5 @@ void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 	}
 
 	component->Assosiate();
-
 	component->PostRecv();
 }

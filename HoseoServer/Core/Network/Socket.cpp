@@ -66,7 +66,7 @@ bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 	DWORD outputBuffer{ 0 };
 	DWORD receivedByte{ 0 };
 	const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
-		0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetBody()));
+		0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetTag()));
 
 	return result;
 }
@@ -76,8 +76,22 @@ bool CSocket::Connect()
 	return true;
 }
 
-bool CSocket::Recv(CAsyncTcpEvent* recvtEvent)
+bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 {
+	/*WSABUF ioBuf;
+	ioBuf.buf = recvEvent->GetBuffer();
+	ioBuf.len = 
+
+
+	int error = WSARecv(GetHandle(), &overlappedBuffer->_wsaBuffer, 1, NULL, &flag, &overlappedBuffer->_overlapped, 0);
+
+	if (SOCKET_ERROR == error)
+	{
+		if (WSA_IO_PENDING != GetLastError())
+		{
+			Logger::getInstance()->log(Logger::Level::WARNING, "Error");
+		}
+	}*/
 	return true;
 }
 

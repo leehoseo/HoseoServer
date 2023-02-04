@@ -3,7 +3,7 @@
 #include "Socket.h"
 #include "AsyncTcpEventSink.h"
 
-CAsyncTcpEvent::CAsyncTcpEvent(const EventType type, const int size)
+CAsyncTcpEvent::CAsyncTcpEvent(const EventType type)
 	: m_Type(type)
 {
 	
@@ -15,7 +15,7 @@ CAsyncTcpEvent::~CAsyncTcpEvent()
 
 int CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 {
-	CAsyncTcpEventSink* tcpEventSink = static_cast<CAsyncTcpEventSink*>(sink);
+	CAsyncTcpEventSink* tcpEventSink = dynamic_cast<CAsyncTcpEventSink*>(sink);
 	int byte = 0;
 	switch (GetType())
 	{

@@ -9,8 +9,6 @@ class CAsyncTcpEvent;
 /// </summary>
 class CPeerListener : public CPeer
 {
-	class CPeerListenEvent;
-
 public:
 	CPeerListener();
 	virtual ~CPeerListener();

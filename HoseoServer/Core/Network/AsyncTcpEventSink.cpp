@@ -21,4 +21,8 @@ int CAsyncTcpEventSink::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 
 void CAsyncTcpEventSink::OnSendEvent(CAsyncTcpEvent* tcpEvent)
 {
+	int num = 0;
+	++num;
+
+	num++;
 }

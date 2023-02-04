@@ -9,7 +9,7 @@ class CPeer : public CEntity, public CAsyncTcpEventSink
 {
 public:
 	CPeer();
-	~CPeer();
+	virtual ~CPeer();
 
 public:
 	virtual int OnReceiveEvent(CAsyncTcpEvent* tcpEvent);

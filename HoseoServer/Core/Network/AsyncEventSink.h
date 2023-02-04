@@ -9,5 +9,4 @@ class CAsyncEventSink
 public:
 	CAsyncEventSink();
 	virtual ~CAsyncEventSink();
-
 };

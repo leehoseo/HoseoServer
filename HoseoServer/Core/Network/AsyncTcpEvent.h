@@ -14,7 +14,7 @@ public:
 		, COUNT
 	};
 public:
-	CAsyncTcpEvent(const EventType type, const int size);
+	CAsyncTcpEvent(const EventType type);
 	virtual ~CAsyncTcpEvent();
 
 public:
@@ -26,11 +26,11 @@ public:
 	void SetSocket(CSocket* socket) { m_Socket = socket; }
 
 	char* GetBuffer() { return m_Buffer; };
-
+	
 private:
 	CSocket* m_Socket;
 	EventType m_Type;
 
 	char* m_Buffer;
-	WSABUF m_io;
+	//WSABUF m_io;
 };

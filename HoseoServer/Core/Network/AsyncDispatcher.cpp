@@ -46,7 +46,7 @@ bool CAsyncDispatcher::Associate(CAsyncTcpEventSink* sink, CSocket* socket)
 	return nullptr != CreateIoCompletionPort((HANDLE)socket->GetHandle(), m_Iocp->GetHandle(), (ULONG_PTR)sink, 0);
 }
 
-void CAsyncDispatcher::Enqueue(CAsyncEventSink* sink, CAsyncEvent::Body* buffer)
+void CAsyncDispatcher::Enqueue(CAsyncEventSink* sink, CAsyncEvent::Tag* buffer)
 {
 	PostQueuedCompletionStatus(m_Iocp->GetHandle(), 0, (ULONG_PTR)sink, (LPOVERLAPPED)(buffer));
 }
@@ -70,7 +70,7 @@ void CAsyncDispatcher::CIocpThread::Run()
 	while (true)
 	{
 		CAsyncEventSink* sink = nullptr;
-		CAsyncEvent::Body* buffer = nullptr;
+		CAsyncEvent::Tag* buffer = nullptr;
 		DWORD ioByte = 0;
 
 		CAsyncDispatcher::GetInstance()->Dequeue(

@@ -6,7 +6,6 @@
 #include "Network/AsyncTask.h"
 #include "Network/Packet.h"
 #include "Network/PacketWriter.h"
-#include "TradePacket.h"
 
 int main()
 {

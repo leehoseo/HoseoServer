@@ -14,7 +14,7 @@ CAsyncTask::~CAsyncTask()
 
 void CAsyncTask::PostTask(CAsyncTask* task)
 {
-	CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &task->GetBody());
+	CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &task->GetTag());
 }
 
 int CAsyncTask::Execute(CAsyncEventSink* sink)

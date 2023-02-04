@@ -12,7 +12,7 @@ CAsyncEvent::~CAsyncEvent()
 {
 }
 
-CAsyncEvent::Body& CAsyncEvent::GetBody()
+CAsyncEvent::Tag& CAsyncEvent::GetTag()
 {
 	return m_Body;
 }
