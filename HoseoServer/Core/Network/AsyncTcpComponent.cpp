@@ -15,9 +15,10 @@ void CAsyncTcpComponent::SetSocket(CSocket* socket)
     m_Socket = socket;
 }
 
-void CAsyncTcpComponent::Assosiate()
+void CAsyncTcpComponent::Assosiate(CAsyncTcpEventSink* sink, CSocket* socket)
 {
-    const bool result = CAsyncDispatcher::GetInstance()->Associate(reinterpret_cast<CAsyncTcpEventSink*>(m_Owner), GetSocket());
+    //const bool result = CAsyncDispatcher::GetInstance()->Associate(reinterpret_cast<CAsyncTcpEventSink*>(m_Owner), GetSocket());
+    const bool result = CAsyncDispatcher::GetInstance()->Associate(sink, socket);
     if (false == result)
     {
         int num = 0;

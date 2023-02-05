@@ -27,7 +27,7 @@ void CPeerListener::Start()
 	component->Bind(13480);
 	component->Listen();
 
-	component->Assosiate();
+	component->Assosiate(this, component->GetSocket());
 
 	// 한번에 받을 수 있는 클라이언트의 수
 	for (int index = 0; index < 1; ++index)
@@ -78,6 +78,6 @@ void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 		return;
 	}
 
-	component->Assosiate();
+	component->Assosiate(newPeer, component->GetSocket());
 	component->PostRecv();
 }

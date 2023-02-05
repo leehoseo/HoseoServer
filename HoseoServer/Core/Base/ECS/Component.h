@@ -11,23 +11,20 @@ class CEntity;
 class CComponent
 {
 public:
-	CComponent(CEntity* owner);
+	CComponent();
 	virtual ~CComponent();
 
 protected:
 	virtual void Init() {};
-
-protected:
-	CEntity* m_Owner;
 };
 
 #define COMPONENT_FOUNDATION(name)\
 public:\
-	name( CEntity* owner ) : CComponent(owner) { Init(); } \
+	name() : CComponent() { Init(); } \
 	virtual ~name() {} \
 	static std::string	GetName() { return #name; }\
 	static int			GetHash() { return std::hash<std::string>()(#name); } \
-	static CComponent* GetClone(CEntity* owner) \
+	static CComponent* GetClone() \
 	{ \
-		return new name(owner); \
+		return new name(); \
 	}

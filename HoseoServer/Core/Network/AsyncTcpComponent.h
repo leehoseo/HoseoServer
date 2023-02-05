@@ -3,6 +3,7 @@
 
 class CSocket;
 class CAsyncTcpEvent;
+class CAsyncTcpEventSink;
 class CAsyncTcpComponent : public CComponent
 {
 	COMPONENT_FOUNDATION(CAsyncTcpComponent);
@@ -10,7 +11,7 @@ class CAsyncTcpComponent : public CComponent
 public:
 	CSocket* GetSocket();
 	void SetSocket(CSocket* socket);
-	void Assosiate();
+	void Assosiate(CAsyncTcpEventSink* sink, CSocket* socket);
 protected:
 	virtual void Init();
 
