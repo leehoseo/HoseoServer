@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "Task.h"
 
 CTask::CTask(const Callback& callback)

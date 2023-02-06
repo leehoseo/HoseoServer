@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "MarshalerComponent.h"
 #include "AsyncTcpEvent.h"
 #include "PacketRegistry.h"

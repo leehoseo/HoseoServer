@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "Packet.h"
 #include <string>
 #include <Windows.h>

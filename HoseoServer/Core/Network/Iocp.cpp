@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "Iocp.h"
 #include "Peer.h"
 #include <WS2tcpip.h>

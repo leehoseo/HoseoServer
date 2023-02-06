@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "AsyncTcpEvent.h"
 #include "Socket.h"
 #include "AsyncTcpEventSink.h"
