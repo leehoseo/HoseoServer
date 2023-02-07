@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AppManager.h" />
     <ClInclude Include="Atomic.h" />
     <ClInclude Include="Delegate.h" />
     <ClInclude Include="ECS\Component.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Thread.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AppManager.cpp" />
     <ClCompile Include="Atomic.cpp" />
     <ClCompile Include="ECS\Component.cpp" />
     <ClCompile Include="ECS\Entity.cpp" />

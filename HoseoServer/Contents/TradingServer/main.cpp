@@ -6,17 +6,19 @@
 #include "Network/AsyncTask.h"
 #include "Network/Packet.h"
 #include "Network/PacketWriter.h"
-
+#include "TradingAppManager.h"
 int main()
 {
+	g_TradingAppManager::GetInstance()->Setup();
+
 	//CPacketWriter<CLogin> packet();
-	CAsyncDispatcher::GetInstance()->Start();
+	g_AsyncDispatcher::GetInstance()->Start();
 
 	// 데이터 세팅
-	CListenSystem::GetInstance()->Init(new CLobbyPeerListener());
-	CListenSystem::GetInstance()->Start();
+	g_ListenSystem::GetInstance()->Init(new CLobbyPeerListener());
+	g_ListenSystem::GetInstance()->Start();
 
-	CAsyncDispatcher::GetInstance()->Join();
+	g_AsyncDispatcher::GetInstance()->Join();
 
 	return 0;
 }

@@ -22,7 +22,19 @@ int CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 		return 0;
 	}
 
-	return marshaler->UnMarshal(tcpEvent->GetBuffer());
+	int size = marshaler->UnMarshal(tcpEvent->GetBuffer());
+
+
+
+	CAsyncTcpComponent* tcpComponent = GetComponent<CAsyncTcpComponent>();
+	if (nullptr == tcpComponent)
+	{
+		return 0;
+	}
+
+	tcpComponent->PostRecv();
+
+	return size;
 }
 
 CSocket* CPeer::GetSocket()

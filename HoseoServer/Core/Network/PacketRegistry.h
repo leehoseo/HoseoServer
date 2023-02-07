@@ -3,7 +3,7 @@
 #include <unordered_map>
 
 class CPacketHandler;
-class CPacketRegistry : public CSystem<CPacketRegistry>
+class CPacketRegistry : public CSingleton<CPacketRegistry>
 {
 public:
 	CPacketRegistry();

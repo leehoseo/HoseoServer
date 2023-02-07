@@ -32,5 +32,6 @@ private:
 	EventType m_Type;
 
 	char* m_Buffer;
-	//WSABUF m_io;
+
+	WSABUF m_WsaBuffer;
 };

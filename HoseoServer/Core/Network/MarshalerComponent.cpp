@@ -11,8 +11,8 @@ int CMarshalerComponent::UnMarshal(char* buffer)
 {
 	// 암호화 여부
 
-	// PacketHeader로 올바른 Handler 검색
+	// 패킷 처리
 
-	// Handler에 PacketBody 보내주기
+	// 패킷 반환
 	return 0;
 }

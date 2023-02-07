@@ -4,7 +4,7 @@
 #include "Base/ECS/System.h"
 #include "MemoryEntity.h"
 
-class CMemorySystem : public CSystem<CMemorySystem>
+class CMemorySystem : public CSystem
 {
 public:
 	CMemorySystem();
@@ -20,3 +20,5 @@ public:
 private:
 	CMemoryEntity* m_MemoryEntity;
 };
+
+typedef CSingleton<CMemorySystem> g_MemorySystem;

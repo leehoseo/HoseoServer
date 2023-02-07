@@ -72,7 +72,7 @@ void CAsyncDispatcher::CIocpThread::Run()
 		CAsyncEvent::Tag* buffer = nullptr;
 		DWORD ioByte = 0;
 
-		CAsyncDispatcher::GetInstance()->Dequeue(
+		g_AsyncDispatcher::GetInstance()->Dequeue(
 												  reinterpret_cast<ULONG_PTR*>(&sink)
 												, reinterpret_cast<LPOVERLAPPED*>(&buffer)
 												, ioByte);

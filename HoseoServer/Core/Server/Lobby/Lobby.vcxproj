@@ -154,11 +154,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="LobbyAppManager.h" />
     <ClInclude Include="LobbyPeer.h" />
     <ClInclude Include="LobbyPeerListener.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LobbyAppManager.cpp" />
     <ClCompile Include="LobbyPeer.cpp" />
     <ClCompile Include="LobbyPeerListener.cpp" />
     <ClCompile Include="pch.cpp">

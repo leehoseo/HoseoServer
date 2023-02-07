@@ -164,6 +164,7 @@
     <ClInclude Include="AsyncTcpEventSink.h" />
     <ClInclude Include="Iocp.h" />
     <ClInclude Include="MarshalerComponent.h" />
+    <ClInclude Include="NetworkAppManager.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="PacketBase.h" />
     <ClInclude Include="PacketHandler.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="AsyncTcpEventSink.cpp" />
     <ClCompile Include="Iocp.cpp" />
     <ClCompile Include="MarshalerComponent.cpp" />
+    <ClCompile Include="NetworkAppManager.cpp" />
     <ClCompile Include="Packet.cpp" />
     <ClCompile Include="PacketHandler.cpp" />
     <ClCompile Include="PacketRegistry.cpp" />

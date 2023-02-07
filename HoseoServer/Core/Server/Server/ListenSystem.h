@@ -2,7 +2,7 @@
 #include "Base/ECS/System.h"
 #include "PeerListener.h"
 
-class CListenSystem : public CSystem<CListenSystem>
+class CListenSystem : public CSystem
 {
 public:
 	CListenSystem();
@@ -14,3 +14,4 @@ private:
 	CPeerListener* m_Listener;
 };
 
+typedef CSingleton<CListenSystem> g_ListenSystem;

@@ -11,7 +11,6 @@ class CAsyncTcpComponent : public CComponent
 public:
 	CSocket* GetSocket();
 	void SetSocket(CSocket* socket);
-	void Assosiate(CAsyncTcpEventSink* sink, CSocket* socket);
 protected:
 	virtual void Init();
 

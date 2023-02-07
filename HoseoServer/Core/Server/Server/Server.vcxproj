@@ -157,6 +157,7 @@
     <ClInclude Include="ListenSystem.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PeerListener.h" />
+    <ClInclude Include="ServerAppManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ListenSystem.cpp" />
@@ -167,6 +168,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PeerListener.cpp" />
+    <ClCompile Include="ServerAppManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Base\Base.vcxproj">

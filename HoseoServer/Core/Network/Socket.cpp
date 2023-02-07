@@ -1,6 +1,56 @@
 #include "Socket.h"
 #include "AsyncTcpEvent.h"
 
+#define WIN32_LEAN_AND_MEAN
+
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <mswsock.h>
+#include <stdio.h>
+
+// Need to link with Ws2_32.lib
+#pragma comment(lib, "Ws2_32.lib")
+
+namespace Network
+{
+	// 소켓 통신에 사용할 함수 포인터 모음
+	LPFN_ACCEPTEX lpfnAcceptEx = nullptr;
+	LPFN_CONNECTEX lpfnConnectEx = nullptr;
+	LPFN_DISCONNECTEX lpfnDisconnectEx = nullptr;
+	LPFN_WSARECVMSG lpfnWsaRecvMsg = nullptr;
+	LPFN_WSASENDMSG lpfnWsaSendMsg = nullptr;
+
+	bool LinkSocketFunc(const GUID& funcId, void* funcPtr)
+	{
+		return true;
+	}
+
+	bool Setup()
+	{
+		WSADATA w;
+		WSAStartup(MAKEWORD(2, 2), &w);
+
+		int result = 0;
+		do
+		{
+			if (false == LinkSocketFunc(WSAID_ACCEPTEX, lpfnAcceptEx))
+			{
+				result = GetLastError();
+				break;
+			}
+
+			if (false == LinkSocketFunc(WSAID_CONNECTEX, lpfnConnectEx))
+			{
+				result = GetLastError();
+				break;
+			}
+
+		} while (false);
+
+		return result != NO_ERROR;
+	}
+}
+
 
 CSocket::CSocket()
 {

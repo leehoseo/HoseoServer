@@ -6,6 +6,12 @@
 #include <winsock.h>
 #include <MSWSock.h>
 
+// 匙飘况农 技泼 包访
+namespace Network
+{
+	bool Setup();
+}
+
 class CAsyncTcpEvent;
 class CSocket
 {
@@ -27,4 +33,3 @@ public:
 private:
 	SOCKET m_Handle; // 家南 勤甸
 };
-

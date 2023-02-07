@@ -78,6 +78,7 @@
     <ClInclude Include="Delegate.inl">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="AppManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -114,6 +115,9 @@
       <Filter>소스 파일\Task</Filter>
     </ClCompile>
     <ClCompile Include="Atomic.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AppManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

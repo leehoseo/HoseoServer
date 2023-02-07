@@ -3,7 +3,7 @@
 
 int main()
 {
-	CAsyncDispatcher::GetInstance()->Start();
+	g_AsyncDispatcher::GetInstance()->Start();
 
 	return 0;
 }

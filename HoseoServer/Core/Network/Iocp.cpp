@@ -16,9 +16,6 @@ CIocp::~CIocp()
 
 void CIocp::Start()
 {
-	WSADATA w;
-	WSAStartup(MAKEWORD(2, 2), &w);
-
 	m_ProcessCount = std::thread::hardware_concurrency();
 	m_IocpHandle = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, m_ProcessCount);
 

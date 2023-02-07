@@ -12,7 +12,7 @@ class CSocket;
 class CAsyncTcpEventSink;
 class CAsyncEventSink;
 
-class CAsyncDispatcher : public CSystem<CAsyncDispatcher>
+class CAsyncDispatcher : public CSingleton<CAsyncDispatcher>
 {
 public:
 	CAsyncDispatcher();
@@ -42,3 +42,4 @@ private:
 	std::vector<CIocpThread*> m_ThreadList;
 };
 
+typedef CSingleton<CAsyncDispatcher> g_AsyncDispatcher;

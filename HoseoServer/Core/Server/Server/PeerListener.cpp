@@ -26,7 +26,9 @@ void CPeerListener::Start()
 	component->Bind(13480);
 	component->Listen();
 
-	component->Assosiate(this, component->GetSocket());
+	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
+
+	//component->Assosiate(this, component->GetSocket());
 
 	// 한번에 받을 수 있는 클라이언트의 수
 	for (int index = 0; index < 1; ++index)
@@ -38,7 +40,7 @@ void CPeerListener::Start()
 		if (true == component->Accept(newSocket, acceptEvent))
 		{
 			// 추가 처리를 위해 이벤트를 Enqueue
-			CAsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetTag());
+			g_AsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetTag());
 		}
 		else
 		{
@@ -77,6 +79,6 @@ void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 		return;
 	}
 
-	component->Assosiate(newPeer, component->GetSocket());
+	g_AsyncDispatcher::GetInstance()->Associate(newPeer, component->GetSocket());
 	component->PostRecv();
 }
