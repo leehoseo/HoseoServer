@@ -28,7 +28,7 @@ public:
 	bool Bind(const int port);
 	bool Connect();
 	bool Recv(CAsyncTcpEvent* recvEvent);
-	bool Send(CAsyncTcpEvent* sendEvent);
+	bool Send(char* buffer);
 
 	bool OnAccepted(CAsyncTcpEvent* acceptEvent);
 private:

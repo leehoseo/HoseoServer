@@ -17,8 +17,6 @@ namespace Network
 	LPFN_ACCEPTEX lpfnAcceptEx = nullptr;
 	LPFN_CONNECTEX lpfnConnectEx = nullptr;
 	LPFN_DISCONNECTEX lpfnDisconnectEx = nullptr;
-	LPFN_WSARECVMSG lpfnWsaRecvMsg = nullptr;
-	LPFN_WSASENDMSG lpfnWsaSendMsg = nullptr;
 	LPFN_GETACCEPTEXSOCKADDRS lpfnGetAcceptExSocketAddrs = nullptr;
 
 	bool LinkSocketFunc(GUID&& funcId, void* funcPtr, SOCKET& socket)
@@ -62,18 +60,6 @@ namespace Network
 			}
 
 			if (false == LinkSocketFunc(WSAID_DISCONNECTEX, &lpfnDisconnectEx, funcSocket->GetHandle()))
-			{
-				result = GetLastError();
-				break;
-			}
-
-			if (false == LinkSocketFunc(WSAID_WSARECVMSG, &lpfnWsaRecvMsg, funcSocket->GetHandle()))
-			{
-				result = GetLastError();
-				break;
-			}
-
-			if (false == LinkSocketFunc(WSAID_WSASENDMSG, &lpfnWsaSendMsg, funcSocket->GetHandle()))
 			{
 				result = GetLastError();
 				break;
@@ -177,28 +163,35 @@ bool CSocket::Connect()
 
 bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 {
+	// ¶ô Ã³¸® °í¹Î
+	DWORD recvBytes = {};
+	DWORD flags = {};
 
+	WSABUF* wsaBuffer = recvEvent->GetWsaBuffer();
+	
+	wsaBuffer->buf = recvEvent->GetBuffer() + recvEvent->GetTotalSize();
+	wsaBuffer->len = sizeof(recvEvent->GetBuffer()) - recvEvent->GetTotalSize();
+	
+	WSARecv(GetHandle(), wsaBuffer, 1, &recvBytes, &flags, &recvEvent->GetTag(), NULL);
 
-	/*WSABUF ioBuf;
-	ioBuf.buf = recvEvent->GetBuffer();
-	ioBuf.len = 
-
-
-	int error = WSARecv(GetHandle(), &overlappedBuffer->_wsaBuffer, 1, NULL, &flag, &overlappedBuffer->_overlapped, 0);
-
-	if (SOCKET_ERROR == error)
-	{
-		if (WSA_IO_PENDING != GetLastError())
-		{
-			Logger::getInstance()->log(Logger::Level::WARNING, "Error");
-		}
-	}*/
-	return true;
+	return WSA_IO_PENDING != GetLastError();
 }
 
-bool CSocket::Send(CAsyncTcpEvent* sendEvent)
+bool CSocket::Send(char* buffer)
 {
-	return true;
+	DWORD sendBytes = {};
+	DWORD flags = {};
+
+	CAsyncTcpEvent* sendEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::SEND);
+	sendEvent->SetBuffer(buffer);
+
+	WSABUF* wsaBuffer = sendEvent->GetWsaBuffer();
+	wsaBuffer->buf = sendEvent->GetBuffer();
+	wsaBuffer->len = sizeof(sendEvent->GetBuffer());
+
+	WSASend(GetHandle(), wsaBuffer, 1, &sendBytes, flags, &sendEvent->GetTag(), NULL);
+
+	return WSA_IO_PENDING != GetLastError();
 }
 
 bool CSocket::OnAccepted(CAsyncTcpEvent* acceptEvent)
