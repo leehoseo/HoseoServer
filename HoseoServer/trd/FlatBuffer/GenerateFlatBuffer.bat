@@ -1,0 +1,1 @@
+flatc.exe -c Person.fbs

@@ -7,6 +7,8 @@
 #include "Network/Packet.h"
 #include "Network/PacketWriter.h"
 #include "TradingAppManager.h"
+#include "flatbuffers/flatbuffers.h"
+
 int main()
 {
 	g_TradingAppManager::GetInstance()->Setup();

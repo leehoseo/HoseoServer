@@ -23,14 +23,13 @@ void CPeerListener::Start()
 		return;
 	}
 	component->SetSocket(new CSocket());
+
 	component->Bind(13480);
 	component->Listen();
 
 	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
 
-	//component->Assosiate(this, component->GetSocket());
-
-	// 한번에 받을 수 있는 클라이언트의 수
+	// 한번에 받을 수 있는 클라이언트의 수 4
 	for (int index = 0; index < 4; ++index)
 	{
 		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::ACCEPT);

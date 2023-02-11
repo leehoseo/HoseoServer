@@ -132,6 +132,7 @@ bool CSocket::Bind(const int port)
 	socketAddr.sin_family = AF_INET;
 	socketAddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	socketAddr.sin_port = htons(port);
+	//inet_pton(AF_INET, "127.0.0.1", &socketAddr.sin_addr.s_addr);
 
 	if (SOCKET_ERROR == ::bind(GetHandle(), reinterpret_cast<sockaddr*>(&socketAddr), sizeof(socketAddr)))
 	{

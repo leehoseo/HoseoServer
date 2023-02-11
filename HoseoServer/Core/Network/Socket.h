@@ -27,10 +27,13 @@ public:
 	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
 	bool Bind(const int port);
 	bool Connect();
+	bool DisConnect();
 	bool Recv(CAsyncTcpEvent* recvEvent);
 	bool Send(char* buffer);
 
 	bool OnAccepted(CAsyncTcpEvent* acceptEvent);
+
 private:
 	SOCKET m_Handle; // 소켓 핸들
+	sockaddr m_Addr;
 };
