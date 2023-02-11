@@ -30,6 +30,7 @@ public:
 	bool Recv(CAsyncTcpEvent* recvEvent);
 	bool Send(CAsyncTcpEvent* sendEvent);
 
+	bool OnAccepted(CAsyncTcpEvent* acceptEvent);
 private:
 	SOCKET m_Handle; // 소켓 핸들
 };

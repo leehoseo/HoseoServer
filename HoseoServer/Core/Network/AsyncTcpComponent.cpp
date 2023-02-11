@@ -39,6 +39,11 @@ bool CAsyncTcpComponent::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
     return result;
 }
 
+void CAsyncTcpComponent::OnAccepted(CAsyncTcpEvent* acceptEvent)
+{
+    m_Socket->OnAccepted(acceptEvent);
+}
+
 bool CAsyncTcpComponent::Connect()
 {
     return m_Socket->Connect();

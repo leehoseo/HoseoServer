@@ -18,6 +18,7 @@ public:
 	bool Bind(const int port);
 	bool Listen();
 	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
+	void OnAccepted(CAsyncTcpEvent* acceptEvent);
 	bool Connect();
 	bool PostRecv();
 private:

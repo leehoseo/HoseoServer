@@ -71,14 +71,6 @@ CPeer* CPeerListener::CreatePeer()
 void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 {
 	CPeer* newPeer = CreatePeer();
-	//newPeer->SetSocket(tcpEvent->GetSocket());
 
-	CAsyncTcpComponent* component = newPeer->GetComponent<CAsyncTcpComponent>();
-	if (nullptr == component)
-	{
-		return;
-	}
-
-	g_AsyncDispatcher::GetInstance()->Associate(newPeer, component->GetSocket());
-	component->PostRecv();
+	newPeer->OnAccepted(tcpEvent);
 }

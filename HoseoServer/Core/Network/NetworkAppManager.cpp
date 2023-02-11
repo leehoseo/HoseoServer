@@ -6,7 +6,10 @@ bool CNetworkAppManager::Setup()
 {
     bool result = __super::Setup();
 
-    Network::Setup();
+    if (false == result)
+    {
+        return false;
+    }
 
-    return result;
+    return Network::Setup();
 }

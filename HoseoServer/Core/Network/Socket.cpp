@@ -19,9 +19,23 @@ namespace Network
 	LPFN_DISCONNECTEX lpfnDisconnectEx = nullptr;
 	LPFN_WSARECVMSG lpfnWsaRecvMsg = nullptr;
 	LPFN_WSASENDMSG lpfnWsaSendMsg = nullptr;
+	LPFN_GETACCEPTEXSOCKADDRS lpfnGetAcceptExSocketAddrs = nullptr;
 
-	bool LinkSocketFunc(const GUID& funcId, void* funcPtr)
+	bool LinkSocketFunc(GUID&& funcId, void* funcPtr, SOCKET& socket)
 	{
+		DWORD dwBytes;
+		int result = NO_ERROR;
+		result = WSAIoctl(socket, SIO_GET_EXTENSION_FUNCTION_POINTER,
+							&funcId, sizeof(funcId),
+							funcPtr, sizeof(funcPtr),
+							&dwBytes, NULL, NULL);
+
+		if (result == SOCKET_ERROR) {
+			wprintf(L"WSAIoctl failed with error: %u\n", WSAGetLastError());
+			closesocket(socket);
+			WSACleanup();
+			return 1;
+		}
 		return true;
 	}
 
@@ -33,17 +47,44 @@ namespace Network
 		int result = 0;
 		do
 		{
-			if (false == LinkSocketFunc(WSAID_ACCEPTEX, lpfnAcceptEx))
+			CSocket* funcSocket = new CSocket();
+
+			if (false == LinkSocketFunc(WSAID_ACCEPTEX, &lpfnAcceptEx, funcSocket->GetHandle()))
 			{
 				result = GetLastError();
 				break;
 			}
 
-			if (false == LinkSocketFunc(WSAID_CONNECTEX, lpfnConnectEx))
+			if (false == LinkSocketFunc(WSAID_CONNECTEX, &lpfnConnectEx, funcSocket->GetHandle()))
 			{
 				result = GetLastError();
 				break;
 			}
+
+			if (false == LinkSocketFunc(WSAID_DISCONNECTEX, &lpfnDisconnectEx, funcSocket->GetHandle()))
+			{
+				result = GetLastError();
+				break;
+			}
+
+			if (false == LinkSocketFunc(WSAID_WSARECVMSG, &lpfnWsaRecvMsg, funcSocket->GetHandle()))
+			{
+				result = GetLastError();
+				break;
+			}
+
+			if (false == LinkSocketFunc(WSAID_WSASENDMSG, &lpfnWsaSendMsg, funcSocket->GetHandle()))
+			{
+				result = GetLastError();
+				break;
+			}
+
+			if (false == LinkSocketFunc(WSAID_GETACCEPTEXSOCKADDRS, &lpfnGetAcceptExSocketAddrs, funcSocket->GetHandle()))
+			{
+				result = GetLastError();
+				break;
+			}
+			delete funcSocket;
 
 		} while (false);
 
@@ -66,6 +107,10 @@ CSocket::CSocket()
 		const int zero = 0;
 		::setsockopt(m_Handle, SOL_SOCKET, SO_SNDBUF, (char*)&zero, sizeof(zero));
 		::setsockopt(m_Handle, SOL_SOCKET, SO_RCVBUF, (char*)&zero, sizeof(zero));
+
+		// AcceptEx()를 사용할 경우, listen() 에서 자동적으로 accept를 받지 못하도록 한다.
+		BOOL on = TRUE;
+		//::setsockopt(m_Handle, SOL_SOCKET, SO_CONDITIONAL_ACCEPT, (char*)&on, sizeof(on));
 	}
 }
 
@@ -114,9 +159,14 @@ bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 {
 	DWORD outputBuffer{ 0 };
 	DWORD receivedByte{ 0 };
-	const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
-		0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetTag()));
+	//const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
+	//	0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetTag()));
 
+
+	 const bool result = Network::lpfnAcceptEx(GetHandle(), newSocket->GetHandle()
+											, (PVOID)acceptEvent->GetBuffer(), (sizeof(sockaddr_in) + 16) * 2, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16
+											, &receivedByte
+											, (LPOVERLAPPED)(&acceptEvent->GetTag()));
 	return result;
 }
 
@@ -146,5 +196,19 @@ bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 
 bool CSocket::Send(CAsyncTcpEvent* sendEvent)
 {
+	return true;
+}
+
+bool CSocket::OnAccepted(CAsyncTcpEvent* acceptEvent)
+{
+	sockaddr* localAddr = nullptr;
+	sockaddr* remoteAddr = nullptr;
+
+	int localLen = 0;
+	int remoteLen = 0;
+	
+	Network::lpfnGetAcceptExSocketAddrs(acceptEvent->GetBuffer(), (sizeof(sockaddr_in) + 16) * 2, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16
+		, &localAddr, &localLen, &remoteAddr, &remoteLen);
+
 	return true;
 }
