@@ -26,6 +26,8 @@ public:
 	void SetSocket(CSocket* socket) { m_Socket = socket; }
 
 	char* GetBuffer() { return m_Buffer; };
+	void CleanBuffer();
+	WSABUF* GetWsaBuffer() { return &m_WsaBuffer; };
 	
 private:
 	CSocket* m_Socket;

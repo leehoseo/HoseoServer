@@ -177,6 +177,8 @@ bool CSocket::Connect()
 
 bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 {
+
+
 	/*WSABUF ioBuf;
 	ioBuf.buf = recvEvent->GetBuffer();
 	ioBuf.len = 

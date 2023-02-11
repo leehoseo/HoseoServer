@@ -51,6 +51,7 @@ bool CAsyncTcpComponent::Connect()
 
 bool CAsyncTcpComponent::PostRecv()
 {
+    //m_RecvEvent->GetBuffer
 //       evt->TotalBytes = offset;
 //
 //#ifdef ZERO_BYTE_RECV_ENABLED

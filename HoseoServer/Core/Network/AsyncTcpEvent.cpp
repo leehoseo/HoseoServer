@@ -40,3 +40,8 @@ int CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 
 	return byte;
 }
+
+void CAsyncTcpEvent::CleanBuffer()
+{
+	ZeroMemory(m_Buffer, sizeof(m_Buffer));
+}
