@@ -9,9 +9,7 @@ CPacketHandler::~CPacketHandler()
 {
 }
 
-void CPacketHandler::Execute(CPeer* peer)
+int CPacketHandler::Execute(CPeer* peer, char* buffer, int receiveLen)
 {
 	// 최종적인 컨텐츠로직 전 검증처리
-
-	OnExecute(peer);
 }
