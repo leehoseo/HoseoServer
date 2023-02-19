@@ -93,6 +93,18 @@
     <ClInclude Include="NetworkAppManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="PacketBuilder.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Builder.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Handler.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HandlerRegistry.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -141,6 +153,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="NetworkAppManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketBuilder.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Builder.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Handler.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="HandlerRegistry.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

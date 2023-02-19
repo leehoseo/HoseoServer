@@ -7,10 +7,13 @@
 #include "Network/Packet.h"
 #include "Network/PacketWriter.h"
 #include "TradingAppManager.h"
-#include "flatbuffers/flatbuffers.h"
+#include "TradeShared/TradeSharedPacket.h"
 
 int main()
 {
+	uint8_t* buffer = TradePacket::MakePersonBuffer("heelele", 155);
+	//flatBuffers::flatBufferBuilder builder;
+
 	g_TradingAppManager::GetInstance()->Setup();
 
 	//CPacketWriter<CLogin> packet();

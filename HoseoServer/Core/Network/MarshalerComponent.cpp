@@ -2,6 +2,7 @@
 #include "AsyncTcpEvent.h"
 #include "PacketRegistry.h"
 #include "PacketHandler.h"
+#include "HandlerRegistry.h"
 
 void CMarshalerComponent::Init()
 {
