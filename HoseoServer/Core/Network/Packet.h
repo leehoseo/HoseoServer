@@ -18,7 +18,7 @@ struct PacketHeader
 class CPacket
 {
 public:
-	static void GetSize(char* buffer, PacketSize_t& outSize);
+	static void GetSize(const char* buffer, PacketSize_t& outSize);
 	static void SetSize(char* outBuffer, const PacketSize_t& size);
 
 	static void GetId(const char* buffer, PacketId_t& outSize);
@@ -30,7 +30,7 @@ public:
 	static void GetEncryptionType(const char* buffer, EncryptionType_t& outSize);
 	static void SetEncryptionType(char* outBuffer, const EncryptionType_t& size);
 
-	static void GetBody(const char* buffer, char* outBody, const int len);
+	static void GetBody(const char* buffer, char* outBody);
 	static void SetBody(char* outBuffer, const char* body, const int len);
 	
 	static int FindPacket(int value);

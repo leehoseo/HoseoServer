@@ -9,7 +9,8 @@ CPacketHandler::~CPacketHandler()
 {
 }
 
-int CPacketHandler::Execute(CPeer* peer, char* buffer, int receiveLen)
+int CPacketHandler::Execute(CPeer* peer, char* buffer)
 {
 	// 최종적인 컨텐츠로직 전 검증처리
+	return 0;
 }

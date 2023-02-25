@@ -11,12 +11,8 @@
 
 int main()
 {
-	uint8_t* buffer = TradePacket::MakePersonBuffer("heelele", 155);
-	//flatBuffers::flatBufferBuilder builder;
-
 	g_TradingAppManager::GetInstance()->Setup();
 
-	//CPacketWriter<CLogin> packet();
 	g_AsyncDispatcher::GetInstance()->Start();
 
 	// 데이터 세팅

@@ -2,7 +2,7 @@
 #include <string>
 #include <Windows.h>
 
-void CPacket::GetSize(char* buffer, PacketSize_t& outValue)
+void CPacket::GetSize(const char* buffer, PacketSize_t& outValue)
 {
 	memcpy(&outValue, buffer, sizeof(PacketSize_t));
 }
@@ -42,9 +42,15 @@ void CPacket::SetEncryptionType(char* outBuffer, const EncryptionType_t& value)
 	memcpy(outBuffer + 5, &value, sizeof(EncryptionType_t));
 }
 
-void CPacket::GetBody(const char* buffer, char* outBody, const int len)
+void CPacket::GetBody(const char* buffer, char* outBody)
 {
-	memcpy(&outBody, buffer + 6, len);
+	PacketSize_t size = 0;
+	CPacket::GetSize(buffer, size);
+
+	PacketSize_t bodySize = size - sizeof(PacketHeader);
+	outBody = new char[bodySize];
+
+	memcpy(&outBody, buffer + 6, bodySize);
 }
 
 void CPacket::SetBody(char* outBuffer, const char* body, const int len)

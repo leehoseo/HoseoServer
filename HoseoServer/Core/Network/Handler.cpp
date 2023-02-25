@@ -11,7 +11,7 @@ CHandler::~CHandler()
 
 }
 
-int CHandler::Execute(CPeer* peer, char* buffer, int receiveLen)
+int CHandler::Execute(CPeer* peer, char* buffer)
 {
 	return 0;
 }

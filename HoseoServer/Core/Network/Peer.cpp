@@ -18,7 +18,7 @@ int CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 {
 	CMarshalerComponent* marshaler = GetComponent<CMarshalerComponent>();
 
-	int size = marshaler->UnMarshal(tcpEvent->GetBuffer());
+	int size = marshaler->UnMarshal(this, tcpEvent->GetBuffer());
 
 	CAsyncTcpComponent* tcpComponent = GetComponent<CAsyncTcpComponent>();
 	tcpComponent->PostRecv();

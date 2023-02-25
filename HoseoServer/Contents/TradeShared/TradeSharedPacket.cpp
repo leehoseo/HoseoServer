@@ -1,16 +1,24 @@
 #include "TradeSharedPacket.h"
 #include "Person_generated.h"
 
+
 namespace TradePacket
 {
-	uint8_t* MakePersonBuffer(std::string name, int age)
+	/*template<typename T>
+	uint8_t* PackPacketBuffer(T* packet)
 	{
 		flatbuffers::FlatBufferBuilder builder;
-		auto buildedName = builder.CreateString(name);
-		
-		builder.Finish(CreatePerson(builder, buildedName, age));
-		
+		packet->Pack(builder);
+
 		return builder.GetBufferPointer();
 	}
+	
+	template<typename T>
+	T* UnPackPacketBuffer(uint8_t* buffer)
+	{
+		T* packet = new T();
+		packet->UnPack(builder);
 
+		return packet;
+	}*/
 }
