@@ -98,6 +98,10 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>start "" "$(MSBuildProjectDirectory)\MakePacket.bat" $(SolutionDir) $(MSBuildProjectDirectory)
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -153,8 +157,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Generated\Person_generated.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Person_generated.h" />
     <ClInclude Include="TradeSharedPacket.h" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +169,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TradeSharedPacket.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fbs\Person.fbs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

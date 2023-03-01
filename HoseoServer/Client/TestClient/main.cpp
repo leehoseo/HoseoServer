@@ -3,7 +3,5 @@
 
 int main()
 {
-	g_AsyncDispatcher::GetInstance()->Start();
-
 	return 0;
 }

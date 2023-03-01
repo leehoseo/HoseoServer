@@ -13,35 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Generated">
-      <UniqueIdentifier>{68da5a5f-b8cb-4fc4-a17e-ea82868fd82d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fbs">
-      <UniqueIdentifier>{42af74eb-e7fc-44e5-b530-f7604af02f80}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="TradeSharedPacket.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Generated\Person_generated.h">
-      <Filter>Generated</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TradeSharedPacket.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Fbs\Person.fbs">
-      <Filter>Fbs</Filter>
-    </None>
   </ItemGroup>
 </Project>

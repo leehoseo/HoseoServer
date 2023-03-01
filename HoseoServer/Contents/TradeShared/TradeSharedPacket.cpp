@@ -1,6 +1,4 @@
 #include "TradeSharedPacket.h"
-#include "Person_generated.h"
-
 
 namespace TradePacket
 {
