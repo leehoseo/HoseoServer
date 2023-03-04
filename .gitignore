@@ -31,3 +31,6 @@
 
 .vs
 Debug/
+HoseoServer/packages/DllExport.1.7.4/tools/PeViewer.exe
+HoseoServer/packages/DllExport.1.7.4/tools/coreclr/ilasm.exe
+HoseoServer/packages/DllExport.1.7.4/tools/coreclr/ildasm.exe
