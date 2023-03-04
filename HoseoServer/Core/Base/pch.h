@@ -12,8 +12,6 @@
 // 컨테이너 헤더
 #include <unordered_map>
 
-using namespace std;
-
 // 공용 헤더
 #include "ECS/Component.h"
 #include "ECS/Entity.h"
