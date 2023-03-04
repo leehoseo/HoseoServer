@@ -1,5 +1,5 @@
 #pragma once
-#include "Base/ECS/System.h"
+#include "Base/System.h"
 #include <unordered_map>
 
 //class CPacketHandler;

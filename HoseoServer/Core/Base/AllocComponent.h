@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Base/ECS/Component.h"
+#include "Component.h"
 
 class CAllocComponent : public CComponent
 {

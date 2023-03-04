@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 
-#include "Base/ECS/System.h"
+#include "Base/System.h"
 #include "Base/Thread.h"
 
 #include "AsyncEvent.h"

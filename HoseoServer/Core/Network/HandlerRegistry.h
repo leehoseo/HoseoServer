@@ -1,5 +1,5 @@
 #pragma once
-#include "Base/Pattern/Singleton.h"
+#include "Base/Singleton.h"
 #include "Handler.h"
 #include <map>
 

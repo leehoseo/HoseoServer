@@ -73,7 +73,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Core\Base;$(SolutionDir)Core\Network;$(SolutionDir)Core\Server;$(SolutionDir)Contents;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Contents;$(IncludePath)</IncludePath>
+    <IntDir>$(SolutionDir)immediate\Obj\$(Configuration)\$(MSBuildProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)immediate\Lib\$(Configuration)\$(MSBuildProjectName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -157,14 +159,11 @@
     <ProjectReference Include="..\..\Core\Base\Base.vcxproj">
       <Project>{ff6d711e-404a-4ef8-90fd-8f470f2d47c7}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core\Network\Network.vcxproj">
-      <Project>{d6caf8e9-9604-4ba2-8136-a6bb4abc9db4}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Core\Server\Lobby\Lobby.vcxproj">
+    <ProjectReference Include="..\..\Core\Lobby\Lobby.vcxproj">
       <Project>{5d2b7b94-32c8-464a-a6d1-c07863d392c2}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core\Server\Server\Server.vcxproj">
-      <Project>{2fc3d6e8-1c27-4d27-9b9d-11a4f84b9ae2}</Project>
+    <ProjectReference Include="..\..\Core\Network\Network.vcxproj">
+      <Project>{d6caf8e9-9604-4ba2-8136-a6bb4abc9db4}</Project>
     </ProjectReference>
     <ProjectReference Include="..\TradeShared\TradeShared.vcxproj">
       <Project>{c0f2d492-d32a-4a7b-89a9-e35b14d9800e}</Project>

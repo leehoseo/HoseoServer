@@ -8,7 +8,7 @@
 #define PCH_H
 
 // 여기에 미리 컴파일하려는 헤더 추가
-#include "Memory/MemoryUtil.h"
-#include <stdint.h>
+#include "Base/MemoryUtil.h"
 #include <string>
+
 #endif //PCH_H

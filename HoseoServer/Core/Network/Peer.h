@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Base/ECS/Entity.h"
+#include "Base/Entity.h"
 #include "AsyncTcpEventSink.h"
 
 class CSocket;

@@ -9,14 +9,7 @@
 
 // 여기에 미리 컴파일하려는 헤더 추가
 
-// 컨테이너 헤더
-#include <unordered_map>
-
 // 공용 헤더
-#include "ECS/Component.h"
-#include "ECS/Entity.h"
-#include "ECS/System.h"
-
-#include "Memory/MemoryUtil.h"
+#include "MemoryUtil.h"
 
 #endif //PCH_H

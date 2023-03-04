@@ -1,5 +1,5 @@
 #pragma once
-#include "Base/Pattern/Singleton.h"
+#include "Singleton.h"
 /// <summary>
 /// ECS의 System 최상위 클래스
 /// </summary>

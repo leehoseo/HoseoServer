@@ -32,4 +32,6 @@ bool CTradeClientAppManager::Setup()
     g_ListenSystem::GetInstance()->Start();
 
     g_AsyncDispatcher::GetInstance()->Join();
+
+    return true;
 }

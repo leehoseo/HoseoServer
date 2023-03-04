@@ -32,35 +32,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ECS\Entity.h">
-      <Filter>소스 파일\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="ECS\System.h">
-      <Filter>소스 파일\ECS</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Memory\MemorySystem.h">
-      <Filter>소스 파일\Memory</Filter>
-    </ClInclude>
-    <ClInclude Include="Memory\AllocComponent.h">
-      <Filter>소스 파일\Memory</Filter>
-    </ClInclude>
-    <ClInclude Include="Memory\MemoryEntity.h">
-      <Filter>소스 파일\Memory</Filter>
-    </ClInclude>
-    <ClInclude Include="ECS\Component.h">
-      <Filter>소스 파일\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="Pattern\Singleton.h">
-      <Filter>소스 파일\Pattern</Filter>
-    </ClInclude>
-    <ClInclude Include="Memory\MemoryUtil.h">
-      <Filter>소스 파일\Memory</Filter>
-    </ClInclude>
-    <ClInclude Include="Memory\MemoryUtil.hpp">
-      <Filter>소스 파일\Memory</Filter>
     </ClInclude>
     <ClInclude Include="TaskComponent.h">
       <Filter>소스 파일\Task</Filter>
@@ -79,31 +52,37 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="AppManager.h" />
+    <ClInclude Include="MemoryUtil.hpp">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryUtil.h">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="MemorySystem.h">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryEntity.h">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AllocComponent.h">
+      <Filter>소스 파일\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>소스 파일\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>소스 파일\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>소스 파일\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>소스 파일\Pattern</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ECS\Entity.cpp">
-      <Filter>소스 파일\ECS</Filter>
-    </ClCompile>
-    <ClCompile Include="ECS\System.cpp">
-      <Filter>소스 파일\ECS</Filter>
-    </ClCompile>
-    <ClCompile Include="Memory\MemorySystem.cpp">
-      <Filter>소스 파일\Memory</Filter>
-    </ClCompile>
-    <ClCompile Include="Memory\MemoryEntity.cpp">
-      <Filter>소스 파일\Memory</Filter>
-    </ClCompile>
-    <ClCompile Include="Memory\AllocComponent.cpp">
-      <Filter>소스 파일\Memory</Filter>
-    </ClCompile>
-    <ClCompile Include="ECS\Component.cpp">
-      <Filter>소스 파일\ECS</Filter>
-    </ClCompile>
-    <ClCompile Include="Pattern\Singleton.cpp">
-      <Filter>소스 파일\Pattern</Filter>
     </ClCompile>
     <ClCompile Include="TaskComponent.cpp">
       <Filter>소스 파일\Task</Filter>
@@ -117,8 +96,29 @@
     <ClCompile Include="Atomic.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="MemorySystem.cpp">
+      <Filter>소스 파일\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryEntity.cpp">
+      <Filter>소스 파일\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="AllocComponent.cpp">
+      <Filter>소스 파일\Memory</Filter>
+    </ClCompile>
     <ClCompile Include="AppManager.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>소스 파일\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>소스 파일\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>소스 파일\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>소스 파일\Pattern</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

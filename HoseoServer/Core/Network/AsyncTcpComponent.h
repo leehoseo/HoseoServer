@@ -1,5 +1,5 @@
 #pragma once
-#include "Base/ECS/Component.h"
+#include "Base/Component.h"
 
 #define WIN32_LEAN_AND_MEAN
 

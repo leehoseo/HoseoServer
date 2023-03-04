@@ -1,5 +1,5 @@
 #pragma once
-#include "Pattern/Singleton.h"
+#include "Singleton.h"
 
 class CAppManager : public CSingleton<CAppManager>
 {

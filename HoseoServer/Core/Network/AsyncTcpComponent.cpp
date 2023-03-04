@@ -17,7 +17,7 @@ void CAsyncTcpComponent::Init()
 {
     //m_Socket = New(CSocket);
     //m_Socket =  new CSocket();
-    m_RecvEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::RECEIVE);
+    m_RecvEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::RECEIVE); // New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::RECEIVE);
 }
 
 bool CAsyncTcpComponent::Bind(sockaddr_in& addr)

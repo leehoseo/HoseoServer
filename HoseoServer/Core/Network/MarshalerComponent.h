@@ -1,5 +1,5 @@
 #pragma once
-#include "Base/ECS/Component.h"
+#include "Base/Component.h"
 
 class CAsyncTcpEvent;
 class CPeer;
