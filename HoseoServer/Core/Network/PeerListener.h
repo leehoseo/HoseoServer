@@ -14,7 +14,7 @@ public:
 	virtual ~CPeerListener();
 
 public:
-	void Start();
+	virtual void Start();
 	virtual CPeer* CreatePeer();
 	void PostAccept(CAsyncTcpEvent* acceptEvent);
 public:

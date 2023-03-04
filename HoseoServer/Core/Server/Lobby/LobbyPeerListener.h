@@ -1,7 +1,7 @@
 #pragma once
-#include "Server/PeerListener.h"
+#include "Server/ServerListener.h"
 
-class CLobbyPeerListener : public CPeerListener
+class CLobbyPeerListener : public CServerListener
 {
 public:
 	CLobbyPeerListener();

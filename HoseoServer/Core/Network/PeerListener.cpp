@@ -17,24 +17,7 @@ CPeerListener::~CPeerListener()
 
 void CPeerListener::Start()
 {
-	CAsyncTcpComponent* component = GetComponent<CAsyncTcpComponent>();
-	if (nullptr == component)
-	{
-		return;
-	}
-	component->SetSocket(new CSocket());
-
-	component->Bind(13480);
-	component->Listen();
-
-	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
-
-	// 한번에 받을 수 있는 클라이언트의 수 4
-	for (int index = 0; index < 4; ++index)
-	{
-		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::ACCEPT);
-		PostAccept(acceptEvent);
-	}
+	
 }
 
 CPeer* CPeerListener::CreatePeer()
@@ -64,14 +47,10 @@ void CPeerListener::PostAccept(CAsyncTcpEvent* acceptEvent)
 		DWORD lastError = GetLastError();
 		if (ERROR_IO_PENDING == lastError)
 		{
-			int num = 0;
-			++num;
 			// 성공
 		}
 		else
 		{
-			int num = 0;
-			++num;
 			// 실패
 		}
 

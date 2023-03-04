@@ -20,9 +20,9 @@ void CAsyncTcpComponent::Init()
     m_RecvEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::RECEIVE);
 }
 
-bool CAsyncTcpComponent::Bind(const int port)
+bool CAsyncTcpComponent::Bind(sockaddr_in& addr)
 {
-    return m_Socket->Bind(port);
+    return m_Socket->Bind(addr);
 }
 
 bool CAsyncTcpComponent::Listen()
@@ -44,26 +44,21 @@ void CAsyncTcpComponent::OnAccepted(CAsyncTcpEvent* acceptEvent)
     m_Socket->OnAccepted(acceptEvent);
 }
 
-bool CAsyncTcpComponent::Connect()
+bool CAsyncTcpComponent::Connect(sockaddr_in& addr)
 {
-    return m_Socket->Connect();
+    return m_Socket->Connect(addr);
 }
 
 bool CAsyncTcpComponent::PostRecv()
 {
-    //m_RecvEvent->GetBuffer
-//       evt->TotalBytes = offset;
-//
-//#ifdef ZERO_BYTE_RECV_ENABLED
-//   evt->WsaBuf.buf = nullptr;
-//   evt->WsaBuf.len = 0;
-//#else
-//   evt->WsaBuf.buf = evt->Buffer + offset;
-//   evt->WsaBuf.len = evt->Capacity - offset;
-//#endif
-//
-//
-//   m_RecvEvent;
+    // 받기 전 recvEvent에 대한 처리
+    return m_Socket->Recv(m_RecvEvent);
+}
 
-    return m_Socket->Connect();
+bool CAsyncTcpComponent::PostSend(char* buffer)
+{
+    CAsyncTcpEvent* sendEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::SEND);
+    sendEvent->SetBuffer(buffer);
+
+    return m_Socket->Send(sendEvent);
 }

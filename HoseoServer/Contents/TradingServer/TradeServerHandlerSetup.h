@@ -1,6 +1,6 @@
 #pragma once
 
-namespace TradeHandlerSetup
+namespace TradeServerHandlerSetup
 {
 	void Setup();
 }

@@ -125,16 +125,9 @@ bool CSocket::Listen()
 	return true;
 }
 
-bool CSocket::Bind(const int port)
+bool CSocket::Bind(sockaddr_in& addr)
 {
-	sockaddr_in socketAddr;
-	memset(&socketAddr, 0, sizeof(socketAddr));
-	socketAddr.sin_family = AF_INET;
-	socketAddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	socketAddr.sin_port = htons(port);
-	//inet_pton(AF_INET, "127.0.0.1", &socketAddr.sin_addr.s_addr);
-
-	if (SOCKET_ERROR == ::bind(GetHandle(), reinterpret_cast<sockaddr*>(&socketAddr), sizeof(socketAddr)))
+	if (SOCKET_ERROR == ::bind(GetHandle(), reinterpret_cast<sockaddr*>(&addr), sizeof(addr)))
 	{
 		//Logger::getInstance()->log(Logger::Level::WARNING, "Error_Bind");
 		return false;
@@ -157,9 +150,14 @@ bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 	return result;
 }
 
-bool CSocket::Connect()
+bool CSocket::Connect(sockaddr_in& addr)
 {
 	return true;
+}
+
+bool CSocket::Disconnect()
+{
+	return false;
 }
 
 bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
@@ -178,13 +176,10 @@ bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 	return WSA_IO_PENDING != GetLastError();
 }
 
-bool CSocket::Send(char* buffer)
+bool CSocket::Send(CAsyncTcpEvent* sendEvent)
 {
 	DWORD sendBytes = {};
 	DWORD flags = {};
-
-	CAsyncTcpEvent* sendEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::SEND);
-	sendEvent->SetBuffer(buffer);
 
 	WSABUF* wsaBuffer = sendEvent->GetWsaBuffer();
 	wsaBuffer->buf = sendEvent->GetBuffer();

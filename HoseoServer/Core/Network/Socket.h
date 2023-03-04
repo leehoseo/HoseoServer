@@ -25,11 +25,11 @@ public:
 
 	bool Listen();
 	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
-	bool Bind(const int port);
-	bool Connect();
-	bool DisConnect();
+	bool Bind(sockaddr_in& addr);
+	bool Connect(sockaddr_in& addr);
+	bool Disconnect();
 	bool Recv(CAsyncTcpEvent* recvEvent);
-	bool Send(char* buffer);
+	bool Send(CAsyncTcpEvent* sendEvent);
 
 	bool OnAccepted(CAsyncTcpEvent* acceptEvent);
 

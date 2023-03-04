@@ -154,21 +154,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ListenSystem.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="PeerListener.h" />
     <ClInclude Include="ServerAppManager.h" />
+    <ClInclude Include="ServerListener.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ListenSystem.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="PeerListener.cpp" />
     <ClCompile Include="ServerAppManager.cpp" />
+    <ClCompile Include="ServerListener.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Base\Base.vcxproj">

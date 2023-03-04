@@ -24,6 +24,7 @@
     <ProjectGuid>{609aabd1-48a7-4b05-8337-d76f091e9126}</ProjectGuid>
     <RootNamespace>TradingServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TradeServer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -149,8 +150,8 @@
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TradeHandlerSetup.cpp" />
-    <ClCompile Include="TradingAppManager.cpp" />
+    <ClCompile Include="TradeServerHandlerSetup.cpp" />
+    <ClCompile Include="TradeServerAppManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Base\Base.vcxproj">
@@ -172,8 +173,8 @@
   <ItemGroup>
     <ClInclude Include="CT_LoginHandler.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="TradeHandlerSetup.h" />
-    <ClInclude Include="TradingAppManager.h" />
+    <ClInclude Include="TradeServerHandlerSetup.h" />
+    <ClInclude Include="TradeServerAppManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

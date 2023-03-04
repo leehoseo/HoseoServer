@@ -24,6 +24,7 @@
     <ProjectGuid>{2664a378-6fed-4870-bc9f-6c12538b521d}</ProjectGuid>
     <RootNamespace>TradingClient</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TradeClient</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -156,6 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TradeClientAppManager.cpp" />
+    <ClCompile Include="TradeClientHandlerSetup.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TradeClientAppManager.h" />
+    <ClInclude Include="TradeClientHandlerSetup.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

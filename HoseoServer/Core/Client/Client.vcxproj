@@ -155,10 +155,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ClientAppManager.h" />
+    <ClInclude Include="ClientListener.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClientAppManager.cpp" />
+    <ClCompile Include="ClientListener.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

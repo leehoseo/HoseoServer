@@ -105,6 +105,12 @@
     <ClInclude Include="HandlerRegistry.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="PeerListener.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ListenSystem.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -165,6 +171,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="HandlerRegistry.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PeerListener.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ListenSystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

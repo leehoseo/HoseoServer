@@ -21,12 +21,18 @@
     <ClInclude Include="ClientAppManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="ClientListener.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="ClientAppManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientListener.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
