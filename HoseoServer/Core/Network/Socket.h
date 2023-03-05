@@ -26,7 +26,7 @@ public:
 	bool Listen();
 	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
 	bool Bind(sockaddr_in& addr);
-	bool Connect(sockaddr_in& addr);
+	bool Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent);
 	bool Disconnect();
 	bool Recv(CAsyncTcpEvent* recvEvent);
 	bool Send(CAsyncTcpEvent* sendEvent);

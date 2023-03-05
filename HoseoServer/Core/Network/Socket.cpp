@@ -74,7 +74,7 @@ namespace Network
 
 		} while (false);
 
-		return result != NO_ERROR;
+		return result == NO_ERROR;
 	}
 }
 
@@ -150,9 +150,22 @@ bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 	return result;
 }
 
-bool CSocket::Connect(sockaddr_in& addr)
+bool CSocket::Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent)
 {
-	return true;
+	DWORD outputBuffer{ 0 };
+	DWORD receivedByte{ 0 };
+	//const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
+	//	0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetTag()));
+
+	WSABUF* wsaBuffer = connectEvent->GetWsaBuffer();
+	wsaBuffer->buf = connectEvent->GetBuffer();
+	wsaBuffer->len = sizeof(connectEvent->GetBuffer());
+
+
+	const bool result = Network::lpfnConnectEx(GetHandle(), reinterpret_cast<SOCKADDR*>(&addr), sizeof(addr)
+		, (PVOID)wsaBuffer, wsaBuffer->len, NULL, &connectEvent->GetTag());
+	
+	return result;
 }
 
 bool CSocket::Disconnect()

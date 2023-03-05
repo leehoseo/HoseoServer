@@ -20,17 +20,22 @@ int CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 	int byte = 0;
 	switch (GetType())
 	{
-	case EventType::ACCEPT:
+	case EventType::Accept:
 	{
 		tcpEventSink->OnAcceptEvent(this);
 		break;
 	}
-	case EventType::SEND:
+	case EventType::Send:
 	{
 		tcpEventSink->OnSendEvent(this);
 		break;
 	}
-	case EventType::RECEIVE:
+	case EventType::Receive:
+	{
+		byte = tcpEventSink->OnReceiveEvent(this);
+		break;
+	}
+	case EventType::Connect:
 	{
 		byte = tcpEventSink->OnReceiveEvent(this);
 		break;

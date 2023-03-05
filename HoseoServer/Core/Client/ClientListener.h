@@ -1,6 +1,7 @@
 #pragma once
 #include "Network/PeerListener.h"
 
+class CAsyncTcpEvent;
 class CClientListener : public CPeerListener
 {
 public:
@@ -9,5 +10,6 @@ public:
 
 public:
 	virtual void Start() override;
+	virtual void OnConnectEvent(CAsyncTcpEvent* tcpEvent) override;
 };
 

@@ -31,9 +31,15 @@ void CClientListener::Start()
 	server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	component->Bind(server_addr);
 
+	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
+	
+	CAsyncTcpEvent* connectEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::Connect);
+
 	server_addr.sin_port = htons(13480);
 	inet_pton(AF_INET, "127.0.0.1", &server_addr.sin_addr.s_addr);
-	component->Connect(server_addr);
+	component->Connect(server_addr, connectEvent);
+}
 
-	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
+void CClientListener::OnConnectEvent(CAsyncTcpEvent* tcpEvent)
+{
 }

@@ -10,6 +10,7 @@ public:
 
 public:
 	virtual void OnAcceptEvent(CAsyncTcpEvent* tcpEvent);
+	virtual void OnConnectEvent(CAsyncTcpEvent* tcpEvent);
 	virtual int OnReceiveEvent(CAsyncTcpEvent* tcpEvent);
 	virtual void OnSendEvent(CAsyncTcpEvent* tcpEvent);
 };

@@ -8,10 +8,11 @@ class CAsyncTcpEvent : public CAsyncEvent
 public:
 	enum class EventType
 	{
-		  ACCEPT = 0
-		, SEND
-		, RECEIVE
-		, COUNT
+		  Accept = 0
+		, Send
+		, Receive
+		, Connect
+		, Count
 	};
 public:
 	CAsyncTcpEvent(const EventType type);

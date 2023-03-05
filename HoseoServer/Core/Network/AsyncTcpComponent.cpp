@@ -17,7 +17,7 @@ void CAsyncTcpComponent::Init()
 {
     //m_Socket = New(CSocket);
     //m_Socket =  new CSocket();
-    m_RecvEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::RECEIVE); // New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::RECEIVE);
+    m_RecvEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::Receive); // New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::RECEIVE);
 }
 
 bool CAsyncTcpComponent::Bind(sockaddr_in& addr)
@@ -44,9 +44,9 @@ void CAsyncTcpComponent::OnAccepted(CAsyncTcpEvent* acceptEvent)
     m_Socket->OnAccepted(acceptEvent);
 }
 
-bool CAsyncTcpComponent::Connect(sockaddr_in& addr)
+bool CAsyncTcpComponent::Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent)
 {
-    return m_Socket->Connect(addr);
+    return m_Socket->Connect(addr, connectEvent);
 }
 
 bool CAsyncTcpComponent::PostRecv()
@@ -57,7 +57,7 @@ bool CAsyncTcpComponent::PostRecv()
 
 bool CAsyncTcpComponent::PostSend(char* buffer)
 {
-    CAsyncTcpEvent* sendEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::SEND);
+    CAsyncTcpEvent* sendEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::Send);
     sendEvent->SetBuffer(buffer);
 
     return m_Socket->Send(sendEvent);
