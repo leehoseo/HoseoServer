@@ -42,4 +42,11 @@ void CClientListener::Start()
 
 void CClientListener::OnConnectEvent(CAsyncTcpEvent* tcpEvent)
 {
+	CAsyncTcpComponent* component = GetComponent<CAsyncTcpComponent>();
+	if (nullptr == component)
+	{
+		return;
+	}
+
+	component->PostRecv();
 }

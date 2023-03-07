@@ -2586,7 +2586,7 @@ class CppGenerator : public BaseGenerator {
 
     code_.SetValue("STRUCT_NAME", Name(struct_def));
     code_ +=
-        "struct {{STRUCT_NAME}} FLATBUFFERS_FINAL_CLASS"
+        "struct {{STRUCT_NAME}}"
         " : private ::flatbuffers::Table {";
     if (opts_.generate_object_based_api) {
       code_ += "  typedef {{NATIVE_NAME}} NativeTableType;";

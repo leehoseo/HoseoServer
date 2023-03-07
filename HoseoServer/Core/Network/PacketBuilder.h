@@ -21,3 +21,7 @@ namespace PacketBuilder
 		return packet;
 	}
 };
+
+class CPacketBuilder
+{
+};

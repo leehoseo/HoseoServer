@@ -77,40 +77,49 @@ void CAsyncDispatcher::CIocpThread::Run()
 												, reinterpret_cast<LPOVERLAPPED*>(&buffer)
 												, ioByte);
 
-		int byte = 0;
-
-		// 이 개념은 아니다 손봐야함
-		int handled = 0;
-		// 처리 가능한 바이트 수
-		int total = 0; //m_RecvEvent->TotalBytes + ioByte;
-		while (handled < total)
+		if ( 0 < ioByte)
 		{
-			int result = buffer->m_Owner->Execute(sink);  
-			//int result = m_Marshaller->Unmarshall(this, m_RecvEvent->Buffer + handled, total - handled);
-			if (result <= 0)
+			int byte = 0;
+
+			// 이 개념은 아니다 손봐야함
+			int handled = 0;
+			// 처리 가능한 바이트 수
+			int total = 0; //m_RecvEvent->TotalBytes + ioByte;
+
+
+			while (handled < total)
 			{
-				break; // 더 이상 읽을 수 있는 것이 없거나, 에러가 발생
+				int result = buffer->m_Owner->Execute(sink);
+				//int result = m_Marshaller->Unmarshall(this, m_RecvEvent->Buffer + handled, total - handled);
+				if (result <= 0)
+				{
+					break; // 더 이상 읽을 수 있는 것이 없거나, 에러가 발생
+				}
+				else if (result > 0)
+				{
+					handled += result; // 정상 처리
+				}
 			}
-			else if (result > 0)
+
+			// 남은 것이 있다면 앞쪽으로 옮겨준다.
+			//if (mySocket->GetErrorCount() == 0 && 0 < handled && handled < total)
+			//{
+			//	memmove(m_RecvEvent->Buffer, m_RecvEvent->Buffer + handled, total - handled);
+			//}
+
+			if (nullptr != buffer)
 			{
-				handled += result; // 정상 처리
+				byte = buffer->m_Owner->Execute(sink);
+			}
+
+			if (byte != ioByte)
+			{
+				// 문제 있나..?
 			}
 		}
-
-		// 남은 것이 있다면 앞쪽으로 옮겨준다.
-		//if (mySocket->GetErrorCount() == 0 && 0 < handled && handled < total)
-		//{
-		//	memmove(m_RecvEvent->Buffer, m_RecvEvent->Buffer + handled, total - handled);
-		//}
-
-		if (nullptr != buffer)
+		else
 		{
-			byte = buffer->m_Owner->Execute(sink);
-		}
 
-		if (byte != ioByte)
-		{
-			// 문제 있나..?
 		}
 	}
 }

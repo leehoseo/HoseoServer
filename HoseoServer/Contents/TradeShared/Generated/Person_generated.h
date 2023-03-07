@@ -16,7 +16,7 @@ static_assert(FLATBUFFERS_VERSION_MAJOR == 23 &&
 struct Person;
 struct PersonBuilder;
 
-struct Person FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+struct Person : private ::flatbuffers::Table {
   typedef PersonBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_NAME = 4,
