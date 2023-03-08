@@ -12,6 +12,7 @@ public:
 		, Send
 		, Receive
 		, Connect
+		, Disconnect
 		, Count
 	};
 public:

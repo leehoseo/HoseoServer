@@ -37,9 +37,15 @@ int CAsyncTcpEvent::Execute(CAsyncEventSink* sink)
 	}
 	case EventType::Connect:
 	{
-		byte = tcpEventSink->OnReceiveEvent(this);
+		tcpEventSink->OnConnectEvent(this);
 		break;
 	}
+	case EventType::Disconnect:
+	{
+		tcpEventSink->OnReceiveEvent(this);
+		break;
+	}
+
 	default:
 		break;
 	}

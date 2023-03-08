@@ -1,5 +1,4 @@
 #include "AsyncEventSink.h"
-#include "AsyncEvent.h"
 
 CAsyncEventSink::CAsyncEventSink()
 {

@@ -179,6 +179,7 @@
     <ClInclude Include="PacketWriter.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Peer.h" />
+    <ClInclude Include="PeerFacade.h" />
     <ClInclude Include="PeerListener.h" />
     <ClInclude Include="Socket.h" />
   </ItemGroup>
@@ -208,6 +209,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Peer.cpp" />
+    <ClCompile Include="PeerFacade.cpp" />
     <ClCompile Include="PeerListener.cpp" />
     <ClCompile Include="Socket.cpp" />
   </ItemGroup>

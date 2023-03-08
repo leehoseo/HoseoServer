@@ -31,5 +31,6 @@ public:
 	/// </summary>
 	/// <param name="tcpEvent"> accept시 받은 이벤트 </param>
 	virtual void OnAccepted(CAsyncTcpEvent* tcpEvent);
+	void Disconnect();
 };
 

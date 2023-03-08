@@ -49,6 +49,13 @@ bool CAsyncTcpComponent::Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent
     return m_Socket->Connect(addr, connectEvent);
 }
 
+void CAsyncTcpComponent::Disconnect()
+{
+    CAsyncTcpEvent* disconnectEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::Disconnect);
+
+    m_Socket->Disconnect(disconnectEvent);
+}
+
 bool CAsyncTcpComponent::PostRecv()
 {
     // 받기 전 recvEvent에 대한 처리

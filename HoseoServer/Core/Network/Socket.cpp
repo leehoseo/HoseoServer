@@ -168,9 +168,12 @@ bool CSocket::Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent)
 	return result;
 }
 
-bool CSocket::Disconnect()
+bool CSocket::Disconnect(CAsyncTcpEvent* disconnectEvent)
 {
-	return false;
+	// disconnectEvent를 받아도 ioByte가 0이라 Disconnect를 또 보낸다. Status로 분기 처리를 해줘야할듯
+	const bool result = Network::lpfnDisconnectEx(GetHandle(), NULL, 0, 0);
+
+	return result;
 }
 
 bool CSocket::Recv(CAsyncTcpEvent* recvEvent)

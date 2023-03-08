@@ -51,3 +51,14 @@ void CPeer::OnAccepted(CAsyncTcpEvent* tcpEvent)
 	
 	component->PostRecv();
 }
+
+void CPeer::Disconnect()
+{
+	CAsyncTcpComponent* component = GetComponent<CAsyncTcpComponent>();
+	if (nullptr == component)
+	{
+		return;
+	}
+
+	component->Disconnect();
+}

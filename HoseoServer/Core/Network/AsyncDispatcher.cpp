@@ -5,6 +5,7 @@
 #include "AsyncEvent.h"
 #include "AsyncTcpEventSink.h"
 #include "Socket.h"
+#include "PeerFacade.h"
 
 CAsyncDispatcher::CAsyncDispatcher()
 {
@@ -119,7 +120,7 @@ void CAsyncDispatcher::CIocpThread::Run()
 		}
 		else
 		{
-
+			CPeerFacade::Disconnected(dynamic_cast<CAsyncTcpEventSink*>(sink));
 		}
 	}
 }

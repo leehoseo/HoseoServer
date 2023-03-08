@@ -25,10 +25,17 @@ public:
 	bool Bind(sockaddr_in& addr);
 	bool Listen();
 	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
-	void OnAccepted(CAsyncTcpEvent* acceptEvent);
 	bool Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent);
+	void Disconnect();
 	bool PostRecv();
 	bool PostSend(char* buffer);
+
+public:
+	/// <summary>
+	/// Accept 이벤트를 받았을때 호출함
+	/// </summary>
+	/// <param name="acceptEvent"></param>
+	void OnAccepted(CAsyncTcpEvent* acceptEvent);
 private:
 	CSocket* m_Socket;
 	CAsyncTcpEvent* m_RecvEvent;
