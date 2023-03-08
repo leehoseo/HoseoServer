@@ -160,7 +160,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Generated\Person_generated.h" />
+    <ClInclude Include="Generated\Trade_generated.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="TradePacket.h" />
     <ClInclude Include="TradeSharedPacket.h" />
@@ -176,7 +176,8 @@
     <ClCompile Include="TradeSharedPacket.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Fbs\Person.fbs" />
+    <None Include="Fbs\Trade.fbs" />
+    <None Include="MakePacket.bat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

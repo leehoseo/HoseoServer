@@ -19,6 +19,9 @@
     <Filter Include="Fbs">
       <UniqueIdentifier>{42af74eb-e7fc-44e5-b530-f7604af02f80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Bat">
+      <UniqueIdentifier>{ff9f6d2c-6487-487e-a4d6-89979f0a2336}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -27,11 +30,11 @@
     <ClInclude Include="TradeSharedPacket.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Generated\Person_generated.h">
-      <Filter>Generated</Filter>
-    </ClInclude>
     <ClInclude Include="TradePacket.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Generated\Trade_generated.h">
+      <Filter>Generated</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -46,8 +49,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Fbs\Person.fbs">
+    <None Include="Fbs\Trade.fbs">
       <Filter>Fbs</Filter>
+    </None>
+    <None Include="MakePacket.bat">
+      <Filter>Bat</Filter>
     </None>
   </ItemGroup>
 </Project>
