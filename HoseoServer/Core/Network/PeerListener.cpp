@@ -34,7 +34,7 @@ void CPeerListener::PostAccept(CAsyncTcpEvent* acceptEvent)
 		return;
 	}
 
-	CSocket* newSocket = new CSocket();
+	CSocket* newSocket = New(CSocket);
 	acceptEvent->SetSocket(newSocket);
 
 	if (true == component->Accept(newSocket, acceptEvent))

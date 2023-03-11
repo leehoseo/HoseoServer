@@ -45,7 +45,7 @@ namespace Network
 		int result = 0;
 		do
 		{
-			CSocket* funcSocket = new CSocket();
+			CSocket* funcSocket = New(CSocket);
 
 			if (false == LinkSocketFunc(WSAID_ACCEPTEX, &lpfnAcceptEx, funcSocket->GetHandle()))
 			{

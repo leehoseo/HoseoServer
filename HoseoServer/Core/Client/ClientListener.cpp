@@ -22,7 +22,7 @@ void CClientListener::Start()
 	{
 		return;
 	}
-	component->SetSocket(new CSocket());
+	component->SetSocket(New(CSocket));
 
 	sockaddr_in server_addr;
 	ZeroMemory(&server_addr, sizeof(server_addr));
@@ -33,11 +33,9 @@ void CClientListener::Start()
 
 	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
 	
-	CAsyncTcpEvent* connectEvent = new CAsyncTcpEvent(CAsyncTcpEvent::EventType::Connect);
-
 	server_addr.sin_port = htons(13480);
 	inet_pton(AF_INET, "127.0.0.1", &server_addr.sin_addr.s_addr);
-	component->Connect(server_addr, connectEvent);
+	component->Connect(server_addr, New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Connect));
 }
 
 void CClientListener::OnConnectEvent(CAsyncTcpEvent* tcpEvent)

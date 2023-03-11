@@ -7,4 +7,5 @@
 #ifndef PCH_H
 #define PCH_H
 #include <string>
+#include "Base/MemoryUtil.h"
 #endif //PCH_H

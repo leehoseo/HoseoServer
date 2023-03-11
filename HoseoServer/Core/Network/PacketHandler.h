@@ -24,7 +24,7 @@ public:\
 	static int			GetHash() { return std::hash<std::string>()(#name); } \
 	static CPacketHandler* GetClone() \
 	{ \
-		return new name##Handler(); \
+		return New(name##Handler); \
 	}\
 public:\
 	virtual int Execute( CPeer* peer, char* buffer) final;\

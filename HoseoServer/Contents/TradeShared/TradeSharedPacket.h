@@ -1,6 +1,8 @@
 #pragma once
 
-namespace TradePacket
+#include "Generated/Trade_generated.h"
+
+class TradePacket : public Person
 {
-	uint8_t* MakePersonBuffer(std::string name, int age);
-}
+};
+

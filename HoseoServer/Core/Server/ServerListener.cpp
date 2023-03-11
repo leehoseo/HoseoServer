@@ -23,7 +23,7 @@ void CServerListener::Start()
 	{
 		return;
 	}
-	component->SetSocket(new CSocket());
+	component->SetSocket(New(CSocket));
 
 	{
 		sockaddr_in socketAddr;

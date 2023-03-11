@@ -1,6 +1,4 @@
 #include "AsyncDispatcher.h"
-#include "Base/MemoryUtil.hpp"
-#include <WS2tcpip.h>
 #include <thread>
 #include "AsyncEvent.h"
 #include "AsyncTcpEventSink.h"
@@ -39,7 +37,6 @@ void CAsyncDispatcher::Join()
 		thread->Join();
 	}
 }
-
 
 bool CAsyncDispatcher::Associate(CAsyncTcpEventSink* sink, CSocket* socket)
 {

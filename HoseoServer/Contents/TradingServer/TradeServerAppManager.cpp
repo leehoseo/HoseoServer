@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "TradeServerAppManager.h"
 #include "TradeServerHandlerSetup.h"
 #include "Network/AsyncDispatcher.h"
@@ -20,9 +19,8 @@ bool CTradeServerAppManager::Setup()
     }
 
     g_AsyncDispatcher::GetInstance()->Start();
-
-    // 데이터 세팅
-    g_ListenSystem::GetInstance()->Init(new CLobbyPeerListener());
+    //데이터 세팅
+    g_ListenSystem::GetInstance()->Init(New(CLobbyPeerListener));
     g_ListenSystem::GetInstance()->Start();
 
     g_AsyncDispatcher::GetInstance()->Join();

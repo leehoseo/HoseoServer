@@ -30,9 +30,6 @@
     <ClInclude Include="TradeSharedPacket.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="TradePacket.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Generated\Trade_generated.h">
       <Filter>Generated</Filter>
     </ClInclude>
@@ -42,9 +39,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="TradeSharedPacket.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="TradePacket.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -6,4 +6,7 @@ namespace MemoryUtil
 	T* Alloc(Types&&... args);
 }
 
-#define New(name , ...) MemoryUtil::Alloc<name>(##__VA_ARGS__);
+
+#include "MemoryUtil.hpp"
+
+#define New(name , ...) MemoryUtil::Alloc<name>(##__VA_ARGS__)

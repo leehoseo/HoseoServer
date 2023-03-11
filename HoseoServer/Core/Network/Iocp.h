@@ -19,9 +19,6 @@ public:
 	HANDLE& GetHandle() { return m_IocpHandle; }
 
 private:
-	void Accept();
-
-private:
 	HANDLE m_IocpHandle;
 	int m_ProcessCount;
 };
