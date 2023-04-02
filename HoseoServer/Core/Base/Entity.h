@@ -8,9 +8,7 @@
 class CComponent;
 
 /// <summary>
-/// \brief Entity의 최상위 클래스 
-/// ECS 페턴에서 E를 담당한다.
-/// Component 집합과 Component를 호출할 함수와,, Component가 사용할 멤버 변수를 갖고 있다.
+/// Component(도구 - 기능)를 사용할 사용자 ( Peer, ...er , System 등 )의 최상위 클래스
 /// </summary>
 class CEntity
 {

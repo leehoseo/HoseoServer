@@ -161,6 +161,7 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="Delegate.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="InputSystem.h" />
     <ClInclude Include="MemoryEntity.h" />
     <ClInclude Include="MemorySystem.h" />
     <ClInclude Include="MemoryUtil.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="Atomic.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="MemoryEntity.cpp" />
     <ClCompile Include="MemorySystem.cpp" />
     <ClCompile Include="pch.cpp">

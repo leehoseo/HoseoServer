@@ -79,6 +79,7 @@
     <ClInclude Include="Singleton.h">
       <Filter>소스 파일\Pattern</Filter>
     </ClInclude>
+    <ClInclude Include="InputSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -119,6 +120,9 @@
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
       <Filter>소스 파일\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
