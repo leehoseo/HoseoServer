@@ -1,7 +1,7 @@
-table Person
+table Login
 {
  name:string;
  age:int;
 }
 
-root_type Person;
+root_type Login;

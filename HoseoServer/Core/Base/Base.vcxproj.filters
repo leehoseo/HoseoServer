@@ -80,6 +80,7 @@
       <Filter>소스 파일\Pattern</Filter>
     </ClInclude>
     <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="CInputEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -122,6 +123,9 @@
       <Filter>소스 파일\Pattern</Filter>
     </ClCompile>
     <ClCompile Include="InputSystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CInputEvent.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

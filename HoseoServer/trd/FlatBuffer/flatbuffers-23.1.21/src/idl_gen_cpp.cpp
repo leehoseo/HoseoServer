@@ -2587,7 +2587,7 @@ class CppGenerator : public BaseGenerator {
     code_.SetValue("STRUCT_NAME", Name(struct_def));
     code_ +=
         "struct {{STRUCT_NAME}}"
-        " : private ::flatbuffers::Table {";
+        " : public CPacketBase, private ::flatbuffers::Table {";
     if (opts_.generate_object_based_api) {
       code_ += "  typedef {{NATIVE_NAME}} NativeTableType;";
     }
@@ -2665,7 +2665,7 @@ class CppGenerator : public BaseGenerator {
 
     // Generate a verifier function that can check a buffer from an untrusted
     // source will never cause reads outside the buffer.
-    code_ += "  bool Verify(::flatbuffers::Verifier &verifier) const {";
+    code_ += "  virtual bool Verify(::flatbuffers::Verifier &verifier) const {";
     code_ += "    return VerifyTableStart(verifier)\\";
     for (const auto &field : struct_def.fields.vec) {
       if (field->deprecated) { continue; }

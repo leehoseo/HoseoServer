@@ -1,5 +1,35 @@
 #pragma once
 
+#include "flatbuffers/flatbuffers.h"
+
+#include "Network/PacketWriter.h"
+#include "Network/PacketReader.h"
+class CPacketBase
+{
+public:
+	CPacketBase() {};
+	virtual ~CPacketBase() {};
+
+public:
+	virtual bool Verify(flatbuffers::Verifier& verifier) const = 0;
+
+	bool CheckVerify() const;
+
+protected:
+	flatbuffers::FlatBufferBuilder m_Builder;
+};
+
+template<typename T, typename... Args>
+uint8_t* MakePacketBuffer(Args&&... args)
+{
+	CPacketWriter<T> writer;
+	T* newPacket = new T();
+
+	writer.SetBody(newPacket->Pack(std::forward<Args>(args)...));
+
+	return writer.GetBuffer();
+}
+
 template <typename T>
 struct IsPod { enum { Value = std::is_arithmetic<T>::value || std::is_enum<T>::value }; };
 

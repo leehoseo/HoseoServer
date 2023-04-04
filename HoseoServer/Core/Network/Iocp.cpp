@@ -18,7 +18,7 @@ void CIocp::Start()
 {
 	m_ProcessCount = std::thread::hardware_concurrency();
 	m_IocpHandle = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, m_ProcessCount);
-
+	HANDLE m_IocpHandle2 = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, m_ProcessCount);
 	//sockaddr_in server_addr;
 	//memset(&server_addr, 0, sizeof(server_addr));
 	//server_addr.sin_family = AF_INET;

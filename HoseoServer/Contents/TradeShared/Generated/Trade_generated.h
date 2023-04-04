@@ -5,6 +5,7 @@
 #define FLATBUFFERS_GENERATED_TRADE_H_
 
 #include "flatbuffers/flatbuffers.h"
+#include "Network/PacketBase.h"
 
 // Ensure the included flatbuffers.h is the same version as when this file was
 // generated, otherwise it may not be compatible.
@@ -16,7 +17,7 @@ static_assert(FLATBUFFERS_VERSION_MAJOR == 23 &&
 struct Person;
 struct PersonBuilder;
 
-struct Person : private ::flatbuffers::Table {
+struct Person : public CPacketBase, private ::flatbuffers::Table {
   typedef PersonBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_NAME = 4,
@@ -28,7 +29,7 @@ struct Person : private ::flatbuffers::Table {
   int32_t age() const {
     return GetField<int32_t>(VT_AGE, 0);
   }
-  bool Verify(::flatbuffers::Verifier &verifier) const {
+  virtual bool Verify(::flatbuffers::Verifier &verifier) const {
     return VerifyTableStart(verifier) &&
            VerifyOffset(verifier, VT_NAME) &&
            verifier.VerifyString(name()) &&

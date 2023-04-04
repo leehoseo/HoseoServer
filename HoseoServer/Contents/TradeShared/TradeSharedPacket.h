@@ -4,5 +4,8 @@
 
 class TradePacket : public Person
 {
+public:
+	uint8_t* Pack(int age,  const std::string& name);
+	void UnPack(uint8_t* buffer);
 };
 

@@ -46,6 +46,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TradeServer", "Contents\Tra
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TradeShared", "Contents\TradeShared\TradeShared.vcxproj", "{DFCBBCF4-3725-470A-838C-052708795289}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FF6D711E-404A-4EF8-90FD-8F470F2D47C7} = {FF6D711E-404A-4EF8-90FD-8F470F2D47C7}
+		{D6CAF8E9-9604-4BA2-8136-A6BB4ABC9DB4} = {D6CAF8E9-9604-4BA2-8136-A6BB4ABC9DB4}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Core\Client\Client.vcxproj", "{6FA5883D-5F57-4AFD-9A45-FE15FC343C4E}"
 EndProject

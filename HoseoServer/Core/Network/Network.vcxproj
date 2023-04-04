@@ -175,6 +175,7 @@
     <ClInclude Include="PacketBase.h" />
     <ClInclude Include="PacketBuilder.h" />
     <ClInclude Include="PacketHandler.h" />
+    <ClInclude Include="PacketReader.h" />
     <ClInclude Include="PacketRegistry.h" />
     <ClInclude Include="PacketWriter.h" />
     <ClInclude Include="pch.h" />
@@ -199,8 +200,10 @@
     <ClCompile Include="MarshalerComponent.cpp" />
     <ClCompile Include="NetworkAppManager.cpp" />
     <ClCompile Include="Packet.cpp" />
+    <ClCompile Include="PacketBase.cpp" />
     <ClCompile Include="PacketBuilder.cpp" />
     <ClCompile Include="PacketHandler.cpp" />
+    <ClCompile Include="PacketReader.cpp" />
     <ClCompile Include="PacketRegistry.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

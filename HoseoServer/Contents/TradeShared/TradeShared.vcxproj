@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\trd\FlatBuffer;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\trd\FlatBuffer;$(SolutionDir)Core;$(IncludePath)</IncludePath>
     <IntDir>$(SolutionDir)immediate\Obj\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <OutDir>$(SolutionDir)immediate\Lib\$(Configuration)\$(MSBuildProjectName)\</OutDir>
   </PropertyGroup>
@@ -176,6 +176,14 @@
   <ItemGroup>
     <None Include="Fbs\Trade.fbs" />
     <None Include="MakePacket.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Base\Base.vcxproj">
+      <Project>{ff6d711e-404a-4ef8-90fd-8f470f2d47c7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Network\Network.vcxproj">
+      <Project>{d6caf8e9-9604-4ba2-8136-a6bb4abc9db4}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
