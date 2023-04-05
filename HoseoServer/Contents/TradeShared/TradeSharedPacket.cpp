@@ -5,14 +5,21 @@
 template<typename T>
 void UnPacket(T* packet, uint8_t* buffer)
 {
-    CPacketReader<T> reader(packet);
-
-    packet = GetPerson(buffer);
+    packet->UnPack(buffer);
 }
 
-uint8_t* TradePacket::Pack(int age, const std::string& name)
+
+
+
+CTradePacket::CTradePacket(int age, const std::string& name)
+    : m_Age(age)
+    , m_Name(name)
 {
-    m_Builder.Finish(CreatePersonDirect(m_Builder , name.c_str(), age));
+}
+
+uint8_t* CTradePacket::Pack()
+{
+    m_Builder.Finish(CreatePersonDirect(m_Builder, m_Name.c_str(), m_Age));
  
     if (false == CheckVerify())
     {
@@ -22,9 +29,9 @@ uint8_t* TradePacket::Pack(int age, const std::string& name)
     return m_Builder.GetBufferPointer();
 }
 
-//NewPack<TradePacket, int, std::string>(5, "hoseo");
-
-void TradePacket::UnPack(uint8_t* buffer)
+void CTradePacket::UnPack(uint8_t* buffer)
 {
-    GetPerson(buffer);
+    auto person = GetPerson(buffer);
+    m_Age = person->age();
+    m_Name = person->name()->c_str();
 }

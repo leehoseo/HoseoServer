@@ -142,10 +142,10 @@ class Table {
            verifier.VerifyOffset(data_, field_offset);
   }
 
+  Table();
  private:
   // private constructor & copy constructor: you obtain instances of this
   // class by pointing to existing data only
-  Table();
   Table(const Table &other);
   Table &operator=(const Table &);
 

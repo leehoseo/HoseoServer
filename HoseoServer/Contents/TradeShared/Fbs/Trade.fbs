@@ -1,7 +1,14 @@
 table Login
 {
  name:string;
- age:int;
 }
 
 root_type Login;
+
+table Trade
+{
+ name:string;
+ age:int;
+}
+
+root_type Trade;
