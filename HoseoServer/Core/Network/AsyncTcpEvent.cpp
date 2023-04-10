@@ -6,7 +6,7 @@ CAsyncTcpEvent::CAsyncTcpEvent(const EventType type)
 	: m_Type(type)
 	, m_TotalSize(0)
 {
-	m_Buffer = new char[1204]; // 일단 이렇게
+	m_Buffer = new uint8_t[1204]; // 일단 이렇게
 	ZeroMemory(&m_WsaBuffer, sizeof(m_WsaBuffer));
 }
 

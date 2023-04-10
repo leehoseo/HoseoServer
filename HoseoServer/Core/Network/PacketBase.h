@@ -9,13 +9,20 @@ public:
 	virtual ~CPacketBase() {};
 
 public:
-	virtual bool Verify(flatbuffers::Verifier& verifier) const = 0;
-
-	bool CheckVerify() const;
+public:
+	virtual uint8_t* Pack() = 0;
+	virtual void UnPack(uint8_t* buffer) = 0;
 
 protected:
 	flatbuffers::FlatBufferBuilder m_Builder;
 };
+
+#define PACKET_FOUNDATION(name)\
+public:\
+	name() : CPacketBase() {} \
+	virtual ~name() {} \
+	static std::string	GetName() { return #name; }\
+	static int			GetHash() { return std::hash<std::string>()(#name); }
 
 template <typename T>
 struct IsPod { enum { Value = std::is_arithmetic<T>::value || std::is_enum<T>::value }; };
@@ -29,26 +36,27 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 	outBuffer = buffer;
 }
 
-#define PACKET_BEGIN(name)\
-class name\
-{\
-public:\
-	static std::string	GetName() { return #name; }\
-	static int			GetHash() { return std::hash<std::string>()(#name); 
-
-
-#define PACKET_MEMBER( type, name )\
-	type name;\
-	void Set##name(type value ) { name = value; }\
-	type Get##name() const { return name; }\
-	const int GetBuffer()\
-	{\
-		if ( true == IsPod<type>::Value ) { return static_cast<int>(sizeof(type); }\
-		else { return type.GetByte(); }\
-	}
-
-#define PACKET_END \
-};\
+//
+//#define PACKET_BEGIN(name)\
+//class name\
+//{\
+//public:\
+//	static std::string	GetName() { return #name; }\
+//	static int			GetHash() { return std::hash<std::string>()(#name); 
+//
+//
+//#define PACKET_MEMBER( type, name )\
+//	type name;\
+//	void Set##name(type value ) { name = value; }\
+//	type Get##name() const { return name; }\
+//	const int GetBuffer()\
+//	{\
+//		if ( true == IsPod<type>::Value ) { return static_cast<int>(sizeof(type); }\
+//		else { return type.GetByte(); }\
+//	}
+//
+//#define PACKET_END \
+//};\
 
 //#pragma once
 //

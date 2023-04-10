@@ -9,7 +9,7 @@ public:
 	virtual ~CPacketHandler();
 
 public:
-	virtual int Execute( CPeer* peer, char* buffer) override;
+	virtual int Execute( CPeer* peer, uint8_t* buffer) override;
 };
 
 
@@ -27,5 +27,5 @@ public:\
 		return New(name##Handler); \
 	}\
 public:\
-	virtual int Execute( CPeer* peer, char* buffer) final;\
+	virtual int Execute( CPeer* peer, uint8_t* buffer) final;\
 };

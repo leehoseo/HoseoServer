@@ -58,7 +58,7 @@ bool CAsyncTcpComponent::PostRecv()
     return m_Socket->Recv(m_RecvEvent);
 }
 
-bool CAsyncTcpComponent::PostSend(char* buffer)
+bool CAsyncTcpComponent::PostSend(uint8_t* buffer)
 {
     CAsyncTcpEvent* sendEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Send);
     sendEvent->SetBuffer(buffer);

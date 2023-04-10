@@ -1,6 +1,6 @@
 #pragma once
-
 #include "Packet.h"
+#include "PacketBase.h"
 
 template<typename T>
 class CPacketWriter
@@ -8,13 +8,8 @@ class CPacketWriter
 public:
 	CPacketWriter()
 	{
-		const int size = sizeof(T) + sizeof(PacketHeader);
-		m_Buffer = new char[size];
-
-		CPacket::SetSize(m_Buffer, size);
-		CPacket::SetId(m_Buffer, T::GetId());
-		CPacket::SetCompressType(m_Buffer, 0);
-		CPacket::SetEncryptionType(m_Buffer, 0);
+		m_Packet = New(T);
+		// 유효성 검증 같은걸 해야하나?
 	}
 
 	~CPacketWriter()
@@ -22,16 +17,37 @@ public:
 	}
 
 public:
-	uint8_t* GetBuffer()
+	T* operator->()
 	{
-		return m_Buffer;
+		return m_Packet;
 	}
 
-	void SetBody(uint8_t* bodyBuffer)
+	uint8_t* operator()()
 	{
-		CPacket::SetBody(m_Buffer, bodyBuffer, sizeof(bodyBuffer));
+		uint8_t* bodyBuffer = m_Packet->Pack(); // 패킷을 바이너리로
+
+		if (nullptr == bodyBuffer)
+		{
+			return nullptr;
+		}
+
+		const int bodySize = sizeof(bodyBuffer);
+		const int size = bodySize + sizeof(PacketHeader);
+		uint8_t* packetBuffer = new uint8_t[size];
+
+		// 패킷의 header 부분 설정
+		CPacket::SetSize(packetBuffer, size);
+		CPacket::SetId(packetBuffer, T::GetHash());
+		CPacket::SetCompressType(packetBuffer, 0);
+		CPacket::SetEncryptionType(packetBuffer, 0);
+
+		// 컨텐츠에서 사용할 데이터인 Body 설정
+		CPacket::SetBody(packetBuffer, bodyBuffer, bodySize);
+
+		return packetBuffer;
 	}
+
 private:
-	uint8_t* m_Buffer;
+	T* m_Packet;
 };
 

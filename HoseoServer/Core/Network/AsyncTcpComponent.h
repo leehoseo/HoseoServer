@@ -28,7 +28,7 @@ public:
 	bool Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent);
 	void Disconnect();
 	bool PostRecv();
-	bool PostSend(char* buffer);
+	bool PostSend(uint8_t* buffer);
 
 public:
 	/// <summary>

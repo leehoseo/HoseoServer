@@ -158,7 +158,7 @@ bool CSocket::Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent)
 	//	0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetTag()));
 
 	WSABUF* wsaBuffer = connectEvent->GetWsaBuffer();
-	wsaBuffer->buf = connectEvent->GetBuffer();
+	wsaBuffer->buf = (char*)connectEvent->GetBuffer();
 	wsaBuffer->len = sizeof(connectEvent->GetBuffer());
 
 
@@ -184,7 +184,7 @@ bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 
 	WSABUF* wsaBuffer = recvEvent->GetWsaBuffer();
 	
-	wsaBuffer->buf = recvEvent->GetBuffer() + recvEvent->GetTotalSize();
+	wsaBuffer->buf = (char*)recvEvent->GetBuffer() + recvEvent->GetTotalSize();
 	wsaBuffer->len = sizeof(recvEvent->GetBuffer()) - recvEvent->GetTotalSize();
 	
 	WSARecv(GetHandle(), wsaBuffer, 1, &recvBytes, &flags, &recvEvent->GetTag(), NULL);
@@ -198,7 +198,7 @@ bool CSocket::Send(CAsyncTcpEvent* sendEvent)
 	DWORD flags = {};
 
 	WSABUF* wsaBuffer = sendEvent->GetWsaBuffer();
-	wsaBuffer->buf = sendEvent->GetBuffer();
+	wsaBuffer->buf = (char*)sendEvent->GetBuffer();
 	wsaBuffer->len = sizeof(sendEvent->GetBuffer());
 
 	WSASend(GetHandle(), wsaBuffer, 1, &sendBytes, flags, &sendEvent->GetTag(), NULL);

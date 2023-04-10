@@ -11,4 +11,6 @@
 #include "Base/MemoryUtil.h"
 #include <string>
 
+#include "flatbuffers/flatbuffers.h"
+
 #endif //PCH_H

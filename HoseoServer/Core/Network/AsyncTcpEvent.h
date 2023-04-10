@@ -29,8 +29,8 @@ public:
 
 	const int GetTotalSize() const { return m_TotalSize; }
 	
-	char* GetBuffer() { return m_Buffer; };
-	void SetBuffer(char* buffer) { m_Buffer = buffer; };
+	uint8_t* GetBuffer() { return m_Buffer; };
+	void SetBuffer(uint8_t* buffer) { m_Buffer = buffer; };
 
 	void CleanBuffer();
 	WSABUF* GetWsaBuffer() { return &m_WsaBuffer; };
@@ -39,7 +39,7 @@ private:
 	CSocket* m_Socket;
 	EventType m_Type;
 
-	char* m_Buffer;
+	uint8_t* m_Buffer;
 	int m_TotalSize;
 	WSABUF m_WsaBuffer;
 };

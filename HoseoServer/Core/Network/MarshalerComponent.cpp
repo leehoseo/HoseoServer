@@ -10,7 +10,7 @@ void CMarshalerComponent::Init()
 {
 }
 
-int CMarshalerComponent::UnMarshal(CPeer* peer, char* buffer)
+int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer)
 {
 	// 암호화 여부
 	
@@ -25,7 +25,7 @@ int CMarshalerComponent::UnMarshal(CPeer* peer, char* buffer)
 		return 0;
 	}
 
-	char* packetBody = nullptr;
+	uint8_t* packetBody = nullptr;
 	CPacket::GetBody(buffer, packetBody);
 
 	// 패킷 핸들러 처리

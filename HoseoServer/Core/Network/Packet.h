@@ -1,6 +1,4 @@
 #pragma once
-#include <string>
-#include "PacketBase.h"
 
 typedef unsigned short PacketSize_t;
 typedef unsigned short PacketId_t;
@@ -18,20 +16,20 @@ struct PacketHeader
 class CPacket
 {
 public:
-	static void GetSize(const char* buffer, PacketSize_t& outSize);
-	static void SetSize(char* outBuffer, const PacketSize_t& size);
+	static void GetSize(const uint8_t* buffer, PacketSize_t& outSize);
+	static void SetSize(uint8_t* outBuffer, const PacketSize_t& size);
 
-	static void GetId(const char* buffer, PacketId_t& outSize);
-	static void SetId(char* outBuffer, const PacketId_t& size);
+	static void GetId(const uint8_t* buffer, PacketId_t& outSize);
+	static void SetId(uint8_t* outBuffer, const PacketId_t& size);
 
-	static void GetCompressType(const char* buffer, CompressType_t& outSize);
-	static void SetCompressType(char* outBuffer, const CompressType_t& size);
+	static void GetCompressType(const uint8_t* buffer, CompressType_t& outSize);
+	static void SetCompressType(uint8_t* outBuffer, const CompressType_t& size);
 
-	static void GetEncryptionType(const char* buffer, EncryptionType_t& outSize);
-	static void SetEncryptionType(char* outBuffer, const EncryptionType_t& size);
+	static void GetEncryptionType(const uint8_t* buffer, EncryptionType_t& outSize);
+	static void SetEncryptionType(uint8_t* outBuffer, const EncryptionType_t& size);
 
-	static void GetBody(const char* buffer, char* outBody);
-	static void SetBody(char* outBuffer, const char* body, const int len);
+	static void GetBody(const uint8_t* buffer, uint8_t* outBody);
+	static void SetBody(uint8_t* outBuffer, const uint8_t* body, const int len);
 	
 	static int FindPacket(int value);
 };

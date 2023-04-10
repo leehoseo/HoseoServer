@@ -12,6 +12,6 @@ protected:
 	virtual void Init();
 
 public:
-	int UnMarshal(CPeer* peer, char* buffer);
+	int UnMarshal(CPeer* peer, uint8_t* buffer);
 };
 

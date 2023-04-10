@@ -73,7 +73,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Contents;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Contents;$(SolutionDir)\trd\FlatBuffer;$(IncludePath)</IncludePath>
     <IntDir>$(SolutionDir)immediate\Obj\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <OutDir>$(SolutionDir)immediate\Lib\$(Configuration)\$(MSBuildProjectName)\</OutDir>
   </PropertyGroup>

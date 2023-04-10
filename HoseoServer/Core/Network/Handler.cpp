@@ -11,7 +11,7 @@ CHandler::~CHandler()
 
 }
 
-int CHandler::Execute(CPeer* peer, char* buffer)
+int CHandler::Execute(CPeer* peer, uint8_t* buffer)
 {
 	return 0;
 }
