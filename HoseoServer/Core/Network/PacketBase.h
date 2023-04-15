@@ -12,9 +12,6 @@ public:
 public:
 	virtual uint8_t* Pack() = 0;
 	virtual void UnPack(uint8_t* buffer) = 0;
-
-protected:
-	flatbuffers::FlatBufferBuilder m_Builder;
 };
 
 #define PACKET_FOUNDATION(name)\

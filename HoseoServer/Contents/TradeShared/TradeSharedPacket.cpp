@@ -1,10 +1,12 @@
 #include "TradeSharedPacket.h"
+#include "Generated/Trade_generated.h"
 
 uint8_t* CTradePacket::Pack()
 {
-    m_Builder.Finish(CreateTradeDirect(m_Builder, m_Name.c_str(), m_Age));
+    flatbuffers::FlatBufferBuilder builder;
+    builder.Finish(CreateTradeDirect(builder, m_Name.c_str(), m_Age));
  
-    return m_Builder.GetBufferPointer();
+    return builder.GetBufferPointer();
 }
 
 void CTradePacket::UnPack(uint8_t* buffer)

@@ -5,7 +5,6 @@
 #define FLATBUFFERS_GENERATED_TRADE_H_
 
 #include "flatbuffers/flatbuffers.h"
-#include "Network/PacketBase.h"
 
 // Ensure the included flatbuffers.h is the same version as when this file was
 // generated, otherwise it may not be compatible.
@@ -20,7 +19,7 @@ struct LoginBuilder;
 struct Trade;
 struct TradeBuilder;
 
-struct Login : public CPacketBase, private ::flatbuffers::Table {
+struct Login : private ::flatbuffers::Table {
   typedef LoginBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_NAME = 4
@@ -28,7 +27,7 @@ struct Login : public CPacketBase, private ::flatbuffers::Table {
   const ::flatbuffers::String *name() const {
     return GetPointer<const ::flatbuffers::String *>(VT_NAME);
   }
-  virtual bool Verify(::flatbuffers::Verifier &verifier) const {
+  bool Verify(::flatbuffers::Verifier &verifier) const {
     return VerifyTableStart(verifier) &&
            VerifyOffset(verifier, VT_NAME) &&
            verifier.VerifyString(name()) &&
@@ -71,7 +70,7 @@ inline ::flatbuffers::Offset<Login> CreateLoginDirect(
       name__);
 }
 
-struct Trade : public CPacketBase, private ::flatbuffers::Table {
+struct Trade : private ::flatbuffers::Table {
   typedef TradeBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_NAME = 4,
@@ -83,7 +82,7 @@ struct Trade : public CPacketBase, private ::flatbuffers::Table {
   int32_t age() const {
     return GetField<int32_t>(VT_AGE, 0);
   }
-  virtual bool Verify(::flatbuffers::Verifier &verifier) const {
+  bool Verify(::flatbuffers::Verifier &verifier) const {
     return VerifyTableStart(verifier) &&
            VerifyOffset(verifier, VT_NAME) &&
            verifier.VerifyString(name()) &&

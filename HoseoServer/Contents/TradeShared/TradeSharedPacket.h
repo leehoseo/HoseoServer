@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Generated/Trade_generated.h"
+#include "Network/PacketBase.h"
 
 //template<typename T, typename... Args>
 //uint8_t* MakePacketBuffer(Args&&... args)
