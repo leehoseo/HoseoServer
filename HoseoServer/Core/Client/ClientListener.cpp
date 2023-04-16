@@ -6,7 +6,6 @@
 #include "Network/AsyncTcpEvent.h"
 #include "Network/Socket.h"
 
-
 CClientListener::CClientListener()
 {
 }
@@ -47,4 +46,8 @@ void CClientListener::OnConnectEvent(CAsyncTcpEvent* tcpEvent)
 	}
 
 	component->PostRecv();
+
+	CAsyncTcpEvent* sendEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Send);
+	component->PostSend(sendEvent);
+
 }

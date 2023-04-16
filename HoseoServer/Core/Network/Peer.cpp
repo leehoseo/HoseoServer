@@ -2,12 +2,15 @@
 #include "AsyncTcpComponent.h"
 #include "MarshalerComponent.h"
 #include "AsyncTcpEvent.h"
-#include "Network/AsyncDispatcher.h"
+#include "AsyncDispatcher.h"
+#include "SendPolicy.h"
 
 CPeer::CPeer()
 {
 	InsertComponent<CAsyncTcpComponent>();
 	InsertComponent<CMarshalerComponent>();
+
+	m_SendPolicy = New(CSendPolicy);
 }
 
 CPeer::~CPeer()
@@ -26,16 +29,6 @@ int CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 	return size;
 }
 
-CSocket* CPeer::GetSocket()
-{
-	return GetComponent<CAsyncTcpComponent>()->GetSocket();
-}
-
-void CPeer::SetSocket(CSocket* socket)
-{
-	GetComponent<CAsyncTcpComponent>()->SetSocket(socket);
-}
-
 void CPeer::OnAccepted(CAsyncTcpEvent* tcpEvent)
 {
 	CAsyncTcpComponent* component = GetComponent<CAsyncTcpComponent>();
@@ -44,12 +37,25 @@ void CPeer::OnAccepted(CAsyncTcpEvent* tcpEvent)
 		return;
 	}
 
-	component->SetSocket(tcpEvent->GetSocket());
-	
 	component->OnAccepted(tcpEvent);
-	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
-	
+
 	component->PostRecv();
+}
+
+bool CPeer::PostSend(CAsyncTcpEvent* sendEvent)
+{
+	m_SendPolicy->PostSend(this, sendEvent);
+	return true;
+}
+
+CSocket* CPeer::GetSocket()
+{
+	return GetComponent<CAsyncTcpComponent>()->GetSocket();
+}
+
+void CPeer::SetSocket(CSocket* socket)
+{
+	GetComponent<CAsyncTcpComponent>()->SetSocket(socket);
 }
 
 void CPeer::Disconnect()

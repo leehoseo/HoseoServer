@@ -181,6 +181,7 @@
     <ClInclude Include="Peer.h" />
     <ClInclude Include="PeerFacade.h" />
     <ClInclude Include="PeerListener.h" />
+    <ClInclude Include="SendPolicy.h" />
     <ClInclude Include="Socket.h" />
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +214,7 @@
     <ClCompile Include="Peer.cpp" />
     <ClCompile Include="PeerFacade.cpp" />
     <ClCompile Include="PeerListener.cpp" />
+    <ClCompile Include="SendPolicy.cpp" />
     <ClCompile Include="Socket.cpp" />
   </ItemGroup>
   <ItemGroup>

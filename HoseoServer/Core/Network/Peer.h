@@ -3,6 +3,7 @@
 #include "Base/Entity.h"
 #include "AsyncTcpEventSink.h"
 
+class CSendPolicy;
 class CSocket;
 class CAsyncTcpEvent;
 class CPeer : public CEntity, public CAsyncTcpEventSink
@@ -20,17 +21,23 @@ public:
 	/// <returns>성공시 처리한 바이트 수</returns>
 	virtual int OnReceiveEvent(CAsyncTcpEvent* tcpEvent);
 
-public:
-	CSocket* GetSocket();
-	void SetSocket(CSocket* socket);
-
-public:
-
 	/// <summary>
 	/// Accept 성공시 호출되는 함수
 	/// </summary>
 	/// <param name="tcpEvent"> accept시 받은 이벤트 </param>
 	virtual void OnAccepted(CAsyncTcpEvent* tcpEvent);
+public:
+
+	bool PostSend(CAsyncTcpEvent* sendEvent);
+
+	CSocket* GetSocket();
+	void SetSocket(CSocket* socket);
+
+public:
+
 	void Disconnect();
+
+private:
+	CSendPolicy* m_SendPolicy;
 };
 

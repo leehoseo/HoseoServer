@@ -3,6 +3,7 @@
 
 class CSocket;
 class CAsyncEventSink;
+class CSendPolicy;
 class CAsyncTcpEvent : public CAsyncEvent
 {
 public:

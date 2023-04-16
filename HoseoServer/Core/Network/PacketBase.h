@@ -1,7 +1,5 @@
 #pragma once
 
-#include "flatbuffers/flatbuffers.h"
-
 class CPacketBase
 {
 public:

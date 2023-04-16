@@ -60,8 +60,11 @@ void CPeerListener::PostAccept(CAsyncTcpEvent* acceptEvent)
 void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 {
 	CPeer* newPeer = CreatePeer();
-
+	newPeer->SetSocket(tcpEvent->GetSocket());
+	
 	newPeer->OnAccepted(tcpEvent);
+
+	g_AsyncDispatcher::GetInstance()->Associate(newPeer, newPeer->GetSocket());
 
 	// 이벤트 다시 재활용한다.
 	tcpEvent->SetSocket(nullptr);

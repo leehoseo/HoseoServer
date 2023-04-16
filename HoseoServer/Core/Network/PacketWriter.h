@@ -1,6 +1,7 @@
 #pragma once
 #include "Packet.h"
 #include "PacketBase.h"
+#include "AsyncTcpEvent.h"
 
 template<typename T>
 class CPacketWriter
@@ -22,7 +23,16 @@ public:
 		return m_Packet;
 	}
 
-	uint8_t* operator()()
+	CAsyncTcpEvent* operator()()
+	{
+		CAsyncTcpEvent* sendEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Send);
+		sendEvent->SetBuffer(MakeBuffer());
+
+		return sendEvent;
+	}
+
+private:
+	uint8_t* MakeBuffer()
 	{
 		uint8_t* bodyBuffer = m_Packet->Pack(); // 패킷을 바이너리로
 

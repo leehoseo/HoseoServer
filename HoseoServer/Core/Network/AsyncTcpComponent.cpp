@@ -1,7 +1,12 @@
 #include "AsyncTcpComponent.h"
 #include "Socket.h"
 #include "AsyncTcpEvent.h"
-#include "AsyncDispatcher.h"
+#include "SendPolicy.h"
+
+void CAsyncTcpComponent::Init()
+{
+    m_RecvEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Receive);
+}
 
 CSocket* CAsyncTcpComponent::GetSocket()
 {
@@ -11,11 +16,6 @@ CSocket* CAsyncTcpComponent::GetSocket()
 void CAsyncTcpComponent::SetSocket(CSocket* socket)
 {
     m_Socket = socket;
-}
-
-void CAsyncTcpComponent::Init()
-{
-    m_RecvEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Receive);
 }
 
 bool CAsyncTcpComponent::Bind(sockaddr_in& addr)
@@ -58,10 +58,7 @@ bool CAsyncTcpComponent::PostRecv()
     return m_Socket->Recv(m_RecvEvent);
 }
 
-bool CAsyncTcpComponent::PostSend(uint8_t* buffer)
+bool CAsyncTcpComponent::PostSend(CAsyncTcpEvent* sendEvent)
 {
-    CAsyncTcpEvent* sendEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Send);
-    sendEvent->SetBuffer(buffer);
-
     return m_Socket->Send(sendEvent);
 }
