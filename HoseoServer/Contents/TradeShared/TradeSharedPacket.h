@@ -15,7 +15,7 @@
 
 struct CTradePacket : public CPacketBase
 {
-PACKET_FOUNDATION(CTradePacket)
+PACKET_FOUNDATION(CTradePacket, PacketType::NO_DELAY)
 
 public:
 	virtual uint8_t* Pack() final;

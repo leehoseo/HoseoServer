@@ -1,5 +1,13 @@
 #pragma once
 
+enum class PacketType
+{
+	DELAY = 0, // 패킷을 보낼때 지연 시킨다.
+	NO_DELAY,  // 패킷을 보낼때 지연 시키지 않는다.
+
+	COUNT,
+};
+
 class CPacketBase
 {
 public:
@@ -12,12 +20,14 @@ public:
 	virtual void UnPack(uint8_t* buffer) = 0;
 };
 
-#define PACKET_FOUNDATION(name)\
+#define PACKET_FOUNDATION(name, Type)\
 public:\
 	name() : CPacketBase() {} \
 	virtual ~name() {} \
 	static std::string	GetName() { return #name; }\
-	static int			GetHash() { return std::hash<std::string>()(#name); }
+	static int			GetHash() { return std::hash<std::string>()(#name); }\
+	static PacketType	GetType() { return Type; }
+	
 
 template <typename T>
 struct IsPod { enum { Value = std::is_arithmetic<T>::value || std::is_enum<T>::value }; };
