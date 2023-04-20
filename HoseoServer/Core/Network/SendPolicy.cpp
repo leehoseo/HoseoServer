@@ -10,8 +10,8 @@ CSendPolicy::~CSendPolicy()
 {
 }
 
-void CSendPolicy::PostSend(CPeer* peer, CAsyncTcpEvent* sendEvent)
+bool CSendPolicy::PostSend(CPeer* peer, CAsyncTcpEvent* sendEvent)
 {
 	// 일단 그냥 보낸다.
-	
+	peer->Send(sendEvent);
 }

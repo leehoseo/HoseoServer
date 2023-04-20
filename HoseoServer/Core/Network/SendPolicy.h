@@ -10,6 +10,6 @@ public:
 	~CSendPolicy();
 
 public:
-	void PostSend(CPeer* peer, CAsyncTcpEvent* sendEvent);
+	bool PostSend(CPeer* peer, CAsyncTcpEvent* sendEvent);
 };
 

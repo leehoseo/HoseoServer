@@ -27,8 +27,8 @@ public:
 	bool Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent);
 	bool Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent);
 	void Disconnect();
-	bool PostRecv();
-	bool PostSend(CAsyncTcpEvent* sendEvent);
+	bool Recv();
+	bool Send(CAsyncTcpEvent* sendEvent);
 
 public:
 	/// <summary>

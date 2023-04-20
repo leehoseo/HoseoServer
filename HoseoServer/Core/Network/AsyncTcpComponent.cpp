@@ -52,13 +52,13 @@ void CAsyncTcpComponent::Disconnect()
     m_Socket->Disconnect(New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Disconnect));
 }
 
-bool CAsyncTcpComponent::PostRecv()
+bool CAsyncTcpComponent::Recv()
 {
     // 받기 전 recvEvent에 대한 처리
     return m_Socket->Recv(m_RecvEvent);
 }
 
-bool CAsyncTcpComponent::PostSend(CAsyncTcpEvent* sendEvent)
+bool CAsyncTcpComponent::Send(CAsyncTcpEvent* sendEvent)
 {
     return m_Socket->Send(sendEvent);
 }

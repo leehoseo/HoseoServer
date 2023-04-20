@@ -24,7 +24,7 @@ int CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
 	int size = marshaler->UnMarshal(this, tcpEvent->GetBuffer());
 
 	CAsyncTcpComponent* tcpComponent = GetComponent<CAsyncTcpComponent>();
-	tcpComponent->PostRecv();
+	tcpComponent->Recv();
 	
 	return size;
 }
@@ -39,13 +39,17 @@ void CPeer::OnAccepted(CAsyncTcpEvent* tcpEvent)
 
 	component->OnAccepted(tcpEvent);
 
-	component->PostRecv();
+	component->Recv();
 }
 
 bool CPeer::PostSend(CAsyncTcpEvent* sendEvent)
 {
-	m_SendPolicy->PostSend(this, sendEvent);
-	return true;
+	return m_SendPolicy->PostSend(this, sendEvent);;
+}
+
+bool CPeer::Send(CAsyncTcpEvent* sendEvent)
+{
+	return GetComponent<CAsyncTcpComponent>()->Send(sendEvent);
 }
 
 CSocket* CPeer::GetSocket()

@@ -28,7 +28,11 @@ public:
 	virtual void OnAccepted(CAsyncTcpEvent* tcpEvent);
 public:
 
+	// 패킷을 보내기 위한 사전 작업
 	bool PostSend(CAsyncTcpEvent* sendEvent);
+
+	// 패킷을 실제로 보낸다.
+	bool Send(CAsyncTcpEvent* sendEvent);
 
 	CSocket* GetSocket();
 	void SetSocket(CSocket* socket);
