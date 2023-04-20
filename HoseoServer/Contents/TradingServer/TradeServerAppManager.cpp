@@ -3,7 +3,16 @@
 #include "Network/AsyncDispatcher.h"
 #include "Lobby/LobbyPeerListener.h"
 #include "Network/ListenSystem.h"
+#include "LinkToQueryPolicy.h"
 
+CTradeServerAppManager::CTradeServerAppManager()
+    : m_ToQueryPolicy(nullptr)
+{
+}
+
+CTradeServerAppManager::~CTradeServerAppManager()
+{
+}
 
 bool CTradeServerAppManager::Setup()
 {
@@ -11,6 +20,11 @@ bool CTradeServerAppManager::Setup()
     if (false == result)
     {
         return false;
+    }
+
+    // 서버 연결 관리
+    {
+        m_ToQueryPolicy = New(CLinkToQueryPolicy);
     }
 
     // 핸들러 추가
@@ -27,4 +41,9 @@ bool CTradeServerAppManager::Setup()
 
 
     return result;
+}
+
+bool CTradeServerAppManager::ToQuery(CAsyncEvent* sendEvent)
+{
+    return m_ToQueryPolicy->Send(sendEvent);
 }
