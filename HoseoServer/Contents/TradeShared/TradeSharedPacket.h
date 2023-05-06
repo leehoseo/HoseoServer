@@ -2,27 +2,29 @@
 
 #include "Network/PacketBase.h"
 
-//template<typename T, typename... Args>
-//uint8_t* MakePacketBuffer(Args&&... args)
-//{
-//    CPacketWriter<T> writer;
-//    T* newPacket = new T(std::forward<Args>(args)...);
-//
-//    writer.SetBody(newPacket->Pack());
-//
-//    return writer.GetBuffer();
-//}
-
-struct CTradePacket : public CPacketBase
+struct CT_Login : public CPacketBase
 {
-PACKET_FOUNDATION(CTradePacket, PacketType::NO_DELAY)
+PACKET_FOUNDATION(CT_Login, PacketType::NO_DELAY)
 
 public:
 	virtual uint8_t* Pack() final;
 	virtual void UnPack(uint8_t* buffer) final;
 
 public:
-	int m_Age;
 	std::string m_Name;
+	std::string m_Pwd;
+};
+
+struct TQ_Login : public CPacketBase
+{
+	PACKET_FOUNDATION(TQ_Login, PacketType::NO_DELAY)
+
+public:
+	virtual uint8_t* Pack() final;
+	virtual void UnPack(uint8_t* buffer) final;
+
+public:
+	std::string m_Name;
+	std::string m_Pwd;
 };
 

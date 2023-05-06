@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Handler">
+      <UniqueIdentifier>{878aec01-627d-4c1c-b3ab-c026ddb19e22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,14 +27,17 @@
     <ClCompile Include="TradeServerAppManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CT_LoginHandler.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="TradeServerHandlerSetup.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="LinkToQueryPolicy.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CT_LoginHandler.cpp">
+      <Filter>Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="TQ_LoginHandler.cpp">
+      <Filter>Handler</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,14 +47,17 @@
     <ClInclude Include="TradeServerAppManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="CT_LoginHandler.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="TradeServerHandlerSetup.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="LinkToQueryPolicy.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TQ_LoginHandler.h">
+      <Filter>Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="CT_LoginHandler.h">
+      <Filter>Handler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

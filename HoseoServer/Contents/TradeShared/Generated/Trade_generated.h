@@ -13,153 +13,169 @@ static_assert(FLATBUFFERS_VERSION_MAJOR == 23 &&
               FLATBUFFERS_VERSION_REVISION == 21,
              "Non-compatible flatbuffers version included");
 
-struct Login;
-struct LoginBuilder;
+struct FCT_Login;
+struct FCT_LoginBuilder;
 
-struct Trade;
-struct TradeBuilder;
+struct FTQ_Login;
+struct FTQ_LoginBuilder;
 
-struct Login : private ::flatbuffers::Table {
-  typedef LoginBuilder Builder;
-  enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
-    VT_NAME = 4
-  };
-  const ::flatbuffers::String *name() const {
-    return GetPointer<const ::flatbuffers::String *>(VT_NAME);
-  }
-  bool Verify(::flatbuffers::Verifier &verifier) const {
-    return VerifyTableStart(verifier) &&
-           VerifyOffset(verifier, VT_NAME) &&
-           verifier.VerifyString(name()) &&
-           verifier.EndTable();
-  }
-};
-
-struct LoginBuilder {
-  typedef Login Table;
-  ::flatbuffers::FlatBufferBuilder &fbb_;
-  ::flatbuffers::uoffset_t start_;
-  void add_name(::flatbuffers::Offset<::flatbuffers::String> name) {
-    fbb_.AddOffset(Login::VT_NAME, name);
-  }
-  explicit LoginBuilder(::flatbuffers::FlatBufferBuilder &_fbb)
-        : fbb_(_fbb) {
-    start_ = fbb_.StartTable();
-  }
-  ::flatbuffers::Offset<Login> Finish() {
-    const auto end = fbb_.EndTable(start_);
-    auto o = ::flatbuffers::Offset<Login>(end);
-    return o;
-  }
-};
-
-inline ::flatbuffers::Offset<Login> CreateLogin(
-    ::flatbuffers::FlatBufferBuilder &_fbb,
-    ::flatbuffers::Offset<::flatbuffers::String> name = 0) {
-  LoginBuilder builder_(_fbb);
-  builder_.add_name(name);
-  return builder_.Finish();
-}
-
-inline ::flatbuffers::Offset<Login> CreateLoginDirect(
-    ::flatbuffers::FlatBufferBuilder &_fbb,
-    const char *name = nullptr) {
-  auto name__ = name ? _fbb.CreateString(name) : 0;
-  return CreateLogin(
-      _fbb,
-      name__);
-}
-
-struct Trade : private ::flatbuffers::Table {
-  typedef TradeBuilder Builder;
+struct FCT_Login : private ::flatbuffers::Table {
+  typedef FCT_LoginBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_NAME = 4,
-    VT_AGE = 6
+    VT_PWD = 6
   };
   const ::flatbuffers::String *name() const {
     return GetPointer<const ::flatbuffers::String *>(VT_NAME);
   }
-  int32_t age() const {
-    return GetField<int32_t>(VT_AGE, 0);
+  const ::flatbuffers::String *pwd() const {
+    return GetPointer<const ::flatbuffers::String *>(VT_PWD);
   }
   bool Verify(::flatbuffers::Verifier &verifier) const {
     return VerifyTableStart(verifier) &&
            VerifyOffset(verifier, VT_NAME) &&
            verifier.VerifyString(name()) &&
-           VerifyField<int32_t>(verifier, VT_AGE, 4) &&
+           VerifyOffset(verifier, VT_PWD) &&
+           verifier.VerifyString(pwd()) &&
            verifier.EndTable();
   }
 };
 
-struct TradeBuilder {
-  typedef Trade Table;
+struct FCT_LoginBuilder {
+  typedef FCT_Login Table;
   ::flatbuffers::FlatBufferBuilder &fbb_;
   ::flatbuffers::uoffset_t start_;
   void add_name(::flatbuffers::Offset<::flatbuffers::String> name) {
-    fbb_.AddOffset(Trade::VT_NAME, name);
+    fbb_.AddOffset(FCT_Login::VT_NAME, name);
   }
-  void add_age(int32_t age) {
-    fbb_.AddElement<int32_t>(Trade::VT_AGE, age, 0);
+  void add_pwd(::flatbuffers::Offset<::flatbuffers::String> pwd) {
+    fbb_.AddOffset(FCT_Login::VT_PWD, pwd);
   }
-  explicit TradeBuilder(::flatbuffers::FlatBufferBuilder &_fbb)
+  explicit FCT_LoginBuilder(::flatbuffers::FlatBufferBuilder &_fbb)
         : fbb_(_fbb) {
     start_ = fbb_.StartTable();
   }
-  ::flatbuffers::Offset<Trade> Finish() {
+  ::flatbuffers::Offset<FCT_Login> Finish() {
     const auto end = fbb_.EndTable(start_);
-    auto o = ::flatbuffers::Offset<Trade>(end);
+    auto o = ::flatbuffers::Offset<FCT_Login>(end);
     return o;
   }
 };
 
-inline ::flatbuffers::Offset<Trade> CreateTrade(
+inline ::flatbuffers::Offset<FCT_Login> CreateFCT_Login(
     ::flatbuffers::FlatBufferBuilder &_fbb,
     ::flatbuffers::Offset<::flatbuffers::String> name = 0,
-    int32_t age = 0) {
-  TradeBuilder builder_(_fbb);
-  builder_.add_age(age);
+    ::flatbuffers::Offset<::flatbuffers::String> pwd = 0) {
+  FCT_LoginBuilder builder_(_fbb);
+  builder_.add_pwd(pwd);
   builder_.add_name(name);
   return builder_.Finish();
 }
 
-inline ::flatbuffers::Offset<Trade> CreateTradeDirect(
+inline ::flatbuffers::Offset<FCT_Login> CreateFCT_LoginDirect(
     ::flatbuffers::FlatBufferBuilder &_fbb,
     const char *name = nullptr,
-    int32_t age = 0) {
+    const char *pwd = nullptr) {
   auto name__ = name ? _fbb.CreateString(name) : 0;
-  return CreateTrade(
+  auto pwd__ = pwd ? _fbb.CreateString(pwd) : 0;
+  return CreateFCT_Login(
       _fbb,
       name__,
-      age);
+      pwd__);
 }
 
-inline const Trade *GetTrade(const void *buf) {
-  return ::flatbuffers::GetRoot<Trade>(buf);
+struct FTQ_Login : private ::flatbuffers::Table {
+  typedef FTQ_LoginBuilder Builder;
+  enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
+    VT_NAME = 4,
+    VT_PWD = 6
+  };
+  const ::flatbuffers::String *name() const {
+    return GetPointer<const ::flatbuffers::String *>(VT_NAME);
+  }
+  const ::flatbuffers::String *pwd() const {
+    return GetPointer<const ::flatbuffers::String *>(VT_PWD);
+  }
+  bool Verify(::flatbuffers::Verifier &verifier) const {
+    return VerifyTableStart(verifier) &&
+           VerifyOffset(verifier, VT_NAME) &&
+           verifier.VerifyString(name()) &&
+           VerifyOffset(verifier, VT_PWD) &&
+           verifier.VerifyString(pwd()) &&
+           verifier.EndTable();
+  }
+};
+
+struct FTQ_LoginBuilder {
+  typedef FTQ_Login Table;
+  ::flatbuffers::FlatBufferBuilder &fbb_;
+  ::flatbuffers::uoffset_t start_;
+  void add_name(::flatbuffers::Offset<::flatbuffers::String> name) {
+    fbb_.AddOffset(FTQ_Login::VT_NAME, name);
+  }
+  void add_pwd(::flatbuffers::Offset<::flatbuffers::String> pwd) {
+    fbb_.AddOffset(FTQ_Login::VT_PWD, pwd);
+  }
+  explicit FTQ_LoginBuilder(::flatbuffers::FlatBufferBuilder &_fbb)
+        : fbb_(_fbb) {
+    start_ = fbb_.StartTable();
+  }
+  ::flatbuffers::Offset<FTQ_Login> Finish() {
+    const auto end = fbb_.EndTable(start_);
+    auto o = ::flatbuffers::Offset<FTQ_Login>(end);
+    return o;
+  }
+};
+
+inline ::flatbuffers::Offset<FTQ_Login> CreateFTQ_Login(
+    ::flatbuffers::FlatBufferBuilder &_fbb,
+    ::flatbuffers::Offset<::flatbuffers::String> name = 0,
+    ::flatbuffers::Offset<::flatbuffers::String> pwd = 0) {
+  FTQ_LoginBuilder builder_(_fbb);
+  builder_.add_pwd(pwd);
+  builder_.add_name(name);
+  return builder_.Finish();
 }
 
-inline const Trade *GetSizePrefixedTrade(const void *buf) {
-  return ::flatbuffers::GetSizePrefixedRoot<Trade>(buf);
+inline ::flatbuffers::Offset<FTQ_Login> CreateFTQ_LoginDirect(
+    ::flatbuffers::FlatBufferBuilder &_fbb,
+    const char *name = nullptr,
+    const char *pwd = nullptr) {
+  auto name__ = name ? _fbb.CreateString(name) : 0;
+  auto pwd__ = pwd ? _fbb.CreateString(pwd) : 0;
+  return CreateFTQ_Login(
+      _fbb,
+      name__,
+      pwd__);
 }
 
-inline bool VerifyTradeBuffer(
+inline const FTQ_Login *GetFTQ_Login(const void *buf) {
+  return ::flatbuffers::GetRoot<FTQ_Login>(buf);
+}
+
+inline const FTQ_Login *GetSizePrefixedFTQ_Login(const void *buf) {
+  return ::flatbuffers::GetSizePrefixedRoot<FTQ_Login>(buf);
+}
+
+inline bool VerifyFTQ_LoginBuffer(
     ::flatbuffers::Verifier &verifier) {
-  return verifier.VerifyBuffer<Trade>(nullptr);
+  return verifier.VerifyBuffer<FTQ_Login>(nullptr);
 }
 
-inline bool VerifySizePrefixedTradeBuffer(
+inline bool VerifySizePrefixedFTQ_LoginBuffer(
     ::flatbuffers::Verifier &verifier) {
-  return verifier.VerifySizePrefixedBuffer<Trade>(nullptr);
+  return verifier.VerifySizePrefixedBuffer<FTQ_Login>(nullptr);
 }
 
-inline void FinishTradeBuffer(
+inline void FinishFTQ_LoginBuffer(
     ::flatbuffers::FlatBufferBuilder &fbb,
-    ::flatbuffers::Offset<Trade> root) {
+    ::flatbuffers::Offset<FTQ_Login> root) {
   fbb.Finish(root);
 }
 
-inline void FinishSizePrefixedTradeBuffer(
+inline void FinishSizePrefixedFTQ_LoginBuffer(
     ::flatbuffers::FlatBufferBuilder &fbb,
-    ::flatbuffers::Offset<Trade> root) {
+    ::flatbuffers::Offset<FTQ_Login> root) {
   fbb.FinishSizePrefixed(root);
 }
 

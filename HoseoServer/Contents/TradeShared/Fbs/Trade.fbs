@@ -1,14 +1,15 @@
-table Login
+table FCT_Login
 {
  name:string;
+ pwd:string;
 }
 
-root_type Login;
+root_type FCT_Login;
 
-table Trade
+table FTQ_Login
 {
  name:string;
- age:int;
+ pwd:string;
 }
 
-root_type Trade;
+root_type FTQ_Login;

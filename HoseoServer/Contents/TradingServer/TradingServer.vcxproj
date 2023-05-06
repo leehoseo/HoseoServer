@@ -154,6 +154,7 @@
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TQ_LoginHandler.cpp" />
     <ClCompile Include="TradeServerHandlerSetup.cpp" />
     <ClCompile Include="TradeServerAppManager.cpp" />
   </ItemGroup>
@@ -175,6 +176,7 @@
     <ClInclude Include="CT_LoginHandler.h" />
     <ClInclude Include="LinkToQueryPolicy.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="TQ_LoginHandler.h" />
     <ClInclude Include="TradeServerHandlerSetup.h" />
     <ClInclude Include="TradeServerAppManager.h" />
   </ItemGroup>

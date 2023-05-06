@@ -6,7 +6,14 @@
 
 #ifndef PCH_H
 #define PCH_H
-#include <string>
 #include "Base/MemoryUtil.h"
+
+#include <string>
+
+#include "Network/PacketWriter.h"
+#include "Network/PacketReader.h"
+
+#include "TradeShared/TradeSharedPacket.h"
+
 
 #endif //PCH_H

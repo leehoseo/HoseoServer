@@ -16,7 +16,14 @@ int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer)
 	
 	// 패킷 처리
 	PacketId_t id;
+	PacketSize_t size;
 	CPacket::GetId(buffer, id);
+	CPacket::GetSize(buffer, size);
+
+	if (sizeof(buffer) < size)
+	{
+		return 0;
+	}
 
 	CHandler* handler = g_HandlerRegistry::GetInstance()->Find(id);
 
