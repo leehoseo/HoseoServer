@@ -1,0 +1,12 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageMessage.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/cmake/modules/FindDB2.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/cmake/modules/FindFirebird.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/cmake/modules/FindMySQL.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/cmake/modules/FindODBC.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/cmake/modules/FindOracle.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/cmake/modules/FindPostgreSQL.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/cmake/modules/FindSQLite3.cmake
+C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/backends/CMakeLists.txt

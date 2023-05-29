@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\backend-loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\connection-parameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\connection-pool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\once-temp-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\prepare-temp-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\procedure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\ref-counted-prepare-info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\ref-counted-statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\row.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\rowid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\soci-simple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\transaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\values.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\backend-loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\bind-values.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\blob-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-fusion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-gregorian-date.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-optional.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-tuple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\callbacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\column-info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\connection-parameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\connection-pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\exchange-traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\into-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\into.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\noreturn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\once-temp-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\prepare-temp-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\procedure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\query_transformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\ref-counted-prepare-info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\ref-counted-statement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\row-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\row.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\rowid-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\rowid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\rowset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\session.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci-backend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci-platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci-simple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\statement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\transaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-conversion-traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-conversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-holder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-ptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-wrappers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\unsigned-types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\use-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\use.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\values-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\values.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{AF5E566E-F6B0-383F-B33B-264DB9A5D5AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{77426F39-2422-3584-9241-1CD64251DD71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F30B7C0D-E8DF-3DE4-9552-D7613CC791F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

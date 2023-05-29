@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FB85F571-36D3-3D71-8BD5-F2C358D72517}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>soci_core_static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">soci_core_static.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libsoci_core_4_0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">soci_core_static.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libsoci_core_4_0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">soci_core_static.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libsoci_core_4_0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">soci_core_static.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libsoci_core_4_0</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION="4_0";DBUG_OFF;SOCI_LIB_PREFIX="soci_";SOCI_LIB_SUFFIX=".dll";SOCI_DEBUG_POSTFIX="";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION=\"4_0\";DBUG_OFF;SOCI_LIB_PREFIX=\"soci_\";SOCI_LIB_SUFFIX=\".dll\";SOCI_DEBUG_POSTFIX=\"\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION="4_0";DBUG_OFF;SOCI_LIB_PREFIX="soci_";SOCI_LIB_SUFFIX=".dll";SOCI_DEBUG_POSTFIX="";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION=\"4_0\";DBUG_OFF;SOCI_LIB_PREFIX=\"soci_\";SOCI_LIB_SUFFIX=\".dll\";SOCI_DEBUG_POSTFIX=\"\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION="4_0";DBUG_OFF;SOCI_LIB_PREFIX="soci_";SOCI_LIB_SUFFIX=".dll";SOCI_DEBUG_POSTFIX="";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION=\"4_0\";DBUG_OFF;SOCI_LIB_PREFIX=\"soci_\";SOCI_LIB_SUFFIX=\".dll\";SOCI_DEBUG_POSTFIX=\"\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION="4_0";DBUG_OFF;SOCI_LIB_PREFIX="soci_";SOCI_LIB_SUFFIX=".dll";SOCI_DEBUG_POSTFIX="";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNING;_SCL_SECURE_NO_WARNINGS;SOCI_ABI_VERSION=\"4_0\";DBUG_OFF;SOCI_LIB_PREFIX=\"soci_\";SOCI_LIB_SUFFIX=\".dll\";SOCI_DEBUG_POSTFIX=\"\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\private;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 -BC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 --check-stamp-file C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\cmake\resources\SOCIConfig.cmake.in;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\soci_backends_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 -BC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 --check-stamp-file C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\cmake\resources\SOCIConfig.cmake.in;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\soci_backends_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 -BC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 --check-stamp-file C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\cmake\resources\SOCIConfig.cmake.in;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\soci_backends_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 -BC:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3 --check-stamp-file C:/Programming/HoseoServer/HoseoServer/trd/SOCI/soci-4.0.3/src/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\cmake\resources\SOCIConfig.cmake.in;C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\soci_backends_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\backend-loader.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\bind-values.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\blob-exchange.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\blob.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-fusion.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-gregorian-date.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-optional.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\boost-tuple.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\callbacks.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\column-info.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\connection-parameters.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\connection-pool.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\error.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\exchange-traits.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\into-type.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\into.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\logger.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\noreturn.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\once-temp-type.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\prepare-temp-type.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\procedure.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\query_transformation.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\ref-counted-prepare-info.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\ref-counted-statement.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\row-exchange.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\row.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\rowid-exchange.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\rowid.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\rowset.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\session.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci-backend.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci-platform.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci-simple.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\soci.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\statement.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\transaction.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-conversion-traits.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-conversion.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-holder.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-ptr.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\type-wrappers.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\unsigned-types.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\use-type.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\use.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\values-exchange.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\values.h" />
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\version.h" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\backend-loader.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\blob.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\common.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\connection-parameters.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\connection-pool.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\error.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\into-type.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\logger.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\once-temp-type.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\prepare-temp-type.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\procedure.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\ref-counted-prepare-info.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\ref-counted-statement.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\row.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\rowid.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\session.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\soci-simple.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\statement.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\transaction.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\use-type.cpp" />
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\core\values.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\ZERO_CHECK.vcxproj">
+      <Project>{36A6018E-80C0-3E77-B742-EBEF9EC5D763}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

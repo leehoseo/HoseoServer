@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\row-id.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\standard-into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\standard-use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\vector-into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\vector-use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\include\soci\odbc\soci-odbc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programming\HoseoServer\HoseoServer\trd\SOCI\soci-4.0.3\src\backends\odbc\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{AF5E566E-F6B0-383F-B33B-264DB9A5D5AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{77426F39-2422-3584-9241-1CD64251DD71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F30B7C0D-E8DF-3DE4-9552-D7613CC791F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
