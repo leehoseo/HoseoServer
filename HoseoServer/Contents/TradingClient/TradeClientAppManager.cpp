@@ -29,9 +29,6 @@ bool CTradeClientAppManager::Setup()
 
     // 데이터 세팅
     g_ListenSystem::GetInstance()->Init(New(CClientListener));
-    g_ListenSystem::GetInstance()->Start();
-
-    g_AsyncDispatcher::GetInstance()->Join();
 
     return true;
 }

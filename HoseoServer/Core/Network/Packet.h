@@ -16,17 +16,17 @@ struct PacketHeader
 class CPacket
 {
 public:
-	static void GetSize(const uint8_t* buffer, PacketSize_t& outSize);
-	static void SetSize(uint8_t* outBuffer, const PacketSize_t& size);
+	static void GetSize(const uint8_t* buffer, PacketSize_t& outValue);
+	static void SetSize(uint8_t* outBuffer, const PacketSize_t& value);
 
-	static void GetId(const uint8_t* buffer, PacketId_t& outSize);
-	static void SetId(uint8_t* outBuffer, const PacketId_t& size);
+	static void GetId(const uint8_t* buffer, PacketId_t& outValue);
+	static void SetId(uint8_t* outBuffer, const PacketId_t& value);
 
-	static void GetCompressType(const uint8_t* buffer, CompressType_t& outSize);
-	static void SetCompressType(uint8_t* outBuffer, const CompressType_t& size);
+	static void GetCompressType(const uint8_t* buffer, CompressType_t& outValue);
+	static void SetCompressType(uint8_t* outBuffer, const CompressType_t& value);
 
-	static void GetEncryptionType(const uint8_t* buffer, EncryptionType_t& outSize);
-	static void SetEncryptionType(uint8_t* outBuffer, const EncryptionType_t& size);
+	static void GetEncryptionType(const uint8_t* buffer, EncryptionType_t& outValue);
+	static void SetEncryptionType(uint8_t* outBuffer, const EncryptionType_t& value);
 
 	static void GetBody(const uint8_t* buffer, uint8_t* outBody);
 	static void SetBody(uint8_t* outBuffer, const uint8_t* body, const int len);

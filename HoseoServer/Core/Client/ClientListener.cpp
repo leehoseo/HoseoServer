@@ -1,10 +1,10 @@
 #include "pch.h"
 #include "ClientListener.h"
 #include "Network/AsyncDispatcher.h"
-//#include "Network/AsyncEvent.h"
 #include "Network/AsyncTcpComponent.h"
 #include "Network/AsyncTcpEvent.h"
 #include "Network/Socket.h"
+#include "ClientConfig.h"
 
 CClientListener::CClientListener()
 {
@@ -32,8 +32,11 @@ void CClientListener::Start()
 
 	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
 	
-	server_addr.sin_port = htons(13480);
-	inet_pton(AF_INET, "127.0.0.1", &server_addr.sin_addr.s_addr);
+	std::string addr = g_ClientConfig::GetInstance()->m_LoginAddr;
+	u_short port = g_ClientConfig::GetInstance()->m_LoginPort;
+
+	server_addr.sin_port = htons(port);
+	inet_pton(AF_INET, addr.c_str(), &server_addr.sin_addr.s_addr);
 	component->Connect(server_addr, New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Connect));
 }
 
@@ -45,9 +48,9 @@ void CClientListener::OnConnectEvent(CAsyncTcpEvent* tcpEvent)
 		return;
 	}
 
-	component->PostRecv();
+	component->Recv();
 
 	CAsyncTcpEvent* sendEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Send);
-	component->PostSend(sendEvent);
+	component->Send(sendEvent);
 
 }

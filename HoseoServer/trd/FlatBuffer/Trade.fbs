@@ -1,0 +1,15 @@
+table FCT_Login
+{
+ name:string;
+ pwd:string;
+}
+
+root_type FCT_Login;
+
+table FTQ_Login
+{
+ name:string;
+ pwd:string;
+}
+
+root_type FTQ_Login;
