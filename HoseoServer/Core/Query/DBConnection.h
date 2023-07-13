@@ -1,6 +1,4 @@
 #pragma once
-#include <sql.h>
-#include <sqlext.h>
 
 class CQueryBuilder;
 class CDBConnection
@@ -17,8 +15,5 @@ public:
 	bool SendQuery(CQueryBuilder& query);
 
 private:
-	SQLHENV m_EnvHandle;
-	SQLHDBC m_DBHandle;
-
 };
 
