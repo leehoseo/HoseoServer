@@ -168,6 +168,9 @@
     <ProjectReference Include="..\..\Core\Network\Network.vcxproj">
       <Project>{d6caf8e9-9604-4ba2-8136-a6bb4abc9db4}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\Core\Query\Query.vcxproj">
+      <Project>{ba5c877d-1294-423a-bc68-798c40a70422}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\TradeShared\TradeShared.vcxproj">
       <Project>{dfcbbcf4-3725-470a-838c-052708795289}</Project>
     </ProjectReference>

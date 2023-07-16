@@ -9,8 +9,8 @@
 // Ensure the included flatbuffers.h is the same version as when this file was
 // generated, otherwise it may not be compatible.
 static_assert(FLATBUFFERS_VERSION_MAJOR == 23 &&
-              FLATBUFFERS_VERSION_MINOR == 1 &&
-              FLATBUFFERS_VERSION_REVISION == 21,
+              FLATBUFFERS_VERSION_MINOR == 5 &&
+              FLATBUFFERS_VERSION_REVISION == 26,
              "Non-compatible flatbuffers version included");
 
 struct FCT_Login;
@@ -19,7 +19,7 @@ struct FCT_LoginBuilder;
 struct FTQ_Login;
 struct FTQ_LoginBuilder;
 
-struct FCT_Login : private ::flatbuffers::Table {
+struct FCT_Login FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
   typedef FCT_LoginBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_NAME = 4,
@@ -84,7 +84,7 @@ inline ::flatbuffers::Offset<FCT_Login> CreateFCT_LoginDirect(
       pwd__);
 }
 
-struct FTQ_Login : private ::flatbuffers::Table {
+struct FTQ_Login FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
   typedef FTQ_LoginBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_NAME = 4,

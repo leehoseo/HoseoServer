@@ -72,7 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\trd\SOCI\soci-4.0.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Core;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)immediate\Lib\$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)immediate\Obj\$(Configuration)\$(MSBuildProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -157,6 +159,7 @@
     <ClInclude Include="DBHandle.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="QueryBuilder.h" />
+    <ClInclude Include="QuerySystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DBConnection.cpp" />
@@ -168,6 +171,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="QueryBuilder.cpp" />
+    <ClCompile Include="QuerySystem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
