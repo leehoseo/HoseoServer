@@ -1,4 +1,4 @@
-namespace DictionaryLookup;
+﻿namespace DictionaryLookup;
 
 table LongFloatEntry {
   key: long (key);

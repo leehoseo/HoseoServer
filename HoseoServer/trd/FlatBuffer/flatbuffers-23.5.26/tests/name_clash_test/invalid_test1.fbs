@@ -1,4 +1,4 @@
-include "invalid_test2.fbs";
+﻿include "invalid_test2.fbs";
 
 namespace A;
 

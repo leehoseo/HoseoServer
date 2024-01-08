@@ -1,4 +1,4 @@
-#include "TradeClientAppManager.h"
+ï»¿#include "TradeClientAppManager.h"
 #include "TradeClientHandlerSetup.h"
 #include "Network/AsyncDispatcher.h"
 #include "Client/ClientListener.h"
@@ -20,14 +20,14 @@ bool CTradeClientAppManager::Setup()
         return false;
     }
 
-    // ÇÚµé·¯ Ãß°¡
+    // í•¸ë“¤ëŸ¬ ì¶”ê°€
     {
         TradeClientHandlerSetup::Setup();
     }
 
     g_AsyncDispatcher::GetInstance()->Start();
 
-    // µ¥ÀÌÅÍ ¼¼ÆÃ
+    // ë°ì´í„° ì„¸íŒ…
     g_ListenSystem::GetInstance()->Init(New(CClientListener));
 
     return true;

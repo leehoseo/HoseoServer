@@ -1,4 +1,4 @@
-# coding=utf-8
+﻿# coding=utf-8
 # Copyright 2014 Google Inc. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -997,13 +997,13 @@ class TestByteLayout(unittest.TestCase):
 
   def test_create_utf8_shared_string(self):
     b = flatbuffers.Builder(0)
-    b.CreateSharedString(u'Цлїςσδε')
-    b.CreateSharedString(u'Цлїςσδε')
+    b.CreateSharedString(u'揆剋???灌琯')
+    b.CreateSharedString(u'揆剋???灌琯')
     self.assertBuilderEquals(b, '\x0e\x00\x00\x00\xd0\xa6\xd0\xbb\xd1\x97' \
         '\xcf\x82\xcf\x83\xce\xb4\xce\xb5\x00\x00')
 
-    b.CreateSharedString(u'ﾌﾑｱﾑｶﾓｹﾓ')
-    b.CreateSharedString(u'ﾌﾑｱﾑｶﾓｹﾓ')
+    b.CreateSharedString(u'絶絶節깍?節띰?節뱄?')
+    b.CreateSharedString(u'絶絶節깍?節띰?節뱄?')
     self.assertBuilderEquals(b, '\x18\x00\x00\x00\xef\xbe\x8c\xef\xbe\x91' \
         '\xef\xbd\xb1\xef\xbe\x91\xef\xbd\xb6\xef\xbe\x93\xef\xbd\xb9\xef' \
         '\xbe\x93\x00\x00\x00\x00\x0e\x00\x00\x00\xd0\xa6\xd0\xbb\xd1\x97' \
@@ -1037,11 +1037,11 @@ class TestByteLayout(unittest.TestCase):
 
   def test_create_utf8_string(self):
     b = flatbuffers.Builder(0)
-    b.CreateString(u'Цлїςσδε')
+    b.CreateString(u'揆剋???灌琯')
     self.assertBuilderEquals(b, '\x0e\x00\x00\x00\xd0\xa6\xd0\xbb\xd1\x97' \
         '\xcf\x82\xcf\x83\xce\xb4\xce\xb5\x00\x00')
 
-    b.CreateString(u'ﾌﾑｱﾑｶﾓｹﾓ')
+    b.CreateString(u'絶絶節깍?節띰?節뱄?')
     self.assertBuilderEquals(b, '\x18\x00\x00\x00\xef\xbe\x8c\xef\xbe\x91' \
         '\xef\xbd\xb1\xef\xbe\x91\xef\xbd\xb6\xef\xbe\x93\xef\xbd\xb9\xef' \
         '\xbe\x93\x00\x00\x00\x00\x0e\x00\x00\x00\xd0\xa6\xd0\xbb\xd1\x97' \

@@ -1,4 +1,4 @@
-import java.nio.ByteBuffer;
+﻿import java.nio.ByteBuffer;
 import MyGame.Example.Monster;
 import MyGame.Example.Stat;
 import com.google.flatbuffers.FlatBufferBuilder;

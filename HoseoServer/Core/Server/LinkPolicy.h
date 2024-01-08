@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 
 class CAsyncEvent;
 
 /// <summary>
-/// ¼­¹öº° ¿¬°á Á¤Ã¥À» ´ã´çÇÑ´Ù.
-/// Libº°·Î ±¸ÇöµÇ¸ç ÇÔ¼ö È£Ãâ, ¶Ç´Â ServerPeer·ÎÀÇ Àü´ÞÀ» ´ã´çÇÑ´Ù.
+/// ì„œë²„ë³„ ì—°ê²° ì •ì±…ì„ ë‹´ë‹¹í•œë‹¤.
+/// Libë³„ë¡œ êµ¬í˜„ë˜ë©° í•¨ìˆ˜ í˜¸ì¶œ, ë˜ëŠ” ServerPeerë¡œì˜ ì „ë‹¬ì„ ë‹´ë‹¹í•œë‹¤.
 /// </summary>
 class CLinkPolicy
 {

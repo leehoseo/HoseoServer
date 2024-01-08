@@ -1,4 +1,4 @@
-import { BitWidth } from './bit-width.js'
+﻿import { BitWidth } from './bit-width.js'
 import { paddingSize, iwidth, uwidth, fwidth, toByteWidth, fromByteWidth } from './bit-width-util.js'
 import { toUTF8Array } from './flexbuffers-util.js'
 import { ValueType } from './value-type.js'

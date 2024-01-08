@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { Enum, EnumT } from '../reflection/enum.js';
 import { Object_, Object_T } from '../reflection/object.js';
 import { SchemaFile, SchemaFileT } from '../reflection/schema-file.js';

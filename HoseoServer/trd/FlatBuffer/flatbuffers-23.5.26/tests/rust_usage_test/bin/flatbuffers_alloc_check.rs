@@ -1,4 +1,4 @@
-// define a passthrough allocator that tracks alloc calls.
+﻿// define a passthrough allocator that tracks alloc calls.
 // (note that we can't drop this in to the usual test suite, because it's a big
 // global variable).
 use std::alloc::{GlobalAlloc, Layout, System};

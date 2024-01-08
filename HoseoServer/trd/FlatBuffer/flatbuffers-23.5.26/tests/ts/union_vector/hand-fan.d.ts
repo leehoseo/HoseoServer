@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 export declare class HandFan implements flatbuffers.IUnpackableObject<HandFanT> {
     bb: flatbuffers.ByteBuffer | null;
     bb_pos: number;

@@ -1,4 +1,4 @@
-name: Mark stale issues and pull requests
+﻿name: Mark stale issues and pull requests
 permissions:
   issues: write
   pull-requests: write

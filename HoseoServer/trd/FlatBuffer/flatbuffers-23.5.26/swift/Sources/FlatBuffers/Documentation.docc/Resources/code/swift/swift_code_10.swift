@@ -1,4 +1,4 @@
-import FlatBuffers
+﻿import FlatBuffers
 import Foundation
 
 func run() {

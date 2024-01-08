@@ -1,4 +1,4 @@
-// Generated from test.proto
+﻿// Generated from test.proto
 
 include "imported.fbs";
 

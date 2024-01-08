@@ -1,4 +1,4 @@
-// Run this using JavaScriptTest.sh
+﻿// Run this using JavaScriptTest.sh
 import assert from 'assert'
 import fs from 'fs'
 import * as flexbuffers from 'flatbuffers/js/flexbuffers.js'
@@ -46,7 +46,7 @@ function testSingleValueBuffers() {
   _assert(0.1, [154, 153, 153, 153, 153, 153, 185, 63, 15, 8]);
   _assert(-1025, [255, 251, 5, 2]);
   _assert("Maxim", [5, 77, 97, 120, 105, 109, 0, 6, 20, 1]);
-  _assert("hello 😱", [10, 104, 101, 108, 108, 111, 32, 240, 159, 152, 177, 0, 11, 20, 1]);
+  _assert("hello ??, [10, 104, 101, 108, 108, 111, 32, 240, 159, 152, 177, 0, 11, 20, 1]);
   _assert({a:12}, [97, 0, 1, 3, 1, 1, 1, 12, 4, 2, 36, 1]);
   _assert({"":45, "a": 12}, [0, 97, 0, 2, 4, 4, 2, 1, 2, 45, 12, 4, 4, 4, 36, 1]);
 }
@@ -67,7 +67,7 @@ function testEncode() {
   _assert(0.5, [0, 0, 0, 63, 14, 4]);
   _assert(new Uint8Array([1, 2, 3]), [3, 1, 2, 3, 3, 100, 1]);
   _assert("Maxim", [5, 77, 97, 120, 105, 109, 0, 6, 20, 1]);
-  _assert("hello 😱", [10, 104, 101, 108, 108, 111, 32, 240, 159, 152, 177, 0, 11, 20, 1]);
+  _assert("hello ??, [10, 104, 101, 108, 108, 111, 32, 240, 159, 152, 177, 0, 11, 20, 1]);
   _assert([1, 2], [1, 2, 2, 64, 1]);
   _assert([-1, 256], [255, 255, 0, 1, 4, 65, 1]);
   _assert([-45, 256000], [211, 255, 255, 255, 0, 232, 3, 0, 8, 66, 1]);

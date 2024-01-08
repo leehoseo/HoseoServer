@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Base/AppManager.h"
 
 class CNetworkAppManager : public CAppManager

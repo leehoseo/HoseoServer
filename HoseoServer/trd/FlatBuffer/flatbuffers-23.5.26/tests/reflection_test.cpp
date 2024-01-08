@@ -1,4 +1,4 @@
-#include "reflection_test.h"
+﻿#include "reflection_test.h"
 
 #include "arrays_test_generated.h"
 #include "flatbuffers/minireflect.h"

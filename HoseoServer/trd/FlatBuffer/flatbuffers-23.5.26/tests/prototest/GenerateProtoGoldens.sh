@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 #
 # Copyright 2022 Google Inc. All rights reserved.
 #

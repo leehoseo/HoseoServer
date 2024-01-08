@@ -1,4 +1,4 @@
-// This file should contain the basics of flatbuffers that all languages should
+﻿// This file should contain the basics of flatbuffers that all languages should
 // support.
 
 table Galaxy {

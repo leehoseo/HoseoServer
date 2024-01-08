@@ -1,4 +1,4 @@
--- We need to put it into a separate file to avoid syntax error like `unexpected symbol near '~'`
+﻿-- We need to put it into a separate file to avoid syntax error like `unexpected symbol near '~'`
 local m = {}
 
 

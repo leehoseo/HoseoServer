@@ -1,4 +1,4 @@
-#include "Iocp.h"
+ï»¿#include "Iocp.h"
 #include "Peer.h"
 #include <WS2tcpip.h>
 #include <thread>
@@ -42,7 +42,7 @@ void CIocp::Start()
 
 	//if (false == isStart)
 	//{
-	//	// ·Î±×¸¦ ³ÖÀ»°Å¿¡¿ä~
+	//	// ë¡œê·¸ë¥¼ ë„£ì„ê±°ì—ìš”~
 	//}
 }
 

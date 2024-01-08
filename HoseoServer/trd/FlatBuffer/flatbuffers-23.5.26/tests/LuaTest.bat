@@ -1,4 +1,4 @@
-set buildtype=Release
+﻿set buildtype=Release
 if "%1"=="-b" set buildtype=%2
 
 echo Run with LuaJIT:

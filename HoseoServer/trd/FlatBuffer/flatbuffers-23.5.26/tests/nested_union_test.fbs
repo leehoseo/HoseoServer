@@ -1,4 +1,4 @@
-namespace MyGame.Example.NestedUnion;
+﻿namespace MyGame.Example.NestedUnion;
 
 /// Composite components of Monster color.
 enum Color:ubyte (bit_flags) {

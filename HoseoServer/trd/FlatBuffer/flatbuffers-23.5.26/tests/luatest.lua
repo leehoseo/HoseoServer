@@ -1,4 +1,4 @@
-package.path = string.format("../lua/?.lua;./?.lua;%s",package.path)
+﻿package.path = string.format("../lua/?.lua;./?.lua;%s",package.path)
 local compat = require("flatbuffers.compat")
 
 local performBenchmarkTests = false

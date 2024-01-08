@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
 
 //#include "Entity.h"
@@ -6,7 +6,7 @@
 class CEntity;
 
 /// <summary>
-/// ECSÀÇ Component ÃÖ»óÀ§ Å¬·¡½º
+/// ECSì˜ Component ìµœìƒìœ„ í´ë˜ìŠ¤
 /// </summary>
 class CComponent
 {

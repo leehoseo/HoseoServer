@@ -1,4 +1,4 @@
-use std::ops::{Deref, Range};
+﻿use std::ops::{Deref, Range};
 
 /// The underlying buffer that is used by a flexbuffer Reader.
 ///

@@ -1,4 +1,4 @@
-#include "Task.h"
+﻿#include "Task.h"
 
 CTask::CTask(const Callback& callback)
 	: m_Callback(callback)

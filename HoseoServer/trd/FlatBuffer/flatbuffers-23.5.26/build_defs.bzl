@@ -1,4 +1,4 @@
-# Description:
+﻿# Description:
 #   BUILD rules for generating flatbuffer files in various languages.
 
 """

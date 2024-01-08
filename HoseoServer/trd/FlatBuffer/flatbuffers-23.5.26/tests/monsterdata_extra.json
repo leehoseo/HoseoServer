@@ -1,4 +1,4 @@
-{
+﻿{
   // Initialize with non-default values.
   d0 : -nan, // match with default
   d1 : +inf,

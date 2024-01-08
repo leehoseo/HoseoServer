@@ -1,2 +1,2 @@
-import FlatBuffers
+﻿import FlatBuffers
 import Foundation

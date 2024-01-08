@@ -1,4 +1,4 @@
-#ifndef TESTS_UTIL_TEST_H
+﻿#ifndef TESTS_UTIL_TEST_H
 #define TESTS_UTIL_TEST_H
 
 namespace flatbuffers {

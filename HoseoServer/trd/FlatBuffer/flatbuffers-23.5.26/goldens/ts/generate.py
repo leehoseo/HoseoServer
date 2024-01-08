@@ -1,4 +1,4 @@
-from golden_utils import flatc_golden
+﻿from golden_utils import flatc_golden
 
 
 def flatc(options, schema):

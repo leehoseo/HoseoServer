@@ -1,4 +1,4 @@
-export { Attacker, AttackerT } from './attacker.js';
+﻿export { Attacker, AttackerT } from './attacker.js';
 export { BookReader, BookReaderT } from './book-reader.js';
 export { Character } from './character.js';
 export { FallingTub, FallingTubT } from './falling-tub.js';

@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { MonsterT as MyGame_Example2_MonsterT } from '../../my-game/example2/monster.js';
 import { Ability, AbilityT } from '../../my-game/example/ability.js';
 import { Any } from '../../my-game/example/any.js';

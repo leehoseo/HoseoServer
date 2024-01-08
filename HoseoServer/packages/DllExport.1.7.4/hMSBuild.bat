@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 :: hMSBuild - 2.3.0.31675+78b6c77
 :: Copyright (c) 2017-2020  Denis Kuzmin [ x-3F@outlook.com ] GitHub/3F
 :: Copyright (c) the hMSBuild contributors

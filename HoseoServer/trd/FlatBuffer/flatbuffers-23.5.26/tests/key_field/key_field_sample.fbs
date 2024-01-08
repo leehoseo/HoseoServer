@@ -1,4 +1,4 @@
-namespace keyfield.sample;
+﻿namespace keyfield.sample;
 
 struct Baz {
   a: [uint8:4] (key); // A fixed-sized array of uint8 as a Key

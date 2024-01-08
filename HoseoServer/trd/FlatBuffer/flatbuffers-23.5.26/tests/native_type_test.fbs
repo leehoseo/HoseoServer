@@ -1,4 +1,4 @@
-native_include "native_type_test_impl.h";
+﻿native_include "native_type_test_impl.h";
 
 namespace Geometry;
 

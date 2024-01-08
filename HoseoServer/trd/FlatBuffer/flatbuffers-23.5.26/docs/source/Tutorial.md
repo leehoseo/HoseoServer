@@ -1,4 +1,4 @@
-Tutorial   {#flatbuffers_guide_tutorial}
+﻿Tutorial   {#flatbuffers_guide_tutorial}
 ========
 
 ## Overview

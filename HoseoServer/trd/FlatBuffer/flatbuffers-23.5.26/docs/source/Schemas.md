@@ -1,4 +1,4 @@
-Writing a schema    {#flatbuffers_guide_writing_schema}
+﻿Writing a schema    {#flatbuffers_guide_writing_schema}
 ================
 
 The syntax of the schema language (aka IDL, [Interface Definition Language][])

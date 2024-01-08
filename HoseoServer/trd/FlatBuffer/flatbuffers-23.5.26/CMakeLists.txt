@@ -1,4 +1,4 @@
-# This is the legacy minimum version flatbuffers supported for a while.
+﻿# This is the legacy minimum version flatbuffers supported for a while.
 cmake_minimum_required(VERSION 3.8...3.25.2)
 
 # Attempt to read the current version of flatbuffers by looking at the latest tag.

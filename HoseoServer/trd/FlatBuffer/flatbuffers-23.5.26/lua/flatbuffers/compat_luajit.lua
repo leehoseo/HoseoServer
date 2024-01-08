@@ -1,4 +1,4 @@
-local bit = require("bit")
+﻿local bit = require("bit")
 local ffi = require("ffi")
 local band = bit.band
 local bnot = bit.bnot

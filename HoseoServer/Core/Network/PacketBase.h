@@ -1,9 +1,9 @@
-#pragma once
+ï»¿#pragma once
 
 enum class PacketType
 {
-	DELAY = 0, // ÆĞÅ¶À» º¸³¾¶§ Áö¿¬ ½ÃÅ²´Ù.
-	NO_DELAY,  // ÆĞÅ¶À» º¸³¾¶§ Áö¿¬ ½ÃÅ°Áö ¾Ê´Â´Ù.
+	DELAY = 0, // íŒ¨í‚·ì„ ë³´ë‚¼ë•Œ ì§€ì—° ì‹œí‚¨ë‹¤.
+	NO_DELAY,  // íŒ¨í‚·ì„ ë³´ë‚¼ë•Œ ì§€ì—° ì‹œí‚¤ì§€ ì•ŠëŠ”ë‹¤.
 
 	COUNT,
 };
@@ -144,7 +144,7 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //class CRecvBuffer
 //{
 //private:
-//	bool m_Malformed; // ÆĞÅ¶ º¯Á¶
+//	bool m_Malformed; // íŒ¨í‚· ë³€ì¡°
 //	
 //public:
 //	CRecvBuffer() {}
@@ -152,13 +152,13 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //	virtual ~CRecvBuffer() {}
 //
 //public:
-//	// ¹öÆÛÀÇ Çìµå¸¦ ¿òÁ÷ÀÌÁö ¾Ê°í ÁÖ¾îÁø ±æÀÌ¸¸Å­ÀÇ µ¥ÀÌÅÍ¸¦ ÀĞ¾î¿Â´Ù
+//	// ë²„í¼ì˜ í—¤ë“œë¥¼ ì›€ì§ì´ì§€ ì•Šê³  ì£¼ì–´ì§„ ê¸¸ì´ë§Œí¼ì˜ ë°ì´í„°ë¥¼ ì½ì–´ì˜¨ë‹¤
 //	virtual int Peek(char* outBuf, int len) = 0;
 //	
-//	// ÁÖ¾îÁø ±æÀÌ¸¸Å­ ¹öÆÛ Çìµå¸¦ µÚ·Î ¿Å±ä´Ù
+//	// ì£¼ì–´ì§„ ê¸¸ì´ë§Œí¼ ë²„í¼ í—¤ë“œë¥¼ ë’¤ë¡œ ì˜®ê¸´ë‹¤
 //	virtual int Skip(int len) = 0;
 //
-//	// ÁÖ¾îÁø ±æÀÌ¸¸Å­ µ¥ÀÌÅÍ¸¦ ÀĞ¾îµéÀÎ´Ù.
+//	// ì£¼ì–´ì§„ ê¸¸ì´ë§Œí¼ ë°ì´í„°ë¥¼ ì½ì–´ë“¤ì¸ë‹¤.
 //	virtual int ReadArray(char* outBuf, int len) = 0;
 //
 //public:
@@ -195,14 +195,14 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //	};
 //};
 //
-//// ¿©±â¼­ Proxy¸¦ ¾²´Â ÀÌÀ¯
-//// CRecvBuffer¿¡ ÀÖ´Â ±â´É ( ÅÛÇÃ¸´ Ã³¸® ) µéÀ» Á÷Á¢ÀûÀ¸·Î º¸¿©ÁÖÁö ¾Ê±â À§ÇØ
+//// ì—¬ê¸°ì„œ Proxyë¥¼ ì“°ëŠ” ì´ìœ 
+//// CRecvBufferì— ìˆëŠ” ê¸°ëŠ¥ ( í…œí”Œë¦¿ ì²˜ë¦¬ ) ë“¤ì„ ì§ì ‘ì ìœ¼ë¡œ ë³´ì—¬ì£¼ì§€ ì•Šê¸° ìœ„í•´
 //class CRecvBufferProxy : public CRecvBuffer
 //{
 //private:
-//	const char* m_Buffer; // ½ÇÁ¦ ¹öÆÛ Æ÷ÀÎÅÍ
-//	int m_MaxLength; // ¹öÆÛÀÇ ÃÖ´ë ±æÀÌ
-//	int m_Offset; // ¹öÆÛ Çìµå
+//	const char* m_Buffer; // ì‹¤ì œ ë²„í¼ í¬ì¸í„°
+//	int m_MaxLength; // ë²„í¼ì˜ ìµœëŒ€ ê¸¸ì´
+//	int m_Offset; // ë²„í¼ í—¤ë“œ
 //
 //public:
 //	CRecvBufferProxy(const char* buffer, int maxLength)
@@ -277,7 +277,7 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //
 //	inline int Bytes() const
 //	{
-//		// ½ºÆ®¸µ »çÀÌÁî + ½ºÆ®¸µ
+//		// ìŠ¤íŠ¸ë§ ì‚¬ì´ì¦ˆ + ìŠ¤íŠ¸ë§
 //		return sizeof(short) + static_cast<int>((_tcslen(Value.c_str()) + 1) * sizeof(TCHAR));
 //	}
 //
@@ -300,7 +300,7 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //		}
 //		else
 //		{
-//			// ÆĞÅ¶ º¯Á¶
+//			// íŒ¨í‚· ë³€ì¡°
 //		}
 //
 //		return read;
@@ -369,7 +369,7 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //		template <typename V>
 //		inline int operator()(const std::vector<T>& element, short count ) const 
 //		{
-//			// ¸®½ºÆ® ¼ö + ¸®½ºÆ® 
+//			// ë¦¬ìŠ¤íŠ¸ ìˆ˜ + ë¦¬ìŠ¤íŠ¸ 
 //			return sizeof(count) + sizeof(T) * count;
 //		}
 //	};
@@ -421,7 +421,7 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //			else if (count != 0)
 //			{
 //				count = 0;
-//				// º¯Á¶ ´çÇÔ
+//				// ë³€ì¡° ë‹¹í•¨
 //			}
 //
 //			return read;
@@ -453,7 +453,7 @@ void ConvertToBuffer(char* outBuffer, int size, T& value)
 //			else if (count != 0)
 //			{
 //				count = 0;
-//				// º¯Á¶ ´çÇÔ
+//				// ë³€ì¡° ë‹¹í•¨
 //			}
 //
 //			return read;

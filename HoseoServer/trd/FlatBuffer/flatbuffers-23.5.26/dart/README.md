@@ -1,4 +1,4 @@
-# FlatBuffers for Dart
+﻿# FlatBuffers for Dart
 
 This package is used to read and write [FlatBuffers](https://google.github.io/flatbuffers/).
 

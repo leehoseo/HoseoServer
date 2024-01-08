@@ -1,4 +1,4 @@
-# Setup for running Google Benchmarks (https://github.com/google/benchmark) on
+﻿# Setup for running Google Benchmarks (https://github.com/google/benchmark) on
 # flatbuffers. This requires both that benchmark library and its dependency gtest
 # to build. Instead of including them here or doing a submodule, this uses
 # FetchContent (https://cmake.org/cmake/help/latest/module/FetchContent.html) to

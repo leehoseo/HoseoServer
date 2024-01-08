@@ -1,4 +1,4 @@
-#include "LinkToQueryPolicy.h"
+ï»¿#include "LinkToQueryPolicy.h"
 #include "Network/AsyncDispatcher.h"
 #include "Network/AsyncEvent.h"
 
@@ -16,7 +16,7 @@ void CLinkToQueryPolicy::Setup()
 
 bool CLinkToQueryPolicy::Send(CAsyncEvent* sendEvent)
 {
-	//»óÈ²¿¡ µû¶ó¼­  Enqueue, Á÷Á¢ È£Ãâ, Peer Send°¡ µÉ ¼ö ÀÖ¾î¾ß ÇÑ´Ù.
+	//ìƒí™©ì— ë”°ë¼ì„œ  Enqueue, ì§ì ‘ í˜¸ì¶œ, Peer Sendê°€ ë  ìˆ˜ ìˆì–´ì•¼ í•œë‹¤.
 	g_AsyncDispatcher::GetInstance()->Enqueue(nullptr, &sendEvent->GetTag());
 	return true;
 }

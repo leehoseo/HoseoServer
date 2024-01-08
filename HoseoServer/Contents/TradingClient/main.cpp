@@ -1,4 +1,4 @@
-#include "TradeClientAppManager.h"
+ï»¿#include "TradeClientAppManager.h"
 #include "TradeShared/TradeSharedPacket.h"
 #include "Network/PacketWriter.h"
 #include "Network/AsyncDispatcher.h"
@@ -6,13 +6,13 @@
 
 int main()
 {
-	// ±âÅ¸ µ¥ÀÌÅÍ ¼¼ÆÃ
+	// ê¸°íƒ€ ë°ì´í„° ì„¸íŒ…
 	g_TradeClientAppManager::GetInstance()->Setup();
 
-	// ¼­¹ö ¿¬°á ½ÃÀÛ
+	// ì„œë²„ ì—°ê²° ì‹œì‘
 	g_ListenSystem::GetInstance()->Start();
 
-	// main ½º·¡µå´Â ÇÏ´ÂÀÏ ¾ø´Ù.
+	// main ìŠ¤ë˜ë“œëŠ” í•˜ëŠ”ì¼ ì—†ë‹¤.
 	g_AsyncDispatcher::GetInstance()->Join();
 
 	return 0;

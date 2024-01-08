@@ -1,4 +1,4 @@
-local m = {}
+﻿local m = {}
 local ok, bit = pcall(require, "bit32")
 assert(ok, "The Bit32 library must be installed")
 assert(pcall(require, "compat53"), "The Compat 5.3 library must be installed")

@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 @REM Builds a .NET solution file, adds the project, builds it
 @REM and executes it. Cleans up all generated files and directories.
 

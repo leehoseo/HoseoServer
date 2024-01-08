@@ -1,4 +1,4 @@
-include "hero.fbs";
+﻿include "hero.fbs";
 
 namespace net;
 

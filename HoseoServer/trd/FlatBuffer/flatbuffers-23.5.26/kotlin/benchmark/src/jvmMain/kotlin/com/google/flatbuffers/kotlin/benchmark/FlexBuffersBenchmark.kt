@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2021 Google Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,8 +38,8 @@ open class FlexBuffersBenchmark {
 
   var initialCapacity = 1024
   var value: Double = 0.0
-  val stringKey = Array(500) { "Ḧ̵̘́ȩ̵̐myFairlyBigKey$it" }
-  val stringValue = Array(500) { "Ḧ̵̘́ȩ̵̐myFairlyBigValue$it" }
+  val stringKey = Array(500) { "H絹??e絹?偈myFairlyBigKey$it" }
+  val stringValue = Array(500) { "H絹??e絹?偈myFairlyBigValue$it" }
   val bigIntArray = IntArray(5000) { it }
 
   @Setup

@@ -1,4 +1,4 @@
-include "nested_namespace_test1.fbs";
+﻿include "nested_namespace_test1.fbs";
 
 namespace NamespaceA.NamespaceB;
 

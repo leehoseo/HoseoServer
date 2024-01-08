@@ -1,4 +1,4 @@
-include 'test_dir/typescript_include.fbs';
+﻿include 'test_dir/typescript_include.fbs';
 include 'reflection/reflection.fbs';
 
 // This file includes a variety of keywords meant to deliberately interfere

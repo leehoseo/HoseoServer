@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Network/Peer.h"
 
 class CAsyncTcpEvent;
 
 /// <summary>
-/// PeerÀÇ ¿¬°áÀ» ´ã´çÇÒ Peer
+/// Peerì˜ ì—°ê²°ì„ ë‹´ë‹¹í•  Peer
 /// </summary>
 class CPeerListener : public CPeer
 {

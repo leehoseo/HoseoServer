@@ -1,4 +1,4 @@
-import 'dart:typed_data';
+﻿import 'dart:typed_data';
 import 'dart:io' as io;
 
 import 'package:path/path.dart' as path;
@@ -262,7 +262,7 @@ class BuilderTest {
       Builder builder = Builder(initialSize: 0);
       builder.startTable(0);
       int offset = builder.endTable();
-      builder.finish(offset, 'Az~ÿ');
+      builder.finish(offset, 'Az~첼');
       byteList = builder.buffer;
     }
     // Convert byteList to a ByteData so that we can read data from it.
@@ -273,7 +273,7 @@ class BuilderTest {
     expect(byteData.getUint8(4), 65); // 'a'
     expect(byteData.getUint8(5), 122); // 'z'
     expect(byteData.getUint8(6), 126); // '~'
-    expect(byteData.getUint8(7), 255); // 'ÿ'
+    expect(byteData.getUint8(7), 255); // '첼'
     // First 4 bytes of the table data are a backwards offset to the vtable.
     int vTableLoc =
         tableDataLoc - byteData.getInt32(tableDataLoc, Endian.little);
@@ -374,7 +374,7 @@ class BuilderTest {
 
   void test_table_string() {
     String latinString = 'test';
-    String unicodeString = 'Проба пера';
+    String unicodeString = '??棘閨逵 極筠?逵';
     List<int> byteList;
     {
       Builder builder = Builder(initialSize: 0);

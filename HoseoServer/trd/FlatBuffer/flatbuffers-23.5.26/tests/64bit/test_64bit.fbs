@@ -1,4 +1,4 @@
-struct LeafStruct {
+﻿struct LeafStruct {
   a:int;
   b:double;
 }

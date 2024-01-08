@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { Ability, AbilityT } from '../../my-game/example/ability.js';
 import { Test, TestT } from '../../my-game/example/test.js';
 export declare class StructOfStructs implements flatbuffers.IUnpackableObject<StructOfStructsT> {

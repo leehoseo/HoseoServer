@@ -1,4 +1,4 @@
-#ifndef TESTS_IS_QUIET_NAN_H
+﻿#ifndef TESTS_IS_QUIET_NAN_H
 #define TESTS_IS_QUIET_NAN_H
 
 namespace flatbuffers {

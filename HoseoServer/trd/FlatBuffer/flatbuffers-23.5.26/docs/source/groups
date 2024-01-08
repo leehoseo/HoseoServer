@@ -1,4 +1,4 @@
-/// @defgroup flatbuffers_cpp_api C++ API
+﻿/// @defgroup flatbuffers_cpp_api C++ API
 /// @brief FlatBuffers API for C++
 
 /// @defgroup flatbuffers_csharp_api C# API

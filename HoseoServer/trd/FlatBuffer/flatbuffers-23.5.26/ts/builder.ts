@@ -1,4 +1,4 @@
-import { ByteBuffer } from "./byte-buffer.js"
+﻿import { ByteBuffer } from "./byte-buffer.js"
 import { SIZEOF_SHORT, SIZE_PREFIX_LENGTH, SIZEOF_INT, FILE_IDENTIFIER_LENGTH } from "./constants.js"
 import { Offset, IGeneratedObject } from "./types.js"
 

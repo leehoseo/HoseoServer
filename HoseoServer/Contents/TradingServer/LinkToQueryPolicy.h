@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Server/LinkPolicy.h"
 
 class CAsyncEvent;

@@ -1,9 +1,9 @@
-#pragma once
+ï»¿#pragma once
 #include "Network/Peer.h"
 #include "LinkPolicy.h"
 
 /// <summary>
-/// ¼­¹öPeer
+/// ì„œë²„Peer
 /// </summary>
 class CServerPeer : public CPeer
 {

@@ -1,4 +1,4 @@
-export declare enum BaseType {
+﻿export declare enum BaseType {
     None = 0,
     UType = 1,
     Bool = 2,

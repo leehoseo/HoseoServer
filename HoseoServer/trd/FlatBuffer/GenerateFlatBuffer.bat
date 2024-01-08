@@ -1,4 +1,4 @@
-SET solutionPath=%1
+﻿SET solutionPath=%1
 SET outPath=%2
 SET fbs=%3
 

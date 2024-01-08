@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Composite components of Monster color.
  */
 export declare enum Color {

@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { BaseType } from '../reflection/base-type.js';
 export declare class Type implements flatbuffers.IUnpackableObject<TypeT> {
     bb: flatbuffers.ByteBuffer | null;

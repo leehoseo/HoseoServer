@@ -1,4 +1,4 @@
-#ifndef GRPC_INTERNAL_COMPILER_CPP_GENERATOR_H
+﻿#ifndef GRPC_INTERNAL_COMPILER_CPP_GENERATOR_H
 #define GRPC_INTERNAL_COMPILER_CPP_GENERATOR_H
 
 // cpp_generator.h/.cc do not directly depend on GRPC/ProtoBuf, such that they

@@ -1,4 +1,4 @@
-Use in Lobster    {#flatbuffers_guide_use_lobster}
+﻿Use in Lobster    {#flatbuffers_guide_use_lobster}
 ==============
 
 ## Before you get started

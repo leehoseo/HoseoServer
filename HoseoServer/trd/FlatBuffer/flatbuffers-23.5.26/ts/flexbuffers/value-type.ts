@@ -1,4 +1,4 @@
-export enum ValueType {
+﻿export enum ValueType {
   NULL = 0,
   INT = 1,
   UINT = 2,

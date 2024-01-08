@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { AttackerT } from './attacker.js';
 import { BookReaderT } from './book-reader.js';
 import { Character } from './character.js';

@@ -1,4 +1,4 @@
-import 'dart:collection';
+﻿import 'dart:collection';
 import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
@@ -714,7 +714,7 @@ class Builder {
     final length = value.length;
     var offset = _buf.lengthInBytes - _tail + 4;
     for (var i = 0; i < length; i++) {
-      // utf16 code unit, e.g. for '†' it's [0x20 0x20], which is 8224 decimal.
+      // utf16 code unit, e.g. for '?' it's [0x20 0x20], which is 8224 decimal.
       // ASCII characters go from 0x00 to 0x7F (which is 0 to 127 decimal).
       final char = value.codeUnitAt(i);
       if ((char & ~0x7F) != 0) {

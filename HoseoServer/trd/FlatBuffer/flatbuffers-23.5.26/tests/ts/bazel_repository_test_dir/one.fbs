@@ -1,4 +1,4 @@
-namespace bazel_repository_test;
+﻿namespace bazel_repository_test;
 
 table One {
   information:int;

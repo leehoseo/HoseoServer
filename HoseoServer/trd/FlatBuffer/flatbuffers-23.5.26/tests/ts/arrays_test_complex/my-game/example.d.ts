@@ -1,4 +1,4 @@
-export { ArrayStruct, ArrayStructT } from './example/array-struct.js';
+﻿export { ArrayStruct, ArrayStructT } from './example/array-struct.js';
 export { ArrayTable, ArrayTableT } from './example/array-table.js';
 export { InnerStruct, InnerStructT } from './example/inner-struct.js';
 export { NestedStruct, NestedStructT } from './example/nested-struct.js';

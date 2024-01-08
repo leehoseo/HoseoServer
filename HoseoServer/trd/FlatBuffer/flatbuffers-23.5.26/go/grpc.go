@@ -1,4 +1,4 @@
-package flatbuffers
+﻿package flatbuffers
 
 // Codec implements gRPC-go Codec which is used to encode and decode messages.
 var Codec = "flatbuffers"

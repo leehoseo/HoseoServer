@@ -1,4 +1,4 @@
-Use in Kotlin    {#flatbuffers_guide_use_kotlin}
+﻿Use in Kotlin    {#flatbuffers_guide_use_kotlin}
 ==============
 
 ## Before you get started

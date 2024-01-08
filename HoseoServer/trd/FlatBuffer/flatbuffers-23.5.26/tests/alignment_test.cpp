@@ -1,4 +1,4 @@
-#include "alignment_test.h"
+﻿#include "alignment_test.h"
 
 #include "alignment_test_generated.h"
 #include "flatbuffers/flatbuffer_builder.h"

@@ -1,4 +1,4 @@
----
+﻿---
 buildifier: latest
 platforms:
   ubuntu1804:

@@ -1,4 +1,4 @@
-set -e
+﻿set -e
 
 JOBS=${JOBS:-1}
 config=$1

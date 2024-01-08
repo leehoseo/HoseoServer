@@ -1,4 +1,4 @@
-Pod::Spec.new do |s|
+﻿Pod::Spec.new do |s|
   s.name             = 'FlatBuffers'
   s.version          = '23.5.26'
   s.summary          = 'FlatBuffers: Memory Efficient Serialization Library'

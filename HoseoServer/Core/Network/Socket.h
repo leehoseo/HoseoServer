@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #define _WINSOCKAPI_
 #include <windows.h>
@@ -6,7 +6,7 @@
 #include <winsock.h>
 #include <MSWSock.h>
 
-// ³×Æ®¿öÅ© ¼¼ÆÃ °ü·Ã
+// ë„¤íŠ¸ì›Œí¬ ì„¸íŒ… ê´€ë ¨
 namespace Network
 {
 	bool Setup();
@@ -34,6 +34,6 @@ public:
 	bool OnAccepted(CAsyncTcpEvent* acceptEvent);
 
 private:
-	SOCKET m_Handle; // ¼ÒÄÏ ÇÚµé
+	SOCKET m_Handle; // ì†Œì¼“ í•¸ë“¤
 	sockaddr m_Addr;
 };

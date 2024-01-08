@@ -1,3 +1,3 @@
-rootProject.name = "flatbuffers-kotlin"
+﻿rootProject.name = "flatbuffers-kotlin"
 include("flatbuffers-kotlin")
 include("benchmark")

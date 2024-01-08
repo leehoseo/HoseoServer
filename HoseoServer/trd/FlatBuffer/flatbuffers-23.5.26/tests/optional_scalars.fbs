@@ -1,4 +1,4 @@
-namespace optional_scalars;
+﻿namespace optional_scalars;
 
 enum OptionalByte: byte {
   None = 0,

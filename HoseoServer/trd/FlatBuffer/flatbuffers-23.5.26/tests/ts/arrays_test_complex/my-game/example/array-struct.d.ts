@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { NestedStruct, NestedStructT } from '../../my-game/example/nested-struct.js';
 import { OuterStruct, OuterStructT } from '../../my-game/example/outer-struct.js';
 export declare class ArrayStruct implements flatbuffers.IUnpackableObject<ArrayStructT> {

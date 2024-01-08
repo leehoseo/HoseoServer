@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { InnerStruct, InnerStructT } from '../../my-game/example/inner-struct.js';
 export declare class OuterStruct implements flatbuffers.IUnpackableObject<OuterStructT> {
     bb: flatbuffers.ByteBuffer | null;

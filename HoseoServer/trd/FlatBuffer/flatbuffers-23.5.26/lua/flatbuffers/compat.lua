@@ -1,4 +1,4 @@
-local compats = {
+﻿local compats = {
     ["Lua 5.1"] = function()  
         -- Check if Lua JIT is installed first
         local ok = pcall(require, "jit")

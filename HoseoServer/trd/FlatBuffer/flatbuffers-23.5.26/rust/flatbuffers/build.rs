@@ -1,4 +1,4 @@
-use rustc_version::{version_meta, Channel};
+﻿use rustc_version::{version_meta, Channel};
 
 fn main() {
     let version_meta = version_meta().unwrap();

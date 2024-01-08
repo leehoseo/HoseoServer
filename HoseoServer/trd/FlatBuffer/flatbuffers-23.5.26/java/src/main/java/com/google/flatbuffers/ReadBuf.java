@@ -1,4 +1,4 @@
-package com.google.flatbuffers;
+﻿package com.google.flatbuffers;
 
 /**
  *  Represent a chunk of data, where FlexBuffers will read from.

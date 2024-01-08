@@ -1,4 +1,4 @@
-# [.NET DllExport](https://github.com/3F/DllExport)
+﻿# [.NET DllExport](https://github.com/3F/DllExport)
 
 *.NET DllExport* with .NET Core support (aka 3F/DllExport)
 
@@ -22,7 +22,7 @@ Copyright (c) 2016-2021  Denis Kuzmin <x-3F@outlook.com> github/3F
 [`DllExport`](https://3f.github.io/DllExport/releases/latest/manager/)` -action Configure` [[?](#how-to-get-dllexport)]
 
 > [ ***[Quick start](https://github.com/3F/DllExport/wiki/Quick-start)*** ] [ [Examples: C++, C#, Java](https://github.com/3F/DllExport/wiki/Examples) ] 
-> -> { **[Wiki](https://github.com/3F/DllExport/wiki)** } { [🧪 Demo src](https://github.com/3F/Examples/tree/master/DllExport/BasicExport) }
+> -> { **[Wiki](https://github.com/3F/DllExport/wiki)** } { [?㎦ Demo src](https://github.com/3F/Examples/tree/master/DllExport/BasicExport) }
 
 ```csharp
 [DllExport]
@@ -148,8 +148,8 @@ Please note again, the [UnmanagedExports](https://www.nuget.org/packages/Unmanag
 
 But *.NET DllExport* [**is not related to him**](https://github.com/3F/DllExport/issues/87#issuecomment-438576100).
 
-✔ *.NET DllExport* is developed for you by [GitHub/3F](https://github.com/3F) ([ [GitHub](https://github.com/3F) ]; [ [twitter](https://twitter.com/GitHub3F) ]). 
+? *.NET DllExport* is developed for you by [GitHub/3F](https://github.com/3F) ([ [GitHub](https://github.com/3F) ]; [ [twitter](https://twitter.com/GitHub3F) ]). 
 
 If something is helpful from *3F/DllExport,* donations are welcomed, and thanks !
 
-[ [ ☕ Donate ](https://3F.github.com/Donation/) ]
+[ [ ? Donate ](https://3F.github.com/Donation/) ]

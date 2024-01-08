@@ -1,4 +1,4 @@
-#include "AsyncTcpComponent.h"
+ï»¿#include "AsyncTcpComponent.h"
 #include "Socket.h"
 #include "AsyncTcpEvent.h"
 #include "SendPolicy.h"
@@ -33,7 +33,7 @@ bool CAsyncTcpComponent::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 {
     const bool result = m_Socket->Accept(newSocket, acceptEvent);
     // https://programmingdiary.tistory.com/4
-    // Owner°¡ Listener¿©¾ß µÉÅÄµ¥
+    // Ownerê°€ Listenerì—¬ì•¼ ë íƒ ë°
     return result;
 }
 
@@ -54,7 +54,7 @@ void CAsyncTcpComponent::Disconnect()
 
 bool CAsyncTcpComponent::Recv()
 {
-    // ¹Þ±â Àü recvEvent¿¡ ´ëÇÑ Ã³¸®
+    // ë°›ê¸° ì „ recvEventì— ëŒ€í•œ ì²˜ë¦¬
     return m_Socket->Recv(m_RecvEvent);
 }
 

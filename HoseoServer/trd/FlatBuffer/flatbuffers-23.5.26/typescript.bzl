@@ -1,4 +1,4 @@
-"""
+﻿"""
 Rules for building typescript flatbuffers with Bazel.
 """
 

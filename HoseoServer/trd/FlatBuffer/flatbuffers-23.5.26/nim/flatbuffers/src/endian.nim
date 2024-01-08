@@ -1,4 +1,4 @@
-template swapEndian*(outp, inp: pointer, size: int) =
+﻿template swapEndian*(outp, inp: pointer, size: int) =
    var i = cast[cstring](inp)
    var o = cast[cstring](outp)
    for x in 0..<size:

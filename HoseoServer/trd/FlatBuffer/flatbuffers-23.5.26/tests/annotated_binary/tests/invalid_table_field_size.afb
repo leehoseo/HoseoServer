@@ -1,4 +1,4 @@
-// Annotated Flatbuffer Binary
+﻿// Annotated Flatbuffer Binary
 //
 // Schema file: annotated_binary.fbs
 // Binary file: tests/invalid_table_field_size.bin

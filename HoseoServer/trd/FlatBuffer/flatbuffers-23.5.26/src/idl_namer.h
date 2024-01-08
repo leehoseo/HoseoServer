@@ -1,4 +1,4 @@
-#ifndef FLATBUFFERS_IDL_NAMER
+﻿#ifndef FLATBUFFERS_IDL_NAMER
 #define FLATBUFFERS_IDL_NAMER
 
 #include "flatbuffers/idl.h"

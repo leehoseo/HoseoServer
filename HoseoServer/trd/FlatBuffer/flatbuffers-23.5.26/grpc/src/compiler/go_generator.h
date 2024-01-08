@@ -1,4 +1,4 @@
-#ifndef GRPC_INTERNAL_COMPILER_GO_GENERATOR_H
+﻿#ifndef GRPC_INTERNAL_COMPILER_GO_GENERATOR_H
 #define GRPC_INTERNAL_COMPILER_GO_GENERATOR_H
 
 // go generator is used to generate GRPC code for serialization system, such as

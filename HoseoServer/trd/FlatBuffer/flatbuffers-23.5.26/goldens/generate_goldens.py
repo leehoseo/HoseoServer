@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 
 from cpp.generate import GenerateCpp
 from csharp.generate import GenerateCSharp

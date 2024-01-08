@@ -1,4 +1,4 @@
-import { fromByteWidth } from './bit-width-util.js'
+﻿import { fromByteWidth } from './bit-width-util.js'
 import { ValueType } from './value-type.js'
 import { isNumber, isIndirectNumber, isAVector, fixedTypedVectorElementSize, isFixedTypedVector, isTypedVector, typedVectorElementType, packedType, fixedTypedVectorElementType } from './value-type-util.js'
 import { indirect, keyForIndex, keyIndex, readFloat, readInt, readUInt } from './reference-util.js'

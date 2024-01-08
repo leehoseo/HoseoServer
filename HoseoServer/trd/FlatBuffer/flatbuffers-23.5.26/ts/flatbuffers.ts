@@ -1,4 +1,4 @@
-export { SIZEOF_SHORT } from './constants.js'
+﻿export { SIZEOF_SHORT } from './constants.js'
 export { SIZEOF_INT } from './constants.js'
 export { FILE_IDENTIFIER_LENGTH } from './constants.js'
 export { SIZE_PREFIX_LENGTH } from './constants.js'

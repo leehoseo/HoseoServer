@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2021 Google Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ class FlexBuffersTest {
 
   @Test
   fun testWriteString() {
-    val text = "Ḧ̵̘́ȩ̵̐l̶̿͜l̶͚͝o̷̦̚ ̷̫̊w̴̤͊ö̸̞́r̴͎̾l̷͚̐d̶̰̍"
+    val text = "H絹??e絹?偈l繭結?l繭??o肩?迲 肩?格w甄?劫o見??r甄潔?l肩??d繭?隔"
     val builder = FlexBuffersBuilder()
     builder.put(text)
     val data = builder.finish()
@@ -265,8 +265,8 @@ class FlexBuffersTest {
   fun testBigStringMap() {
     val builder = FlexBuffersBuilder(shareFlag = FlexBuffersBuilder.SHARE_KEYS_AND_STRINGS)
 
-    val stringKey = Array(10000) { "Ḧ̵̘́ȩ̵̐myFairlyBigKey$it" }
-    val stringValue = Array(10000) { "Ḧ̵̘́ȩ̵̐myFairlyBigValue$it" }
+    val stringKey = Array(10000) { "H絹??e絹?偈myFairlyBigKey$it" }
+    val stringValue = Array(10000) { "H絹??e絹?偈myFairlyBigValue$it" }
     val hashMap = mutableMapOf<String, String>()
     val pos = builder.startMap()
     for (i in stringKey.indices) {
@@ -288,7 +288,7 @@ class FlexBuffersTest {
   @Test
   fun testKeysAccess() {
     for (i in 1 until 1000) {
-      val utf8String = "ሰማይ አይታረስ ንጉሥ አይከሰስ።$i"
+      val utf8String = "?결? ???녁ⓤ????????ⓤ결듄?i"
       val bytes = ByteArray(Utf8.encodedLength(utf8String))
       val pos = Utf8.encodeUtf8Array(utf8String, bytes)
       val key = Key(ArrayReadWriteBuffer(bytes), 0, pos)

@@ -1,4 +1,4 @@
-if (UNIX)
+﻿if (UNIX)
     set(CPACK_GENERATOR "RPM")
     set(CPACK_SOURCE_TGZ "ON")
 

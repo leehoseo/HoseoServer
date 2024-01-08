@@ -1,4 +1,4 @@
-#include "SendPolicy.h"
+ï»¿#include "SendPolicy.h"
 #include "Peer.h"
 #include "AsyncTcpEvent.h"
 
@@ -12,6 +12,6 @@ CSendPolicy::~CSendPolicy()
 
 bool CSendPolicy::PostSend(CPeer* peer, CAsyncTcpEvent* sendEvent)
 {
-	// ÀÏ´Ü ±×³É º¸³½´Ù.
+	// ì¼ë‹¨ ê·¸ëƒ¥ ë³´ë‚¸ë‹¤.
 	return peer->Send(sendEvent);
 }

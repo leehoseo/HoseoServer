@@ -1,4 +1,4 @@
-import assert from 'assert'
+﻿import assert from 'assert'
 import * as flatbuffers from 'flatbuffers';
 import { Foo } from './required-strings/foo.js';
 

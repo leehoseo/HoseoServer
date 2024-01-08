@@ -1,4 +1,4 @@
-# Go Echo Example
+﻿# Go Echo Example
 
 A simple example demonstrating how to send flatbuffers over the network in Go.
 

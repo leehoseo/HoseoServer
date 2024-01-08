@@ -1,4 +1,4 @@
-#include "native_type_test_impl.h"
+﻿#include "native_type_test_impl.h"
 
 #include "native_type_test_generated.h"
 

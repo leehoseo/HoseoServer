@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Lobby/LobbyAppManager.h"
 
 class CLinkToQueryPolicy;

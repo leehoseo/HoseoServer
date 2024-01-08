@@ -1,4 +1,4 @@
-local m = {}
+﻿local m = {}
 
 m.Builder = require("flatbuffers.builder").New
 m.N = require("flatbuffers.numTypes")

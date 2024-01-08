@@ -1,4 +1,4 @@
-#include "AsyncTcpEvent.h"
+Ôªø#include "AsyncTcpEvent.h"
 #include "Socket.h"
 #include "AsyncTcpEventSink.h"
 
@@ -6,7 +6,7 @@ CAsyncTcpEvent::CAsyncTcpEvent(const EventType type)
 	: m_Type(type)
 	, m_TotalSize(0)
 {
-	m_Buffer = new uint8_t[1204]; // ¿œ¥‹ ¿Ã∑∏∞‘
+	m_Buffer = new uint8_t[1204]; // ÏùºÎã® Ïù¥Î†áÍ≤å
 	ZeroMemory(&m_WsaBuffer, sizeof(m_WsaBuffer));
 }
 

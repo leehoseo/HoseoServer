@@ -1,4 +1,4 @@
-import 'dart:typed_data';
+﻿import 'dart:typed_data';
 
 import 'package:flat_buffers/flex_buffers.dart' show Reference, Builder;
 import 'package:test/test.dart';
@@ -79,7 +79,7 @@ void main() {
           20,
           1
         ])).stringValue,
-        'hello 😱');
+        'hello ??);
   });
   test('blob value', () {
     expect(

@@ -1,4 +1,4 @@
-include 'one.fbs';
+﻿include 'one.fbs';
 
 namespace bazel_repository_test;
 

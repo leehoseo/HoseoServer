@@ -1,4 +1,4 @@
-package com.google.flatbuffers;
+﻿package com.google.flatbuffers;
 
 /**
  * Interface to represent a read-write buffer. This interface will be used to access and write

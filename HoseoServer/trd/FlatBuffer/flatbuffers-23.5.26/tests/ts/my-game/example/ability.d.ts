@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 export declare class Ability implements flatbuffers.IUnpackableObject<AbilityT> {
     bb: flatbuffers.ByteBuffer | null;
     bb_pos: number;

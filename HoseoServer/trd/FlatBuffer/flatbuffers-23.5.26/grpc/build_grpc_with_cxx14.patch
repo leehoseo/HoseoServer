@@ -1,4 +1,4 @@
-diff --git a/bazel/copts.bzl b/bazel/copts.bzl
+﻿diff --git a/bazel/copts.bzl b/bazel/copts.bzl
 index 10be944f25..879518b92f 100644
 --- a/bazel/copts.bzl
 +++ b/bazel/copts.bzl

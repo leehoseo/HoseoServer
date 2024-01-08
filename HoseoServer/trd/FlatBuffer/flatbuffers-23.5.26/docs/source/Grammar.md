@@ -1,4 +1,4 @@
-Grammar of the schema language    {#flatbuffers_grammar}
+﻿Grammar of the schema language    {#flatbuffers_grammar}
 ==============================
 
 schema = include*

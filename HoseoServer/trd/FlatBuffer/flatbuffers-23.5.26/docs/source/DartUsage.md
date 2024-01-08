@@ -1,4 +1,4 @@
-Use in Dart    {#flatbuffers_guide_use_dart}
+﻿Use in Dart    {#flatbuffers_guide_use_dart}
 ===========
 
 ## Before you get started

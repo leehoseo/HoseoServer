@@ -1,4 +1,4 @@
-set -e
+﻿set -e
 
 JOBS=${JOBS:-1}
 export UBSAN_OPTIONS=halt_on_error=1

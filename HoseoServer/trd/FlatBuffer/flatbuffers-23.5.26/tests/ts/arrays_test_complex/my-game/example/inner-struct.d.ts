@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 export declare class InnerStruct implements flatbuffers.IUnpackableObject<InnerStructT> {
     bb: flatbuffers.ByteBuffer | null;
     bb_pos: number;

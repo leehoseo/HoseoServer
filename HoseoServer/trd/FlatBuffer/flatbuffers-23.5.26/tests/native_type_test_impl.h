@@ -1,4 +1,4 @@
-#ifndef NATIVE_TYPE_TEST_IMPL_H
+﻿#ifndef NATIVE_TYPE_TEST_IMPL_H
 #define NATIVE_TYPE_TEST_IMPL_H
 
 namespace Native {

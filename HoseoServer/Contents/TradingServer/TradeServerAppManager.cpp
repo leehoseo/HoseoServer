@@ -1,4 +1,4 @@
-#include "TradeServerAppManager.h"
+ï»¿#include "TradeServerAppManager.h"
 #include "TradeServerHandlerSetup.h"
 #include "Network/AsyncDispatcher.h"
 #include "Lobby/LobbyPeerListener.h"
@@ -22,18 +22,18 @@ bool CTradeServerAppManager::Setup()
         return false;
     }
 
-    // ¼­¹ö ¿¬°á °ü¸®
+    // ì„œë²„ ì—°ê²° ê´€ë¦¬
     {
         m_ToQueryPolicy = New(CLinkToQueryPolicy);
     }
 
-    // ÇÚµé·¯ Ãß°¡
+    // í•¸ë“¤ëŸ¬ ì¶”ê°€
     {
         TradeServerHandlerSetup::Setup();
     }
 
     g_AsyncDispatcher::GetInstance()->Start();
-    //µ¥ÀÌÅÍ ¼¼ÆÃ
+    //ë°ì´í„° ì„¸íŒ…
     g_ListenSystem::GetInstance()->Init(New(CLobbyPeerListener));
     g_ListenSystem::GetInstance()->Start();
 

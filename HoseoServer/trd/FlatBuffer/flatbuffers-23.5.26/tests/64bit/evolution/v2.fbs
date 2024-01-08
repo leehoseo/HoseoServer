@@ -1,4 +1,4 @@
-namespace v2;
+﻿namespace v2;
 
 table RootTable {
   a:float;

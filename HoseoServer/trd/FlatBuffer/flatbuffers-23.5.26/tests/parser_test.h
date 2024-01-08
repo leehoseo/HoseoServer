@@ -1,4 +1,4 @@
-#ifndef TESTS_PARSER_TEST_H
+﻿#ifndef TESTS_PARSER_TEST_H
 #define TESTS_PARSER_TEST_H
 
 namespace flatbuffers {

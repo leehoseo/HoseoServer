@@ -1,4 +1,4 @@
-#include "Socket.h"
+ï»¿#include "Socket.h"
 #include "AsyncTcpEvent.h"
 
 #define WIN32_LEAN_AND_MEAN
@@ -13,7 +13,7 @@
 
 namespace Network
 {
-	// ¼ÒÄÏ Åë½Å¿¡ »ç¿ëÇÒ ÇÔ¼ö Æ÷ÀÎÅÍ ¸ğÀ½
+	// ì†Œì¼“ í†µì‹ ì— ì‚¬ìš©í•  í•¨ìˆ˜ í¬ì¸í„° ëª¨ìŒ
 	LPFN_ACCEPTEX lpfnAcceptEx = nullptr;
 	LPFN_CONNECTEX lpfnConnectEx = nullptr;
 	LPFN_DISCONNECTEX lpfnDisconnectEx = nullptr;
@@ -85,16 +85,16 @@ CSocket::CSocket()
 
 	{
 		// https://snowfleur.tistory.com/193?category=756631
-		// Page Locking ÃÖ¼ÒÈ­¸¦ À§ÇØ ¼Û ¼ö½Å ¹öÆÛ¸¦ 0À¸·Î ¼³Á¤ÇÔ
-		// Ä¿³Î ·¹º§¿¡¼­ÀÇ ¼Û¼ö½Å¹öÆÛ¸¦ ÀÌ¿ëÇÏÁö ¾Ê°í ¾ÖÇÃ¸®ÄÉÀÌ¼Ç¿¡¼­ Á¦°øÇÏ´Â ¹öÆÛ·Î ¹Ù·Î º¹»ç¸¦ ÇØ¹ö¸®±â ¶§¹®¿¡ 
-		// º¹»ç È½¼ö°¡ ÇÑ ¹ø ÁÙ¾î ¼Óµµ°¡ ±²ÀåÈ÷ »¡¶óÁø´Ù.
+		// Page Locking ìµœì†Œí™”ë¥¼ ìœ„í•´ ì†¡ ìˆ˜ì‹  ë²„í¼ë¥¼ 0ìœ¼ë¡œ ì„¤ì •í•¨
+		// ì»¤ë„ ë ˆë²¨ì—ì„œì˜ ì†¡ìˆ˜ì‹ ë²„í¼ë¥¼ ì´ìš©í•˜ì§€ ì•Šê³  ì• í”Œë¦¬ì¼€ì´ì…˜ì—ì„œ ì œê³µí•˜ëŠ” ë²„í¼ë¡œ ë°”ë¡œ ë³µì‚¬ë¥¼ í•´ë²„ë¦¬ê¸° ë•Œë¬¸ì— 
+		// ë³µì‚¬ íšŸìˆ˜ê°€ í•œ ë²ˆ ì¤„ì–´ ì†ë„ê°€ êµ‰ì¥íˆ ë¹¨ë¼ì§„ë‹¤.
 
-		// °¢°¢ ÇÔ¼ö·Î »©¾ßÇÑ´Ù.
+		// ê°ê° í•¨ìˆ˜ë¡œ ë¹¼ì•¼í•œë‹¤.
 		const int zero = 0;
 		::setsockopt(m_Handle, SOL_SOCKET, SO_SNDBUF, (char*)&zero, sizeof(zero));
 		::setsockopt(m_Handle, SOL_SOCKET, SO_RCVBUF, (char*)&zero, sizeof(zero));
 
-		// AcceptEx()¸¦ »ç¿ëÇÒ °æ¿ì, listen() ¿¡¼­ ÀÚµ¿ÀûÀ¸·Î accept¸¦ ¹ŞÁö ¸øÇÏµµ·Ï ÇÑ´Ù.
+		// AcceptEx()ë¥¼ ì‚¬ìš©í•  ê²½ìš°, listen() ì—ì„œ ìë™ì ìœ¼ë¡œ acceptë¥¼ ë°›ì§€ ëª»í•˜ë„ë¡ í•œë‹¤.
 		BOOL on = TRUE;
 		//::setsockopt(m_Handle, SOL_SOCKET, SO_CONDITIONAL_ACCEPT, (char*)&on, sizeof(on));
 	}
@@ -170,7 +170,7 @@ bool CSocket::Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent)
 
 bool CSocket::Disconnect(CAsyncTcpEvent* disconnectEvent)
 {
-	// disconnectEvent¸¦ ¹Ş¾Æµµ ioByte°¡ 0ÀÌ¶ó Disconnect¸¦ ¶Ç º¸³½´Ù. Status·Î ºĞ±â Ã³¸®¸¦ ÇØÁà¾ßÇÒµí
+	// disconnectEventë¥¼ ë°›ì•„ë„ ioByteê°€ 0ì´ë¼ Disconnectë¥¼ ë˜ ë³´ë‚¸ë‹¤. Statusë¡œ ë¶„ê¸° ì²˜ë¦¬ë¥¼ í•´ì¤˜ì•¼í• ë“¯
 	const bool result = Network::lpfnDisconnectEx(GetHandle(), NULL, 0, 0);
 
 	return result;
@@ -178,7 +178,7 @@ bool CSocket::Disconnect(CAsyncTcpEvent* disconnectEvent)
 
 bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 {
-	// ¶ô Ã³¸® °í¹Î
+	// ë½ ì²˜ë¦¬ ê³ ë¯¼
 	DWORD recvBytes = {};
 	DWORD flags = {};
 

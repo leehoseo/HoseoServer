@@ -1,7 +1,7 @@
-#pragma once
+ï»¿#pragma once
 #include "Singleton.h"
 /// <summary>
-/// ECSÀÇ System ÃÖ»óÀ§ Å¬·¡½º
+/// ECSì˜ System ìµœìƒìœ„ í´ë˜ìŠ¤
 /// </summary>
 
 class CSystem : public CSingleton<CSystem>

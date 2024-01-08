@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 require join(DIRECTORY_SEPARATOR, array(dirname(dirname(__FILE__)), "php", "Constants.php"));
 require join(DIRECTORY_SEPARATOR, array(dirname(dirname(__FILE__)), "php", "ByteBuffer.php"));

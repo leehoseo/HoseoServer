@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Base/Entity.h"
 #include "AsyncTcpEventSink.h"
@@ -15,23 +15,23 @@ public:
 public:
 
 	/// <summary>
-	/// ¼ÒÄÏ Åë½Å¿¡¼­ IO¸¦ ¹Ş¾ÒÀ»¶§ È£Ãâ
+	/// ì†Œì¼“ í†µì‹ ì—ì„œ IOë¥¼ ë°›ì•˜ì„ë•Œ í˜¸ì¶œ
 	/// </summary>
-	/// <param name="tcpEvent"> ¹ŞÀº ÀÌº¥Æ® </param>
-	/// <returns>¼º°ø½Ã Ã³¸®ÇÑ ¹ÙÀÌÆ® ¼ö</returns>
+	/// <param name="tcpEvent"> ë°›ì€ ì´ë²¤íŠ¸ </param>
+	/// <returns>ì„±ê³µì‹œ ì²˜ë¦¬í•œ ë°”ì´íŠ¸ ìˆ˜</returns>
 	virtual int OnReceiveEvent(CAsyncTcpEvent* tcpEvent);
 
 	/// <summary>
-	/// Accept ¼º°ø½Ã È£ÃâµÇ´Â ÇÔ¼ö
+	/// Accept ì„±ê³µì‹œ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜
 	/// </summary>
-	/// <param name="tcpEvent"> accept½Ã ¹ŞÀº ÀÌº¥Æ® </param>
+	/// <param name="tcpEvent"> acceptì‹œ ë°›ì€ ì´ë²¤íŠ¸ </param>
 	virtual void OnAccepted(CAsyncTcpEvent* tcpEvent);
 public:
 
-	// ÆĞÅ¶À» º¸³»±â À§ÇÑ »çÀü ÀÛ¾÷
+	// íŒ¨í‚·ì„ ë³´ë‚´ê¸° ìœ„í•œ ì‚¬ì „ ì‘ì—…
 	bool PostSend(CAsyncTcpEvent* sendEvent);
 
-	// ÆĞÅ¶À» ½ÇÁ¦·Î º¸³½´Ù.
+	// íŒ¨í‚·ì„ ì‹¤ì œë¡œ ë³´ë‚¸ë‹¤.
 	bool Send(CAsyncTcpEvent* sendEvent);
 
 	CSocket* GetSocket();

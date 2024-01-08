@@ -1,4 +1,4 @@
-#include "DBConnection.h"
+﻿#include "DBConnection.h"
 
 CDBConnection::CDBConnection()
 {

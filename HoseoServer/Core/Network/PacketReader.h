@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "Packet.h"
 #include "PacketBase.h"
 
@@ -9,12 +9,12 @@ public:
 	CPacketReader(uint8_t* buffer)
 	{
 
-		// ÄÁÅÙÃ÷¿¡¼­ »ç¿ëÇÒ µ¥ÀÌÅÍÀÎ Body ¼³Á¤
+		// ì»¨í…ì¸ ì—ì„œ ì‚¬ìš©í•  ë°ì´í„°ì¸ Body ì„¤ì •
 		uint8_t* bodyBuffer = nullptr;
 		CPacket::GetBody(buffer, bodyBuffer);
 
 		m_Packet = New(T);
-		// À¯È¿¼º °ËÁõ °°Àº°É ÇØ¾ßÇÏ³ª?
+		// ìœ íš¨ì„± ê²€ì¦ ê°™ì€ê±¸ í•´ì•¼í•˜ë‚˜?
 		m_Packet->UnPack(bodyBuffer);
 	}
 

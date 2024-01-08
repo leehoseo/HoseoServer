@@ -1,4 +1,4 @@
-/* global BigInt */
+﻿/* global BigInt */
 
 import assert from 'assert';
 import { readFileSync, writeFileSync } from 'fs';

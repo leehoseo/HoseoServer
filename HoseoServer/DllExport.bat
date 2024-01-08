@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 :: Copyright (c) 2016-2021  Denis Kuzmin [x-3F@outlook.com] github/3F
 :: https://github.com/3F/DllExport
 if "%~1"=="/?" goto bq

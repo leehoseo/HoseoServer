@@ -1,4 +1,4 @@
-// sizeof(BadAlignmentSmall) == 12
+﻿// sizeof(BadAlignmentSmall) == 12
 // alignof(BadAlignmentSmall) == 4
 struct BadAlignmentSmall {
   var_0: uint;

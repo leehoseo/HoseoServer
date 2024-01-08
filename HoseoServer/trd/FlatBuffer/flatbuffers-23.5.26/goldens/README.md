@@ -1,4 +1,4 @@
-# Golden Generated Files
+﻿# Golden Generated Files
 
 This directory is a repository for the generated files of `flatc`.
 

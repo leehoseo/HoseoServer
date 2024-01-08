@@ -1,4 +1,4 @@
-# ``FlatBuffers``
+﻿# ``FlatBuffers``
 
 FlatBuffers: Memory Efficient Serialization Library
 

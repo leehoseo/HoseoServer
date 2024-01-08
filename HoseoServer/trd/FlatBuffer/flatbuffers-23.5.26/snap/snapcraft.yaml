@@ -1,4 +1,4 @@
-name: flatbuffers
+﻿name: flatbuffers
 base: core18
 adopt-info: flatc
 summary: FlatBuffers compiler

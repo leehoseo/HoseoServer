@@ -1,1 +1,1 @@
-flatc --csharp Trade.fbs
+﻿flatc --csharp Trade.fbs

@@ -1,4 +1,4 @@
-#include "AppManager.h"
+﻿#include "AppManager.h"
 
 
 bool CAppManager::Setup()

@@ -1,4 +1,4 @@
-import sys
+﻿import sys
 from pathlib import Path
 
 # Get the path where this script is located so we can invoke the script from

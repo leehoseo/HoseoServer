@@ -1,4 +1,4 @@
-- - - - - - - - - - - - - - - - - - - - - - - - -
+﻿- - - - - - - - - - - - - - - - - - - - - - - - -
 .NET DllExport - https://github.com/3F/DllExport
 - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -63,7 +63,7 @@
 
     * NOTE: Version 1.7.2 does not exist! 
             To avoid confusion and additional misunderstanding with 1.2.7, 
-            👉 Minor version 1.7.2 will be numbered as [ 1.7.3 ]
+            ? Minor version 1.7.2 will be numbered as [ 1.7.3 ]
             
             https://github.com/3F/DllExport/milestone/11
 

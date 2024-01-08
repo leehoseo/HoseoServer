@@ -1,4 +1,4 @@
-Use in C#    {#flatbuffers_guide_use_c-sharp}
+﻿Use in C#    {#flatbuffers_guide_use_c-sharp}
 ==============
 
 ## Before you get started

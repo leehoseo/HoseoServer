@@ -1,4 +1,4 @@
-#include "PeerListener.h"
+ï»¿#include "PeerListener.h"
 
 #include "Network/AsyncDispatcher.h"
 //#include "Network/AsyncEvent.h"
@@ -22,7 +22,7 @@ void CPeerListener::Start()
 
 CPeer* CPeerListener::CreatePeer()
 {
-	// ¿©±ä µé¾î¿À¸é ¾ÈµÈ´Ù.
+	// ì—¬ê¸´ ë“¤ì–´ì˜¤ë©´ ì•ˆëœë‹¤.
 	return nullptr;
 }
 
@@ -39,7 +39,7 @@ void CPeerListener::PostAccept(CAsyncTcpEvent* acceptEvent)
 
 	if (true == component->Accept(newSocket, acceptEvent))
 	{
-		// Ãß°¡ Ã³¸®¸¦ À§ÇØ ÀÌº¥Æ®¸¦ Enqueue
+		// ì¶”ê°€ ì²˜ë¦¬ë¥¼ ìœ„í•´ ì´ë²¤íŠ¸ë¥¼ Enqueue
 		g_AsyncDispatcher::GetInstance()->Enqueue(nullptr, &acceptEvent->GetTag());
 	}
 	else
@@ -47,11 +47,11 @@ void CPeerListener::PostAccept(CAsyncTcpEvent* acceptEvent)
 		DWORD lastError = GetLastError();
 		if (ERROR_IO_PENDING == lastError)
 		{
-			// ¼º°ø
+			// ì„±ê³µ
 		}
 		else
 		{
-			// ½ÇÆÐ
+			// ì‹¤íŒ¨
 		}
 
 	}
@@ -66,7 +66,7 @@ void CPeerListener::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 
 	g_AsyncDispatcher::GetInstance()->Associate(newPeer, newPeer->GetSocket());
 
-	// ÀÌº¥Æ® ´Ù½Ã ÀçÈ°¿ëÇÑ´Ù.
+	// ì´ë²¤íŠ¸ ë‹¤ì‹œ ìž¬í™œìš©í•œë‹¤.
 	tcpEvent->SetSocket(nullptr);
 	tcpEvent->CleanBuffer();
 	

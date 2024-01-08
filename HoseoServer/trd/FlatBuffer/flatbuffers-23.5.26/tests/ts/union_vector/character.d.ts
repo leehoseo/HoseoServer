@@ -1,4 +1,4 @@
-import { Attacker } from './attacker.js';
+﻿import { Attacker } from './attacker.js';
 import { BookReader } from './book-reader.js';
 import { Rapunzel } from './rapunzel.js';
 export declare enum Character {

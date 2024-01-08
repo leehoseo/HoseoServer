@@ -1,4 +1,4 @@
-namespace required_strings;
+﻿namespace required_strings;
 
 /**
  * Foo defines a type where both fields are mandatory.

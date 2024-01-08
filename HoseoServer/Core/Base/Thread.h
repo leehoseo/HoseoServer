@@ -1,16 +1,16 @@
-#pragma once
+ï»¿#pragma once
 
 #include <thread>
 #include <string>
 
 /// <summary>
-/// ThreadÀÇ ÃÖ»óÀ§ Å¬·¡½º
+/// Threadì˜ ìµœìƒìœ„ í´ë˜ìŠ¤
 /// </summary>
 class CThread
 {
 	enum class EState
 	{
-		// Tr Ã³¸®¿ë
+		// Tr ì²˜ë¦¬ìš©
 		WAIT = 0,
 		RUN,
 

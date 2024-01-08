@@ -1,4 +1,4 @@
-#[allow(dead_code, unused_imports)]
+﻿#[allow(dead_code, unused_imports)]
 #[path = "../../optional_scalars/mod.rs"]
 mod optional_scalars_generated;
 use crate::optional_scalars_generated::optional_scalars::*;

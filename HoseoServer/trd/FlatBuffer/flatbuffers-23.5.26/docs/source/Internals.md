@@ -1,4 +1,4 @@
-FlatBuffer Internals    {#flatbuffers_internals}
+﻿FlatBuffer Internals    {#flatbuffers_internals}
 ====================
 
 This section is entirely optional for the use of FlatBuffers. In normal

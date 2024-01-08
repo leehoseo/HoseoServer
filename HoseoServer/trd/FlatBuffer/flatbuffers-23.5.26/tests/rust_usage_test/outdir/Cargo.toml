@@ -1,4 +1,4 @@
-[package]
+﻿[package]
 name = "outdir"
 version = "0.1.0"
 authors = ["Casper Neo <cneo@google.com>"]

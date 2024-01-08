@@ -1,4 +1,4 @@
-namespace RustNamerTest;
+﻿namespace RustNamerTest;
 
 table FieldTable {}
 

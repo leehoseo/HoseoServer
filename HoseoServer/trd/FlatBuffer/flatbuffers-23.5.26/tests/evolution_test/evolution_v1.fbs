@@ -1,4 +1,4 @@
-namespace Evolution.V1;
+﻿namespace Evolution.V1;
 
 table TableA {
     a:float;

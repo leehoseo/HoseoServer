@@ -1,4 +1,4 @@
-table HelloReply {
+﻿table HelloReply {
   message:string;
 }
 

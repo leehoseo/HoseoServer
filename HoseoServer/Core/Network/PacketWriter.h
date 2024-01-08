@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "Packet.h"
 #include "PacketBase.h"
 #include "AsyncTcpEvent.h"
@@ -10,7 +10,7 @@ public:
 	CPacketWriter()
 	{
 		m_Packet = New(T);
-		// À¯È¿¼º °ËÁõ °°Àº°É ÇØ¾ßÇÏ³ª?
+		// ìœ íš¨ì„± ê²€ì¦ ê°™ì€ê±¸ í•´ì•¼í•˜ë‚˜?
 	}
 
 	~CPacketWriter()
@@ -34,7 +34,7 @@ public:
 private:
 	uint8_t* MakeBuffer()
 	{
-		uint8_t* bodyBuffer = m_Packet->Pack(); // ÆĞÅ¶À» ¹ÙÀÌ³Ê¸®·Î
+		uint8_t* bodyBuffer = m_Packet->Pack(); // íŒ¨í‚·ì„ ë°”ì´ë„ˆë¦¬ë¡œ
 
 		if (nullptr == bodyBuffer)
 		{
@@ -45,13 +45,13 @@ private:
 		const int size = bodySize + sizeof(PacketHeader);
 		uint8_t* packetBuffer = new uint8_t[size];
 
-		// ÆĞÅ¶ÀÇ header ºÎºĞ ¼³Á¤
+		// íŒ¨í‚·ì˜ header ë¶€ë¶„ ì„¤ì •
 		CPacket::SetSize(packetBuffer, size);
 		CPacket::SetId(packetBuffer, T::GetHash());
 		CPacket::SetCompressType(packetBuffer, 0);
 		CPacket::SetEncryptionType(packetBuffer, 0);
 
-		// ÄÁÅÙÃ÷¿¡¼­ »ç¿ëÇÒ µ¥ÀÌÅÍÀÎ Body ¼³Á¤
+		// ì»¨í…ì¸ ì—ì„œ ì‚¬ìš©í•  ë°ì´í„°ì¸ Body ì„¤ì •
 		CPacket::SetBody(packetBuffer, bodyBuffer, bodySize);
 
 		return packetBuffer;

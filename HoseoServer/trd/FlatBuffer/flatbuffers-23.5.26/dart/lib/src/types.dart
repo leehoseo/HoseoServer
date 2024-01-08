@@ -1,4 +1,4 @@
-import 'dart:typed_data';
+﻿import 'dart:typed_data';
 
 /// Represents the number of bits a value occupies.
 enum BitWidth { width8, width16, width32, width64 }

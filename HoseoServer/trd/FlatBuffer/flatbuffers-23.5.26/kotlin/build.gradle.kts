@@ -1,4 +1,4 @@
-group = "com.google.flatbuffers"
+﻿group = "com.google.flatbuffers"
 version = "2.0.0-SNAPSHOT"
 
 buildscript {

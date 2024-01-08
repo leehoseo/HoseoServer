@@ -1,4 +1,4 @@
-table NativeInlineTable {
+﻿table NativeInlineTable {
   a: int;
 }
 

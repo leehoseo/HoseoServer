@@ -1,4 +1,4 @@
-#include "Peer.h"
+﻿#include "Peer.h"
 #include "AsyncTcpComponent.h"
 #include "MarshalerComponent.h"
 #include "AsyncTcpEvent.h"

@@ -1,4 +1,4 @@
-#ifndef TEST_ASSERT_H
+﻿#ifndef TEST_ASSERT_H
 #define TEST_ASSERT_H
 
 #include "flatbuffers/base.h"

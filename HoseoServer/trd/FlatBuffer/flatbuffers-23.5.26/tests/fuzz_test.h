@@ -1,4 +1,4 @@
-#ifndef TESTS_FUZZ_TEST_H
+﻿#ifndef TESTS_FUZZ_TEST_H
 #define TESTS_FUZZ_TEST_H
 
 namespace flatbuffers {

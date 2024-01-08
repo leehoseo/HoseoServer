@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2021 Google Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -136,7 +136,7 @@ class ByteArrayTest {
 
   @Test
   fun testString() {
-    val testSet = "∮ E⋅da = Q"
+    val testSet = "? E?da = Q"
     val encoded = testSet.encodeToByteArray()
     val data = ByteArray(encoded.size)
     data.setString(0, testSet)

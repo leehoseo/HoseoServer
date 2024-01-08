@@ -1,4 +1,4 @@
-import endian
+﻿import endian
 
 
 type

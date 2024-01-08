@@ -1,4 +1,4 @@
-local N = require("flatbuffers.numTypes")
+﻿local N = require("flatbuffers.numTypes")
 local ba = require("flatbuffers.binaryarray")
 local compat = require("flatbuffers.compat")
 local string_unpack = compat.string_unpack

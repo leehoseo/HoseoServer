@@ -1,4 +1,4 @@
-#ifndef TESTS_JSON_TEST_H
+﻿#ifndef TESTS_JSON_TEST_H
 #define TESTS_JSON_TEST_H
 
 #include <string>

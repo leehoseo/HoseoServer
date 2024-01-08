@@ -1,4 +1,4 @@
-filegroup(
+﻿filegroup(
     name = "distribution",
     srcs = [
         "BUILD.bazel",

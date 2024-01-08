@@ -1,4 +1,4 @@
-fn main() {
+﻿fn main() {
     use std::process::Command;
     let project_root = std::env::current_dir()
         .unwrap()

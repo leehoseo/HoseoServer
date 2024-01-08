@@ -1,4 +1,4 @@
-## Prerequisites
+﻿## Prerequisites
 
 To generate the docs for FlatBuffers from the source files, you
 will first need to install two programs.

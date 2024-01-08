@@ -1,4 +1,4 @@
-
+﻿
 import static com.google.flatbuffers.Constants.*;
 import static com.google.common.truth.Truth.assertThat;
 
@@ -1059,12 +1059,12 @@ public class JavaTest {
         FlexBuffersBuilder builder = new FlexBuffersBuilder(ByteBuffer.allocate(512),
                 FlexBuffersBuilder.BUILDER_FLAG_SHARE_KEYS_AND_STRINGS);
 
-        String key0 = "😨 face1";
-        String key1 = "😩 face2";
-        String key2 = "😨 face3";
-        String key3 = "trademark ®";
-        String key4 = "€ euro";
-        String utf8keys[] = { "😨 face1", "😩 face2", "😨 face3", "trademark ®", "€ euro"};
+        String key0 = "??face1";
+        String key1 = "??face2";
+        String key2 = "??face3";
+        String key3 = "trademark 짰";
+        String key4 = "??euro";
+        String utf8keys[] = { "??face1", "??face2", "??face3", "trademark 짰", "??euro"};
 
         int map = builder.startMap();
 

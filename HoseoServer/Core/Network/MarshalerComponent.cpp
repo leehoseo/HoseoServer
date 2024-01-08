@@ -1,4 +1,4 @@
-#include "MarshalerComponent.h"
+ï»¿#include "MarshalerComponent.h"
 #include "AsyncTcpEvent.h"
 #include "PacketRegistry.h"
 #include "PacketHandler.h"
@@ -12,9 +12,9 @@ void CMarshalerComponent::Init()
 
 int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer)
 {
-	// ¾ÏÈ£È­ ¿©ºÎ
+	// ì•”í˜¸í™” ì—¬ë¶€
 	
-	// ÆÐÅ¶ Ã³¸®
+	// íŒ¨í‚· ì²˜ë¦¬
 	PacketId_t id;
 	PacketSize_t size;
 	CPacket::GetId(buffer, id);
@@ -35,6 +35,6 @@ int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer)
 	uint8_t* packetBody = nullptr;
 	CPacket::GetBody(buffer, packetBody);
 
-	// ÆÐÅ¶ ÇÚµé·¯ Ã³¸®
+	// íŒ¨í‚· í•¸ë“¤ëŸ¬ ì²˜ë¦¬
 	return handler->Execute(peer, packetBody);
 }

@@ -1,4 +1,4 @@
-include 'typescript_transitive_include.fbs';
+﻿include 'typescript_transitive_include.fbs';
 
 namespace foobar;
 

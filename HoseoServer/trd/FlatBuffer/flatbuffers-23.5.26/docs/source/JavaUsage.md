@@ -1,4 +1,4 @@
-Use in Java    {#flatbuffers_guide_use_java}
+﻿Use in Java    {#flatbuffers_guide_use_java}
 ==============
 
 ## Before you get started

@@ -1,4 +1,4 @@
-#include "LinkPolicy.h"
+﻿#include "LinkPolicy.h"
 
 CLinkPolicy::CLinkPolicy()
 {

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2021 Google Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -183,7 +183,7 @@ class JSONTest {
     ref = parser.parse(values[7])
     println(ref.toJson())
     assertEquals(true, ref.isString)
-    assertEquals("/_\\_\"_쫾몾ꮘﳞ볚\b\n\r\t`1~!@#$%^&*()_+-=[]{}|;:',./<>?", ref.toString())
+    assertEquals("/_\\_\"_已얜ぞ園電蹂抵\b\n\r\t`1~!@#$%^&*()_+-=[]{}|;:',./<>?", ref.toString())
   }
 
   @Test
@@ -193,31 +193,31 @@ class JSONTest {
       {
         "name": "unicode_test",
         "testarrayofstring": [
-          "Цлїςσδε",
-          "ﾌﾑｱﾑｶﾓｹﾓ",
-          "フムヤムカモケモ",
-          "㊀㊁㊂㊃㊄",
-          "☳☶☲",
-          "𡇙𝌆"
+          "揆剋???灌琯",
+          "絶絶節깍?節띰?節뱄?",
+          "???ㅳ?ャ㏂긱?,
+          "?????",
+          "?년뜯?,
+          "靜?"
         ],
         "testarrayoftables": [
           {
-            "name": "Цлїςσδε"
+            "name": "揆剋???灌琯"
           },
           {
-            "name": "☳☶☲"
+            "name": "?년뜯?
           },
           {
-            "name": "フムヤムカモケモ"
+            "name": "???ㅳ?ャ㏂긱?
           },
           {
-            "name": "㊀㊁㊂㊃㊄"
+            "name": "?????"
           },
           {
-            "name": "ﾌﾑｱﾑｶﾓｹﾓ"
+            "name": "絶絶節깍?節띰?節뱄?"
           },
           {
-            "name": "𡇙𝌆"
+            "name": "靜?"
           }
         ]
       }
@@ -230,20 +230,20 @@ class JSONTest {
     assertEquals("unicode_test", ref["name"].toString())
     // testarrayofstring
     assertEquals(6, ref["testarrayofstring"].toVector().size)
-    assertEquals("Цлїςσδε", ref["testarrayofstring"][0].toString())
-    assertEquals("ﾌﾑｱﾑｶﾓｹﾓ", ref["testarrayofstring"][1].toString())
-    assertEquals("フムヤムカモケモ", ref["testarrayofstring"][2].toString())
-    assertEquals("㊀㊁㊂㊃㊄", ref["testarrayofstring"][3].toString())
-    assertEquals("☳☶☲", ref["testarrayofstring"][4].toString())
-    assertEquals("𡇙𝌆", ref["testarrayofstring"][5].toString())
+    assertEquals("揆剋???灌琯", ref["testarrayofstring"][0].toString())
+    assertEquals("絶絶節깍?節띰?節뱄?", ref["testarrayofstring"][1].toString())
+    assertEquals("???ㅳ?ャ㏂긱?, ref["testarrayofstring"][2].toString())
+    assertEquals("?????", ref["testarrayofstring"][3].toString())
+    assertEquals("?년뜯?, ref["testarrayofstring"][4].toString())
+    assertEquals("靜?", ref["testarrayofstring"][5].toString())
     // testarrayoftables
     assertEquals(6, ref["testarrayoftables"].toVector().size)
-    assertEquals("Цлїςσδε", ref["testarrayoftables"][0]["name"].toString())
-    assertEquals("☳☶☲", ref["testarrayoftables"][1]["name"].toString())
-    assertEquals("フムヤムカモケモ", ref["testarrayoftables"][2]["name"].toString())
-    assertEquals("㊀㊁㊂㊃㊄", ref["testarrayoftables"][3]["name"].toString())
-    assertEquals("ﾌﾑｱﾑｶﾓｹﾓ", ref["testarrayoftables"][4]["name"].toString())
-    assertEquals("𡇙𝌆", ref["testarrayoftables"][5]["name"].toString())
+    assertEquals("揆剋???灌琯", ref["testarrayoftables"][0]["name"].toString())
+    assertEquals("?년뜯?, ref["testarrayoftables"][1]["name"].toString())
+    assertEquals("???ㅳ?ャ㏂긱?, ref["testarrayoftables"][2]["name"].toString())
+    assertEquals("?????", ref["testarrayoftables"][3]["name"].toString())
+    assertEquals("絶絶節깍?節띰?節뱄?", ref["testarrayoftables"][4]["name"].toString())
+    assertEquals("靜?", ref["testarrayoftables"][5]["name"].toString())
   }
 
   @Test

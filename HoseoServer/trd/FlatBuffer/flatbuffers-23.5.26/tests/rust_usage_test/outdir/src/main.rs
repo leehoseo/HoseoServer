@@ -1,4 +1,4 @@
-// In this example, a build.rs file generates the code and then copies it into generated/
+﻿// In this example, a build.rs file generates the code and then copies it into generated/
 extern crate flatbuffers;
 #[allow(unused_imports, dead_code)]
 mod generated;

@@ -1,4 +1,4 @@
-#![no_std]
+﻿#![no_std]
 
 #[cfg(not(feature = "no_std"))]
 extern crate std;

@@ -1,4 +1,4 @@
-# Format Guidelines
+﻿# Format Guidelines
 
 If you are interesting in contributing to the flatbuffers project, please take a second to read this document. Each language has it's own set of rules, that are defined in their respective formatter/linter documents.
 

@@ -1,4 +1,4 @@
-Use in TypeScript    {#flatbuffers_guide_use_typescript}
+﻿Use in TypeScript    {#flatbuffers_guide_use_typescript}
 =================
 
 ## Before you get started

@@ -1,4 +1,4 @@
-name: OSS-Fuzz
+﻿name: OSS-Fuzz
 permissions: read-all
 
 on: 

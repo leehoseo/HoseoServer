@@ -1,4 +1,4 @@
-export function fromUTF8Array(data: BufferSource): string {
+﻿export function fromUTF8Array(data: BufferSource): string {
   const decoder = new TextDecoder();
   return decoder.decode(data);
 }

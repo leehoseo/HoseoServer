@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Server/ServerAppManager.h"
 
 class CLobbyAppManager : public CServerAppManager

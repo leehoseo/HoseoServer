@@ -1,4 +1,4 @@
-#ifndef FLATBUFFERS_NAMER
+﻿#ifndef FLATBUFFERS_NAMER
 #define FLATBUFFERS_NAMER
 
 #include "flatbuffers/util.h"

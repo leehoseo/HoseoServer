@@ -1,4 +1,4 @@
-#include "ClientConfig.h"
+﻿#include "ClientConfig.h"
 
 void CClientConfig::Load()
 {

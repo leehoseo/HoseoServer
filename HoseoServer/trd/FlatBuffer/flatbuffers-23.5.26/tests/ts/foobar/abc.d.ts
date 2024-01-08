@@ -1,3 +1,3 @@
-export declare enum Abc {
+﻿export declare enum Abc {
     a = 0
 }

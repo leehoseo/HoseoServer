@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 # This is a script used by the typescript flatbuffer bazel rules to compile
 # a flatbuffer schema (.fbs file) to typescript and then use esbuild to
 # generate a single output.

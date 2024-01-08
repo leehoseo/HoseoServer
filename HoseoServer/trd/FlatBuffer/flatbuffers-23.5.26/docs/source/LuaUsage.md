@@ -1,4 +1,4 @@
-Use in Lua    {#flatbuffers_guide_use_lua}
+﻿Use in Lua    {#flatbuffers_guide_use_lua}
 =============
 
 ## Before you get started

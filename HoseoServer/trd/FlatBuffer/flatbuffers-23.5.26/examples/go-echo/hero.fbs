@@ -1,4 +1,4 @@
-namespace hero;
+﻿namespace hero;
 
 table Warrior {
 	name: string;

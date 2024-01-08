@@ -1,4 +1,4 @@
-#define __WIDEN2__(x) L ## x
+﻿#define __WIDEN2__(x) L ## x
 #define __WIDEN__(x) __WIDEN2__(x)
 
 #ifndef __WFILE__

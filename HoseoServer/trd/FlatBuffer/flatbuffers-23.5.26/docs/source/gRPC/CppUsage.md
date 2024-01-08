@@ -1,4 +1,4 @@
-Use in C++    {#flatbuffers_grpc_guide_use_cpp}
+﻿Use in C++    {#flatbuffers_grpc_guide_use_cpp}
 ==========
 
 ## Before you get started

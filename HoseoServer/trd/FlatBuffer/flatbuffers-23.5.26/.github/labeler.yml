@@ -1,4 +1,4 @@
-# Configuration for Auto Labeler during pull request
+﻿# Configuration for Auto Labeler during pull request
 #
 # See https://github.com/actions/labeler for file format
 # and https://github.com/google/flatbuffers/labels for a list of valid labels

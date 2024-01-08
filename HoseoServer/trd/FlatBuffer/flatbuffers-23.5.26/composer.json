@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "google/flatbuffers",
   "type": "library",
   "description": "FlatBuffers for PHP",

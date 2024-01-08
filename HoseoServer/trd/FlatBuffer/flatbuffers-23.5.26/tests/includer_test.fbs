@@ -1,4 +1,4 @@
-include "tests/included_test.fbs";
+﻿include "tests/included_test.fbs";
 
 table Wrapper {
   a:Wrapped;

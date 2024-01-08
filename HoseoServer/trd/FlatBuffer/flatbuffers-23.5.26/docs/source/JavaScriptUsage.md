@@ -1,4 +1,4 @@
-Use in JavaScript    {#flatbuffers_guide_use_javascript}
+﻿Use in JavaScript    {#flatbuffers_guide_use_javascript}
 =================
 
 ## Before you get started

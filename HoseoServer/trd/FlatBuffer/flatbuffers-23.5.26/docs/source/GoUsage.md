@@ -1,4 +1,4 @@
-Use in Go    {#flatbuffers_guide_use_go}
+﻿Use in Go    {#flatbuffers_guide_use_go}
 =========
 
 ## Before you get started

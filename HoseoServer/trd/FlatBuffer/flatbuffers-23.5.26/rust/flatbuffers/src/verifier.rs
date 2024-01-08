@@ -1,4 +1,4 @@
-use crate::follow::Follow;
+﻿use crate::follow::Follow;
 use crate::{ForwardsUOffset, SOffsetT, SkipSizePrefix, UOffsetT, VOffsetT, Vector, SIZE_UOFFSET};
 #[cfg(not(feature = "std"))]
 use alloc::vec::Vec;

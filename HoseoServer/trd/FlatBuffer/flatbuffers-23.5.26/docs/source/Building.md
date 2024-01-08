@@ -1,4 +1,4 @@
-Building    {#flatbuffers_guide_building}
+﻿Building    {#flatbuffers_guide_building}
 ========
 
 ## Building with CMake

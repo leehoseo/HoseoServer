@@ -1,4 +1,4 @@
-Use in Swift {#flatbuffers_guide_use_swift}
+﻿Use in Swift {#flatbuffers_guide_use_swift}
 =========
 
 ## Before you get started

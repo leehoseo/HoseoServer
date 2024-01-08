@@ -1,4 +1,4 @@
-#ifndef TESTS_MONSTER_TEST_H
+﻿#ifndef TESTS_MONSTER_TEST_H
 #define TESTS_MONSTER_TEST_H
 
 #include <string>

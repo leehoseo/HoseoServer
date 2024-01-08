@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { KeyValue, KeyValueT } from '../reflection/key-value.js';
 import { Object_, Object_T } from '../reflection/object.js';
 export declare class RPCCall implements flatbuffers.IUnpackableObject<RPCCallT> {

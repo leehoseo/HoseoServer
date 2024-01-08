@@ -1,4 +1,4 @@
-name: Build and unit tests that are more time consuming
+﻿name: Build and unit tests that are more time consuming
 permissions: read-all
 
 on:

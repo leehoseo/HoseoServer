@@ -1,1 +1,1 @@
-#include "QueryBuilder.h"
+﻿#include "QueryBuilder.h"

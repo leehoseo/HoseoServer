@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #define DELEGATE_ARGS_COUNT 0
 #define DELEGATE_ARGS

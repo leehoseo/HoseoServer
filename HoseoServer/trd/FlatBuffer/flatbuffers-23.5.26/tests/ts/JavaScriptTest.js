@@ -1,4 +1,4 @@
-// Run this using JavaScriptTest.sh
+﻿// Run this using JavaScriptTest.sh
 import assert from 'assert'
 import fs from 'fs'
 import * as flatbuffers from 'flatbuffers'

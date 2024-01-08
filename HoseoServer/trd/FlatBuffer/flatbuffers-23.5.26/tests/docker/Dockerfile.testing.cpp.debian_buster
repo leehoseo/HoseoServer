@@ -1,4 +1,4 @@
-FROM debian:10.1-slim as base
+﻿FROM debian:10.1-slim as base
 RUN apt -qq update >/dev/null
 RUN apt -qq install -y cmake make build-essential >/dev/null
 RUN apt -qq install -y autoconf git libtool >/dev/null

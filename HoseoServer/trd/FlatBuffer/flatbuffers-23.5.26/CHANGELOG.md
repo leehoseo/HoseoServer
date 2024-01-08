@@ -1,4 +1,4 @@
-# Flatbuffers Change Log
+﻿# Flatbuffers Change Log
 
 All major or breaking changes will be documented in this file, as well as any
 new features that should be highlighted. Minor fixes or improvements are not

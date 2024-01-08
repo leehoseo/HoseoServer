@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 # Remove files and directory that are needed to build and run the .NET tests.
 # The script NetTest.sh installs these as needed.

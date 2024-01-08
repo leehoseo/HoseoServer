@@ -1,4 +1,4 @@
-#ifndef FUZZER_ASSERT_IMPL_H_
+﻿#ifndef FUZZER_ASSERT_IMPL_H_
 #define FUZZER_ASSERT_IMPL_H_
 
 #if defined(_MSC_VER)

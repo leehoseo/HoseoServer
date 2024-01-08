@@ -1,4 +1,4 @@
-// Generated GRPC code for FlatBuffers TS *** DO NOT EDIT ***
+﻿// Generated GRPC code for FlatBuffers TS *** DO NOT EDIT ***
 import * as flatbuffers from 'flatbuffers';
 import { HelloReply as models_HelloReply } from './models/hello-reply';
 import { HelloRequest as models_HelloRequest } from './models/hello-request';

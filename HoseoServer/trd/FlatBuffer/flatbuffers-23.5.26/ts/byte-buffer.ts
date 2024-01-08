@@ -1,4 +1,4 @@
-import { FILE_IDENTIFIER_LENGTH, SIZEOF_INT } from "./constants.js";
+﻿import { FILE_IDENTIFIER_LENGTH, SIZEOF_INT } from "./constants.js";
 import { int32, isLittleEndian, float32, float64 } from "./utils.js";
 import { Offset, Table, IGeneratedObject, IUnpackableObject } from "./types.js";
 import { Encoding } from "./encoding.js";

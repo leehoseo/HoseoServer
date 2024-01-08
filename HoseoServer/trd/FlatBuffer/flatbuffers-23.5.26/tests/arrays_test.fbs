@@ -1,4 +1,4 @@
-namespace MyGame.Example;
+﻿namespace MyGame.Example;
 
 enum TestEnum : byte { A, B, C }
 

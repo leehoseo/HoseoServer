@@ -1,4 +1,4 @@
-#include "PacketHandler.h"
+ï»¿#include "PacketHandler.h"
 #include "Peer.h"
 
 CPacketHandler::CPacketHandler()
@@ -11,6 +11,6 @@ CPacketHandler::~CPacketHandler()
 
 int CPacketHandler::Execute(CPeer* peer, uint8_t* buffer)
 {
-	// ÃÖÁ¾ÀûÀÎ ÄÁÅÙÃ÷·ÎÁ÷ Àü °ËÁõÃ³¸®
+	// ìµœì¢…ì ì¸ ì»¨í…ì¸ ë¡œì§ ì „ ê²€ì¦ì²˜ë¦¬
 	return 0;
 }

@@ -1,4 +1,4 @@
-C++ Benchmarks    {#flatbuffers_benchmarks}
+﻿C++ Benchmarks    {#flatbuffers_benchmarks}
 ==========
 
 Comparing against other serialization solutions, running on Windows 7

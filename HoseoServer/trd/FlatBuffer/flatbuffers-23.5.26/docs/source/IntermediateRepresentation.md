@@ -1,4 +1,4 @@
-# Flatbuffers Intermediate Representation {#intermediate_representation}
+﻿# Flatbuffers Intermediate Representation {#intermediate_representation}
 
 We use [reflection.fbs](https://github.com/google/flatbuffers/blob/master/reflection/reflection.fbs)
 as our intermediate representation. `flatc` parses `.fbs` files, checks them for

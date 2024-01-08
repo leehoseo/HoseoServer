@@ -1,4 +1,4 @@
-namespace MyGame;
+﻿namespace MyGame;
 
 // Not all programming languages support this extra table.
 table MonsterExtra {

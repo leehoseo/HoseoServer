@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 set -euo
 #
 # Copyright 2018 Dan Field. All rights reserved.

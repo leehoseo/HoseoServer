@@ -1,4 +1,4 @@
-FlatBuffers swift can be found in both SPM
+﻿FlatBuffers swift can be found in both SPM
 
 `.package(url: "https://github.com/google/flatbuffers.git", from: "X.Y.Z"),`
 

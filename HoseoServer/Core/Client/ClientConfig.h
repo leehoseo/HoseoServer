@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Base/Singleton.h"
 
 class CClientConfig

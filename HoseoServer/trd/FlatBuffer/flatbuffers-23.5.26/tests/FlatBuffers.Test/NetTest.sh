@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 PROJ_FILE=FlatBuffers.Test.csproj
 CORE_PROJ_FILE=FlatBuffers.Core.Test.csproj

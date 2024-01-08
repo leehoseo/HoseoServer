@@ -1,4 +1,4 @@
-import table
+﻿import table
 
 
 type FlatObj* {.inheritable.} = object

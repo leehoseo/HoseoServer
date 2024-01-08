@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 #include "Network/Peer.h"
 
 /// <summary>
-/// ·Îºñ¿Í ¿¬°áµÈ PC
+/// ë¡œë¹„ì™€ ì—°ê²°ëœ PC
 /// </summary>
 class CLobbyPeer : public CPeer
 {

@@ -1,4 +1,4 @@
-import 'dart:collection';
+﻿import 'dart:collection';
 import 'dart:convert';
 import 'dart:typed_data';
 import 'types.dart';

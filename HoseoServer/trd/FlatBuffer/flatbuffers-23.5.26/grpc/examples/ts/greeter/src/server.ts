@@ -1,4 +1,4 @@
-import * as grpc from '@grpc/grpc-js';
+﻿import * as grpc from '@grpc/grpc-js';
 import * as flatbuffers from 'flatbuffers';
 import { HelloReply } from './models/hello-reply';
 import { HelloRequest } from './models/hello-request';

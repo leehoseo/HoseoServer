@@ -1,4 +1,4 @@
-package com.google.flatbuffers;
+﻿package com.google.flatbuffers;
 
 import java.util.Arrays;
 

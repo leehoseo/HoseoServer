@@ -1,12 +1,12 @@
-# Go Greeter example
+﻿# Go Greeter example
 
 ## Project Structure
 
     .
-    ├── server                   # Server module
-    ├── client                   # Client module
-    ├── models                   # Flatbuffers models & main grpc code.
-    └── README.md
+    ??? server                   # Server module
+    ??? client                   # Client module
+    ??? models                   # Flatbuffers models & main grpc code.
+    ??? README.md
 
 ## How to run Server:
 

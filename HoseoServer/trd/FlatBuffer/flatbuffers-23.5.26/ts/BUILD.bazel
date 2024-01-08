@@ -1,4 +1,4 @@
-load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
+﻿load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
 load("@aspect_rules_js//npm:defs.bzl", "npm_package")
 
 filegroup(

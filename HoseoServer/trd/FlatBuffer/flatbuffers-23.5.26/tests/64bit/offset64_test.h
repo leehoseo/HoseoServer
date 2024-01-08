@@ -1,4 +1,4 @@
-#ifndef TESTS_64BIT_OFFSET64_TEST_H
+﻿#ifndef TESTS_64BIT_OFFSET64_TEST_H
 #define TESTS_64BIT_OFFSET64_TEST_H
 
 namespace flatbuffers {

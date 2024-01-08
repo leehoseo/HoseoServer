@@ -1,4 +1,4 @@
-local compat = require("flatbuffers.compat")
+﻿local compat = require("flatbuffers.compat")
 -- locals for slightly faster access
 local string_pack = compat.string_pack
 local string_unpack = compat.string_unpack

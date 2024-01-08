@@ -1,4 +1,4 @@
-#include "TradeClientHandlerSetup.h"
+﻿#include "TradeClientHandlerSetup.h"
 #include "Network/HandlerRegistry.h"
 
 void TradeClientHandlerSetup::Setup()

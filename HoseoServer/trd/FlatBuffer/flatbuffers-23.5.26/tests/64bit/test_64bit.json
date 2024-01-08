@@ -1,4 +1,4 @@
-{
+﻿{
   "far_vector": [1, 2, 3],
   "a": 1234,
   "far_string": "this is a far string which has a 64-bit offset",

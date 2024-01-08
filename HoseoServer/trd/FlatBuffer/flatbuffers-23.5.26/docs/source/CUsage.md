@@ -1,4 +1,4 @@
-Use in C    {#flatbuffers_guide_use_c}
+﻿Use in C    {#flatbuffers_guide_use_c}
 ==========
 
 The C language binding exists in a separate project named [FlatCC](https://github.com/dvidelabs/flatcc).

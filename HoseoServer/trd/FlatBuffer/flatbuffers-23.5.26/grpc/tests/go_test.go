@@ -1,4 +1,4 @@
-package testing
+﻿package testing
 
 import (
 	flatbuffers "github.com/google/flatbuffers/go"

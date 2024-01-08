@@ -1,4 +1,4 @@
-enum OptionsEnum : uint32
+﻿enum OptionsEnum : uint32
 {
     A = 1,
     B = 2,

@@ -1,4 +1,4 @@
-// Sample .proto file that we can translate to the corresponding .fbs.
+﻿// Sample .proto file that we can translate to the corresponding .fbs.
 
 option some_option = is_ignored;
 import "imported.proto";

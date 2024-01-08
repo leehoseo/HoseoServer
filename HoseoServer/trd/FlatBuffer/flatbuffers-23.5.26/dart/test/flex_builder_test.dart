@@ -1,4 +1,4 @@
-import 'dart:typed_data';
+﻿import 'dart:typed_data';
 
 import 'package:flat_buffers/flex_buffers.dart' show Builder;
 import 'package:test/test.dart';
@@ -61,7 +61,7 @@ void main() {
     }
     {
       var flx = Builder();
-      flx.addString('hello 😱');
+      flx.addString('hello ??);
       expect(flx.finish(),
           [10, 104, 101, 108, 108, 111, 32, 240, 159, 152, 177, 0, 11, 20, 1]);
     }

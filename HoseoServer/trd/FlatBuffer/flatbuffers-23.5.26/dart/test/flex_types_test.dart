@@ -1,4 +1,4 @@
-import 'package:flat_buffers/src/types.dart';
+﻿import 'package:flat_buffers/src/types.dart';
 import 'package:test/test.dart';
 
 void main() {

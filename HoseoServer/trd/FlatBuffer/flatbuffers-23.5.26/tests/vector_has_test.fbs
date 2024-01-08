@@ -1,4 +1,4 @@
-namespace Swift.Tests;
+﻿namespace Swift.Tests;
 
 table Vectors
 {

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+﻿#!/usr/bin/bash
 
 printf -v year '%(%y)T' -1
 printf -v month '%(%-m)T' -1

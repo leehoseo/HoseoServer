@@ -1,4 +1,4 @@
-The MIT License (MIT)
+﻿The MIT License (MIT)
 
 Copyright (c) 2009-2015  Robert Giesecke
 Copyright (c) 2016-2021  Denis Kuzmin <x-3F@outlook.com> github/3F

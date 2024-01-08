@@ -1,4 +1,4 @@
-# Flexbuffers
+﻿# Flexbuffers
 
 [Flexbuffers](https://google.github.io/flatbuffers/flexbuffers.html) is a
 schema-less binary format developed at Google. FlexBuffers can be accessed

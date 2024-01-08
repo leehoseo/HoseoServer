@@ -1,4 +1,4 @@
-#include "TradeServerAppManager.h"
+﻿#include "TradeServerAppManager.h"
 
 int main()
 {

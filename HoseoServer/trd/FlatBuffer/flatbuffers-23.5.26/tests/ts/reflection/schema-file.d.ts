@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 /**
  * File specific information.
  * Symbols declared within a file may be recovered by iterating over all

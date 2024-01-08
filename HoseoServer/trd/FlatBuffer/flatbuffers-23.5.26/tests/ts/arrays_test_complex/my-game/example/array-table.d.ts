@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { ArrayStruct, ArrayStructT } from '../../my-game/example/array-struct.js';
 export declare class ArrayTable implements flatbuffers.IUnpackableObject<ArrayTableT> {
     bb: flatbuffers.ByteBuffer | null;

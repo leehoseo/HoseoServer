@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 # This test makes sure that a separate repository can import the flatbuffers
 # repository and use it in their JavaScript code.

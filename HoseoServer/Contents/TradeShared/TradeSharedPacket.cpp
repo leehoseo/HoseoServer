@@ -1,4 +1,4 @@
-#include "TradeSharedPacket.h"
+﻿#include "TradeSharedPacket.h"
 #include "Generated/Trade_generated.h"
 
 uint8_t* CT_Login::Pack()

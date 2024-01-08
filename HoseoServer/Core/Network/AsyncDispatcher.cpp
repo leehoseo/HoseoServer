@@ -1,4 +1,4 @@
-#include "AsyncDispatcher.h"
+ï»¿#include "AsyncDispatcher.h"
 #include <thread>
 #include "AsyncEvent.h"
 #include "AsyncTcpEventSink.h"
@@ -79,9 +79,9 @@ void CAsyncDispatcher::CIocpThread::Run()
 		{
 			int byte = 0;
 
-			// ÀÌ °³³äÀº ¾Æ´Ï´Ù ¼ÕºÁ¾ßÇÔ
+			// ì´ ê°œë…ì€ ì•„ë‹ˆë‹¤ ì†ë´ì•¼í•¨
 			int handled = 0;
-			// Ã³¸® °¡´ÉÇÑ ¹ÙÀÌÆ® ¼ö
+			// ì²˜ë¦¬ ê°€ëŠ¥í•œ ë°”ì´íŠ¸ ìˆ˜
 			int total = 0; //m_RecvEvent->TotalBytes + ioByte;
 
 
@@ -92,15 +92,15 @@ void CAsyncDispatcher::CIocpThread::Run()
 				if (result <= 0)
 				{
 					CPeerFacade::Disconnected(dynamic_cast<CAsyncTcpEventSink*>(sink));
-					break; // ´õ ÀÌ»ó ÀÐÀ» ¼ö ÀÖ´Â °ÍÀÌ ¾ø°Å³ª, ¿¡·¯°¡ ¹ß»ý
+					break; // ë” ì´ìƒ ì½ì„ ìˆ˜ ìžˆëŠ” ê²ƒì´ ì—†ê±°ë‚˜, ì—ëŸ¬ê°€ ë°œìƒ
 				}
 				else if (result > 0)
 				{
-					handled += result; // Á¤»ó Ã³¸®
+					handled += result; // ì •ìƒ ì²˜ë¦¬
 				}
 			}
 
-			// ³²Àº °ÍÀÌ ÀÖ´Ù¸é ¾ÕÂÊÀ¸·Î ¿Å°ÜÁØ´Ù.
+			// ë‚¨ì€ ê²ƒì´ ìžˆë‹¤ë©´ ì•žìª½ìœ¼ë¡œ ì˜®ê²¨ì¤€ë‹¤.
 			//if (mySocket->GetErrorCount() == 0 && 0 < handled && handled < total)
 			//{
 			//	memmove(m_RecvEvent->Buffer, m_RecvEvent->Buffer + handled, total - handled);
@@ -113,7 +113,7 @@ void CAsyncDispatcher::CIocpThread::Run()
 
 			if (byte != ioByte)
 			{
-				// ¹®Á¦ ÀÖ³ª..?
+				// ë¬¸ì œ ìžˆë‚˜..?
 			}
 		}
 		else

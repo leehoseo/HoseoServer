@@ -1,4 +1,4 @@
-namespace Evolution.V2;
+﻿namespace Evolution.V2;
 
 table TableA {
     b:int (id: 1);      // swapped with 'a'

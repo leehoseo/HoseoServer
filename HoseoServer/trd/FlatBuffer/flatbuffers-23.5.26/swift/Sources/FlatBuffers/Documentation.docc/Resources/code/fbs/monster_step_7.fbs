@@ -1,4 +1,4 @@
-enum Color:byte { red, green, blue }
+﻿enum Color:byte { red, green, blue }
 
 union Equipment { Weapon } // Optionally add more tables.
 

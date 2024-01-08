@@ -1,4 +1,4 @@
-FlatBuffers white paper    {#flatbuffers_white_paper}
+﻿FlatBuffers white paper    {#flatbuffers_white_paper}
 =======================
 
 This document tries to shed some light on to the "why" of FlatBuffers, a

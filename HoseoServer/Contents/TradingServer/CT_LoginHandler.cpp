@@ -1,4 +1,4 @@
-#include "CT_LoginHandler.h"
+﻿#include "CT_LoginHandler.h"
 #include "TradeServerAppManager.h"
 
 int CT_LoginHandler::Execute(CPeer* peer, uint8_t* buffer)

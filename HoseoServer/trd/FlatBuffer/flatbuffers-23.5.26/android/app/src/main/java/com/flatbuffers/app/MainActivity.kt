@@ -1,4 +1,4 @@
-package com.flatbuffers.app
+﻿package com.flatbuffers.app
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity

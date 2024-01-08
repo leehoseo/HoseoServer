@@ -1,4 +1,4 @@
-// Run this using JavaScriptTest.sh
+﻿// Run this using JavaScriptTest.sh
 var assert = require('assert');
 var fs = require('fs');
 

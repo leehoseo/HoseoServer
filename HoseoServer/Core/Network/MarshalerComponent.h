@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Base/Component.h"
 
 class CAsyncTcpEvent;

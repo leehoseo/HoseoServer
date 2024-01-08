@@ -1,4 +1,4 @@
-namespace AnnotatedBinary;
+﻿namespace AnnotatedBinary;
 
 enum Food : byte {
   None = 0,

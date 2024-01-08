@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "bazel_repository_test",
   "type": "module",
   "private": true,

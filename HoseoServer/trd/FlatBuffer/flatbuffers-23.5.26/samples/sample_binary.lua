@@ -1,4 +1,4 @@
--- need to update the Lua path to point to the local flatbuffers implementation
+﻿-- need to update the Lua path to point to the local flatbuffers implementation
 package.path = string.format("../lua/?.lua;%s",package.path)
 package.path = string.format("./lua/?.lua;%s",package.path)
 

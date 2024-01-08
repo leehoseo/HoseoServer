@@ -1,7 +1,7 @@
-#pragma once
+ï»¿#pragma once
 
 /// <summary>
-/// AsyncEvent¸¦ Àü´ŞÇÑ °´Ã¼
+/// AsyncEventë¥¼ ì „ë‹¬í•œ ê°ì²´
 /// </summary>
 
 class CAsyncEventSink

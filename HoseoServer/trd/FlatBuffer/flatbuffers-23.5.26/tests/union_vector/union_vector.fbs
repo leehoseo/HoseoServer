@@ -1,4 +1,4 @@
-// Demonstrates the ability to have vectors of unions, and also to
+﻿// Demonstrates the ability to have vectors of unions, and also to
 // store structs and strings in unions.
 
 table Attacker {

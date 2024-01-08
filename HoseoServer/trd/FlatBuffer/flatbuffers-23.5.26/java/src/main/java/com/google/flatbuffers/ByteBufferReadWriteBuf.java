@@ -1,4 +1,4 @@
-package com.google.flatbuffers;
+﻿package com.google.flatbuffers;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

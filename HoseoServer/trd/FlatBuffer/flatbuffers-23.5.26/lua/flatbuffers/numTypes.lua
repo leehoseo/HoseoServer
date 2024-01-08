@@ -1,4 +1,4 @@
-local m = {}
+﻿local m = {}
 
 local ba = require("flatbuffers.binaryarray")
 

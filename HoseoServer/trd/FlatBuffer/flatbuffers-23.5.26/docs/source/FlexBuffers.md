@@ -1,4 +1,4 @@
-FlexBuffers    {#flexbuffers}
+﻿FlexBuffers    {#flexbuffers}
 ==========
 
 FlatBuffers was designed around schemas, because when you want maximum

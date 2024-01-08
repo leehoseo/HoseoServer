@@ -1,4 +1,4 @@
-#include "Thread.h"
+ï»¿#include "Thread.h"
 #include <Windows.h>
 
 CThread::CThread()
@@ -17,7 +17,7 @@ void CThread::Init()
 
 void CThread::Start()
 {
-	// ¾²·¡µå ¼¼ÆÃ
+	// ì“°ëž˜ë“œ ì„¸íŒ…
 	const wchar_t* threadName = GetName();
 	SetThreadDescription(GetCurrentThread(), threadName);
 

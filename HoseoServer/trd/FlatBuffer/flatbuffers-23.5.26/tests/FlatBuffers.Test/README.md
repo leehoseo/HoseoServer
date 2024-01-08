@@ -1,4 +1,4 @@
-# .NET Tests
+﻿# .NET Tests
 
 ## Running on Linux
 

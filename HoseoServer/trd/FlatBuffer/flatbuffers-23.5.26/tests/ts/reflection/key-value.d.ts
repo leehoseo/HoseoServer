@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 export declare class KeyValue implements flatbuffers.IUnpackableObject<KeyValueT> {
     bb: flatbuffers.ByteBuffer | null;
     bb_pos: number;

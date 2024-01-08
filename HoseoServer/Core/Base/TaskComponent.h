@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "Component.h"
 
 class CTaskComponent : public CComponent
@@ -23,77 +23,77 @@ private:
 //{
 //    //------------------------------------------------------------------------------------------------------------------
 //
-//    // ½ÇÇà ÆÄÀÏ Å¸ÀÔ
+//    // ì‹¤í–‰ íŒŒì¼ íƒ€ì…
 //    enum ExeType
 //    {
-//        ET_GAME = 0x00000001, ///< °ÔÀÓ ¼­¹ö
-//        ET_LOGIN = 0x00000002, ///< ·Î±×ÀÎ ¼­¹ö
-//        ET_WORLD = 0x00000004, ///< ¿ùµå ¼­¹ö
-//        ET_SOCIAL = 0x00000008, ///< ¼Ò¼È ¼­¹ö
-//        ET_QUERY = 0x00000010, ///< Äõ¸® ¼­¹ö
-//        ET_CENTER = 0x00000020, ///< ¼¾ÅÍ ¼­¹ö
-//        ET_MATCH = 0x00000040, ///< ¸ÅÄ¡ ¼­¹ö
-//        ET_AUCTION = 0x00000080, ///< ¿Á¼Ç ¼­¹ö
-//        ET_TRACE = 0x00000100, ///< ·Î±× ¼­¹ö
-//        ET_FAM = 0x00000200, ///< ÆÔ ¼­¹ö
-//        ET_DOCK = 0x00000400, ///< µ¶ ¼­¹ö
-//        ET_ASSET = 0x00010000, ///< ¾Ö¼Â ¸¶½ºÅÍ
-//        ET_DUMMY = 0x00020000, ///< ´õ¹Ì Å¬¶óÀÌ¾ğÆ®
-//        ET_SIMPLE = 0x00040000, ///< ½ÉÇÃ Å¬¶óÀÌ¾ğÆ®
-//        ET_ALL = 0xFFFFFFFF, ///< ¸ğµÎ 
+//        ET_GAME = 0x00000001, ///< ê²Œì„ ì„œë²„
+//        ET_LOGIN = 0x00000002, ///< ë¡œê·¸ì¸ ì„œë²„
+//        ET_WORLD = 0x00000004, ///< ì›”ë“œ ì„œë²„
+//        ET_SOCIAL = 0x00000008, ///< ì†Œì…œ ì„œë²„
+//        ET_QUERY = 0x00000010, ///< ì¿¼ë¦¬ ì„œë²„
+//        ET_CENTER = 0x00000020, ///< ì„¼í„° ì„œë²„
+//        ET_MATCH = 0x00000040, ///< ë§¤ì¹˜ ì„œë²„
+//        ET_AUCTION = 0x00000080, ///< ì˜¥ì…˜ ì„œë²„
+//        ET_TRACE = 0x00000100, ///< ë¡œê·¸ ì„œë²„
+//        ET_FAM = 0x00000200, ///< íŒ¸ ì„œë²„
+//        ET_DOCK = 0x00000400, ///< ë… ì„œë²„
+//        ET_ASSET = 0x00010000, ///< ì• ì…‹ ë§ˆìŠ¤í„°
+//        ET_DUMMY = 0x00020000, ///< ë”ë¯¸ í´ë¼ì´ì–¸íŠ¸
+//        ET_SIMPLE = 0x00040000, ///< ì‹¬í”Œ í´ë¼ì´ì–¸íŠ¸
+//        ET_ALL = 0xFFFFFFFF, ///< ëª¨ë‘ 
 //    };
 //
 //    //------------------------------------------------------------------------------------------------------------------
 //
-//    // Æ¯Á¤ ¾Ö¼Â¸¸ ·ÎµåÇÏ±â¸¦ Ã³¸®ÇÏ±â À§ÇÑ ¾Ö¼Â ÀÌ¸§ ¼Â
+//    // íŠ¹ì • ì• ì…‹ë§Œ ë¡œë“œí•˜ê¸°ë¥¼ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ ì• ì…‹ ì´ë¦„ ì…‹
 //    class CAssetNameSet
 //    {
 //    private:
-//        stx::set<tstring, Text::LexLess> m_NameSet; ///< ¾Ö¼Â ¸ñ·Ï
+//        stx::set<tstring, Text::LexLess> m_NameSet; ///< ì• ì…‹ ëª©ë¡
 //
 //
 //    public:
-//        /// \brief »ı¼ºÀÚ
+//        /// \brief ìƒì„±ì
 //        CAssetNameSet();
 //
-//        /// \brief »ı¼ºÀÚ
+//        /// \brief ìƒì„±ì
 //        CAssetNameSet(LPCTSTR text);
 //        CAssetNameSet(const tstring& text);
 //
-//        /// \brief ¼Ò¸êÀÚ
+//        /// \brief ì†Œë©¸ì
 //        ~CAssetNameSet();
 //
 //
 //    public:
-//        /// \brief Ãß°¡
+//        /// \brief ì¶”ê°€
 //        void Add(LPCTSTR name);
 //        void Add(const tstring& name);
 //
-//        /// \brief ºñ¾îÀÖ³ª?
+//        /// \brief ë¹„ì–´ìˆë‚˜?
 //        bool IsEmpty() const;
 //
-//        /// \brief °³¼ö ¹İÈ¯
+//        /// \brief ê°œìˆ˜ ë°˜í™˜
 //        size_t GetCount() const;
 //
-//        /// \brief ¸®·ÎµåÇÒ ´ë»óÀÎ°¡?
+//        /// \brief ë¦¬ë¡œë“œí•  ëŒ€ìƒì¸ê°€?
 //        bool IsMatch(LPCTSTR name) const;
 //        bool IsMatch(const tstring& name) const;
 //
-//        /// \brief ¹®ÀÚ¿­ Á¤º¸¸¦ ¹İÈ¯ÇÑ´Ù.
+//        /// \brief ë¬¸ìì—´ ì •ë³´ë¥¼ ë°˜í™˜í•œë‹¤.
 //        tstring ToString() const;
 //    };
 //
 //    //------------------------------------------------------------------------------------------------------------------
 //
-//    // ¸®·Îµå Áß¿¡ »óÅÂ Ç¥½Ã¸¦ À§ÇØ ½ÇÇàÇÒ Äİ¹é
+//    // ë¦¬ë¡œë“œ ì¤‘ì— ìƒíƒœ í‘œì‹œë¥¼ ìœ„í•´ ì‹¤í–‰í•  ì½œë°±
 //    typedef Delegate::Delegate2<void, int, int> CAssetProgressCallback;
 //
-//    // ¸®·Îµå ¿Ï·á ÈÄ ½ÇÇàÇÒ Äİ¹é
+//    // ë¦¬ë¡œë“œ ì™„ë£Œ í›„ ì‹¤í–‰í•  ì½œë°±
 //    typedef Delegate::Delegate1<void, const CAssetNameSet&> CAssetFinishCallback;
 //
 //    //------------------------------------------------------------------------------------------------------------------
 //
-//    /// \brief ¾Ö¼Â ·Îµù¿ë ÅÂ½ºÅ© °´Ã¼
+//    /// \brief ì• ì…‹ ë¡œë”©ìš© íƒœìŠ¤í¬ ê°ì²´
 //    class CTask :
 //        public CAsyncEvent,
 //        public CCountable<CTask>
@@ -103,29 +103,29 @@ private:
 //
 //
 //    private:
-//        Callback m_Callback; ///< È£ÃâÇÒ ÇÔ¼ö
+//        Callback m_Callback; ///< í˜¸ì¶œí•  í•¨ìˆ˜
 //
-//        static CAtomic<int> s_PendingCount; ///< ¾ÆÁ÷ Ã³¸®µÇÁö ¾ÊÀº ÅÂ½ºÅ© °´Ã¼ÀÇ ¼ö
+//        static CAtomic<int> s_PendingCount; ///< ì•„ì§ ì²˜ë¦¬ë˜ì§€ ì•Šì€ íƒœìŠ¤í¬ ê°ì²´ì˜ ìˆ˜
 //
 //
 //    public:
-//        /// \brief »ı¼ºÀÚ
+//        /// \brief ìƒì„±ì
 //        CTask(const Callback& callback);
 //
-//        /// \brief ¼Ò¸êÀÚ
+//        /// \brief ì†Œë©¸ì
 //        virtual ~CTask();
 //
 //
 //    public:
-//        /// \brief ÀÌº¥Æ®ÀÇ ³»¿ëÀ» ½ÇÇàÇÑ´Ù.
+//        /// \brief ì´ë²¤íŠ¸ì˜ ë‚´ìš©ì„ ì‹¤í–‰í•œë‹¤.
 //        virtual void Execute(bool success, DWORD transferred, CAsyncEventSink* sink) override;
 //
 //
 //    public:
-//        /// \brief ÅÂ½ºÅ©¸¦ Æ÷½ºÆ®ÇÑ´Ù.
+//        /// \brief íƒœìŠ¤í¬ë¥¼ í¬ìŠ¤íŠ¸í•œë‹¤.
 //        static void PostTask(CTask* task);
 //
-//        /// \brief ¾ÆÁ÷ Ã³¸®µÇÁö ¾ÊÀº ÅÂ½ºÅ©ÀÇ ¼ö¸¦ ¹İÈ¯ÇÑ´Ù.
+//        /// \brief ì•„ì§ ì²˜ë¦¬ë˜ì§€ ì•Šì€ íƒœìŠ¤í¬ì˜ ìˆ˜ë¥¼ ë°˜í™˜í•œë‹¤.
 //        static int GetPendingCount();
 //    };
 //
@@ -133,14 +133,14 @@ private:
 //
 //    void WaitAll();
 //
-//    /// \brief ÁÖ¾îÁø ÇÔ¼öÀÚ¸¦ Æ÷½ºÆ®
+//    /// \brief ì£¼ì–´ì§„ í•¨ìˆ˜ìë¥¼ í¬ìŠ¤íŠ¸
 //    template <typename Functor>
 //    inline void Post(const Functor& func)
 //    {
 //        CTask::PostTask(xnew(CTask, func));
 //    }
 //
-//    /// \brief È£ÃâÀÚ°¡ ÇØ´ç »çÇ× ÀÖ´Â ³ÑÀÌ¶ó¸é ÁÖ¾îÁø ÇÔ¼öÀÚ¸¦ Æ÷½ºÆ®
+//    /// \brief í˜¸ì¶œìê°€ í•´ë‹¹ ì‚¬í•­ ìˆëŠ” ë„˜ì´ë¼ë©´ ì£¼ì–´ì§„ í•¨ìˆ˜ìë¥¼ í¬ìŠ¤íŠ¸
 //    template <typename Functor>
 //    inline void Post(LPCTSTR name, const Functor& func, ExeType exe, const CAssetNameSet& wanted, int flag)
 //    {
@@ -153,7 +153,7 @@ private:
 //        }
 //    }
 //
-//    /// \brief Æ÷½ºÆ®ÇÑ ÅÂ½ºÅ© °´Ã¼µéÀÌ ¿Ï·áµÇ±â¸¦ ±â´Ù¸°´Ù.
+//    /// \brief í¬ìŠ¤íŠ¸í•œ íƒœìŠ¤í¬ ê°ì²´ë“¤ì´ ì™„ë£Œë˜ê¸°ë¥¼ ê¸°ë‹¤ë¦°ë‹¤.
 //    inline void WaitAll()
 //    {
 //        while (0 < CTask::GetPendingCount())
@@ -162,7 +162,7 @@ private:
 //        }
 //    }
 //
-//    /// \brief ÇØ´ç »çÇ× ÀÖ´Â ¾Ö¼ÂÀÏ °æ¿ì, ÁÖ¾îÁø ÇÔ¼öÀÚ¸¦ ½ÇÇà
+//    /// \brief í•´ë‹¹ ì‚¬í•­ ìˆëŠ” ì• ì…‹ì¼ ê²½ìš°, ì£¼ì–´ì§„ í•¨ìˆ˜ìë¥¼ ì‹¤í–‰
 //    template <typename Functor>
 //    inline void Exec(LPCTSTR name, const CAssetNameSet& wanted, const Functor& func)
 //    {

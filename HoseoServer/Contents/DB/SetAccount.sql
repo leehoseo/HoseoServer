@@ -1,4 +1,4 @@
-SET ANSI_NULLS ON
+ï»¿SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
@@ -8,24 +8,24 @@ CREATE PROCEDURE InsertAccount
     @pwd VARCHAR(50)
 AS
 BEGIN
-	-- °Ý¸® ·¹º§ : ¿Ï·áµÇÁö ¾ÊÀº µ¥ÀÌÅÍµµ Á¶È¸ °¡´É
+	-- ê²©ë¦¬ ë ˆë²¨ : ì™„ë£Œë˜ì§€ ì•Šì€ ë°ì´í„°ë„ ì¡°íšŒ ê°€ëŠ¥
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
-	--  µð¹ö±ë ·Î±× On
+	--  ë””ë²„ê¹… ë¡œê·¸ On
 	SET NOCOUNT ON;
 
 	BEGIN TRY
-		-- Æ®·»Á§¼Ç ½ÃÀÛ
+		-- íŠ¸ë Œì ì…˜ ì‹œìž‘
 		BEGIN TRANSACTION TranInsertAccount;
 
 		INSERT INTO TblAccount (name, pwd)
         VALUES (@name, @pwd);
 
-		-- Ä¿¹Ô
+		-- ì»¤ë°‹
 		COMMIT TRANSACTION
 	END TRY
     BEGIN CATCH
 
-		-- ·Ñ¹é
+		-- ë¡¤ë°±
 		ROLLBACK TRANSACTION
 	END CATCH
 END

@@ -1,4 +1,4 @@
-[versions]
+﻿[versions]
 kotlin = "1.7.21"
 plugin-gver = "0.42.0"
 kotlinx-benchmark = "0.4.6"

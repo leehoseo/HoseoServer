@@ -1,4 +1,4 @@
-#include "util_test.h"
+﻿#include "util_test.h"
 
 #include "flatbuffers/util.h"
 #include "test_assert.h"

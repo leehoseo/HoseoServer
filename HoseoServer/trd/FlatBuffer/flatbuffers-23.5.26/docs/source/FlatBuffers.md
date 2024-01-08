@@ -1,4 +1,4 @@
-FlatBuffers    {#flatbuffers_index}
+﻿FlatBuffers    {#flatbuffers_index}
 ===========
 
 # Overview {#flatbuffers_overview}

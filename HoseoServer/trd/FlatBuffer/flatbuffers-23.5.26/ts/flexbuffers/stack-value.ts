@@ -1,4 +1,4 @@
-import { Builder } from './builder.js'
+﻿import { Builder } from './builder.js'
 import { BitWidth } from './bit-width.js'
 import { paddingSize, uwidth, fromByteWidth } from './bit-width-util.js'
 import { ValueType } from './value-type.js'

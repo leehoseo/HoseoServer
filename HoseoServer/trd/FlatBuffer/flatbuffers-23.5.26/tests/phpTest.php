@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // manual load for testing. please use PSR style autoloader when you use flatbuffers.
 require join(DIRECTORY_SEPARATOR, array(dirname(dirname(__FILE__)), "php", "Constants.php"));
 require join(DIRECTORY_SEPARATOR, array(dirname(dirname(__FILE__)), "php", "ByteBuffer.php"));

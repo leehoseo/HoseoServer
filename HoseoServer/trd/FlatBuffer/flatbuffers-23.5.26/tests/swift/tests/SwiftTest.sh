@@ -1,4 +1,4 @@
-current_dir=`pwd`
+﻿current_dir=`pwd`
 cd ..
 swift_dir=`pwd`
 cd ..

@@ -1,4 +1,4 @@
-load("//:typescript.bzl", "flatbuffer_ts_library")
+﻿load("//:typescript.bzl", "flatbuffer_ts_library")
 
 genrule(
     name = "copy_schema_to_folder",

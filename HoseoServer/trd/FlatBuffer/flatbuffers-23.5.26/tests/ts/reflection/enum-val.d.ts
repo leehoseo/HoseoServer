@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { KeyValue, KeyValueT } from '../reflection/key-value.js';
 import { Type, TypeT } from '../reflection/type.js';
 export declare class EnumVal implements flatbuffers.IUnpackableObject<EnumValT> {

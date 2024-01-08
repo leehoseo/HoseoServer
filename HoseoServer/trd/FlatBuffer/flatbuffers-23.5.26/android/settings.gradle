@@ -1,2 +1,2 @@
-include ':app'
+﻿include ':app'
 rootProject.name = "FlatbuffersTest"

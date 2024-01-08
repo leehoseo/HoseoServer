@@ -1,4 +1,4 @@
-import assert from 'assert'
+﻿import assert from 'assert'
 import * as flatbuffers from 'flatbuffers'
 import {UnionUnderlyingType as Test} from './union_underlying_type_test.js'
 

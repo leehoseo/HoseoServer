@@ -1,4 +1,4 @@
-#include "src/compiler/go_generator.h"
+﻿#include "src/compiler/go_generator.h"
 
 #include <cctype>
 #include <map>

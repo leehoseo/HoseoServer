@@ -1,4 +1,4 @@
-#ifndef TESTS_REFLECTION_TEST_H
+﻿#ifndef TESTS_REFLECTION_TEST_H
 #define TESTS_REFLECTION_TEST_H
 
 #include <stdint.h>

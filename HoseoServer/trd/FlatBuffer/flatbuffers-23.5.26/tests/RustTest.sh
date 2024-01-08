@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 set -e
 #
 # Copyright 2018 Google Inc. All rights reserved.

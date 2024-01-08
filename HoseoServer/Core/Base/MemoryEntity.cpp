@@ -1,9 +1,9 @@
-#include "MemoryEntity.h"
+ï»¿#include "MemoryEntity.h"
 #include "AllocComponent.h"
 
 CMemoryEntity::CMemoryEntity()
 {
-	// ±âº» Component  ¼³Á¤
+	// ê¸°ë³¸ Component  ì„¤ì •
 	InsertComponent<CAllocComponent>();
 }
 

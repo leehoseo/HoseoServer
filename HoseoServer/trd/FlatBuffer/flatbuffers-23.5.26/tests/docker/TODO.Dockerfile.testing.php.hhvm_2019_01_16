@@ -1,4 +1,4 @@
-# This does not pass tests due to the following error:
+﻿# This does not pass tests due to the following error:
 #
 # Fatal error: Uncaught exception 'InvalidArgumentException' with message 'Google\FlatBuffers\ByteBuffer::getX() expects parameter 1 by reference, but the call was not annotated with '&'. in /code/php/FlatbufferBuilder.php:971
 # Stack trace:

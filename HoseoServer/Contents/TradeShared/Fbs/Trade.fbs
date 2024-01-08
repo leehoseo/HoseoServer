@@ -1,4 +1,4 @@
-table FCT_Login
+﻿table FCT_Login
 {
  name:string;
  pwd:string;

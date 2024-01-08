@@ -1,4 +1,4 @@
-discard """
+﻿discard """
   action:   "run"
   exitcode: 0
   timeout:  60.0

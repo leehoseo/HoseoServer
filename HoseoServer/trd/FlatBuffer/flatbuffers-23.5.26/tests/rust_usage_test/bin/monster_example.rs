@@ -1,4 +1,4 @@
-#![allow(clippy::derivable_impls, clippy::all)]
+﻿#![allow(clippy::derivable_impls, clippy::all)]
 extern crate flatbuffers;
 
 

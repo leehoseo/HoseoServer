@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 //#include "Component.h"
 
@@ -8,7 +8,7 @@
 class CComponent;
 
 /// <summary>
-/// Component(µµ±¸ - ±â´É)¸¦ »ç¿ëÇÒ »ç¿ëÀÚ ( Peer, ...er , System µî )ÀÇ ÃÖ»óÀ§ Å¬·¡½º
+/// Component(ë„êµ¬ - ê¸°ëŠ¥)ë¥¼ ì‚¬ìš©í•  ì‚¬ìš©ì ( Peer, ...er , System ë“± )ì˜ ìµœìƒìœ„ í´ë˜ìŠ¤
 /// </summary>
 class CEntity
 {

@@ -1,4 +1,4 @@
-#include "AsyncEvent.h"
+ï»¿#include "AsyncEvent.h"
 #include "AsyncEventSink.h"
 
 CAsyncEvent::CAsyncEvent()
@@ -18,6 +18,6 @@ CAsyncEvent::Tag& CAsyncEvent::GetTag()
 
 int CAsyncEvent::Execute(CAsyncEventSink* sink)
 {
-	// ¹¹ ¾ø´ç
+	// ë­ ì—†ë‹¹
 	return 0;
 }

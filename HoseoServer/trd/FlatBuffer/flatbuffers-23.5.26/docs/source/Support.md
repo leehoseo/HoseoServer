@@ -1,4 +1,4 @@
-Platform / Language / Feature support    {#flatbuffers_support}
+﻿Platform / Language / Feature support    {#flatbuffers_support}
 =====================================
 
 FlatBuffers is actively being worked on, which means that certain platform /

@@ -1,4 +1,4 @@
-enum Color:ubyte (bit_flags) {
+﻿enum Color:ubyte (bit_flags) {
   Red = 0, // color Red = (1u << 0)
   /// \brief color Green
   /// Green is bit_flag with value (1u << 1)

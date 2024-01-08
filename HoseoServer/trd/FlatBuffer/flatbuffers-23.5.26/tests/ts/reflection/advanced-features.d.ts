@@ -1,4 +1,4 @@
-/**
+﻿/**
  * New schema language features that are not supported by old code generators.
  */
 export declare enum AdvancedFeatures {

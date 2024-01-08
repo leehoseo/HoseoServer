@@ -1,4 +1,4 @@
-namespace foobar;
+﻿namespace foobar;
 
 enum Abc: int {
   a,

@@ -1,4 +1,4 @@
-package flatbuffers
+﻿package flatbuffers
 
 // FlatBuffer is the interface that represents a flatbuffer.
 type FlatBuffer interface {

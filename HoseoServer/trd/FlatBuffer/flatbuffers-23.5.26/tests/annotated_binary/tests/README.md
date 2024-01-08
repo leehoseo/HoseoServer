@@ -1,4 +1,4 @@
-# Tests for Annotated Binaries
+﻿# Tests for Annotated Binaries
 
 ## Invalid Binary Tests
 

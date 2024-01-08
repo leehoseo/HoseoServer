@@ -1,4 +1,4 @@
-Go API
+﻿Go API
 ======
 
 \addtogroup flatbuffers_go_api

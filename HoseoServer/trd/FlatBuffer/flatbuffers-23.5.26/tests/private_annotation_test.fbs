@@ -1,4 +1,4 @@
-enum AB:byte (private) {
+﻿enum AB:byte (private) {
   A,
   B,
 }

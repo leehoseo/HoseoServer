@@ -1,4 +1,4 @@
-// This file was generated using `godoc` and customized for use with the
+﻿// This file was generated using `godoc` and customized for use with the
 // API Reference documentation. To recreate this file, use the `godoc` tool
 // (http://godoc.org) with the files in the `flatbuffers/go` folder.
 //

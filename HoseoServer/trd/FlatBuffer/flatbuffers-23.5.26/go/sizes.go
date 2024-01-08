@@ -1,4 +1,4 @@
-package flatbuffers
+﻿package flatbuffers
 
 import (
 	"unsafe"

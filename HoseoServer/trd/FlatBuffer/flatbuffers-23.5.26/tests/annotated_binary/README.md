@@ -1,4 +1,4 @@
-# Annotated Flatbuffer Binary
+﻿# Annotated Flatbuffer Binary
 
 This directory demonstrates the ability of flatc to annotate binary flatbuffers 
 with helpful annotations. The resulting annotated flatbuffer binary (afb)

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "Base/Component.h"
 
 #define WIN32_LEAN_AND_MEAN
@@ -32,7 +32,7 @@ public:
 
 public:
 	/// <summary>
-	/// Accept ÀÌº¥Æ®¸¦ ¹Ş¾ÒÀ»¶§ È£ÃâÇÔ
+	/// Accept ì´ë²¤íŠ¸ë¥¼ ë°›ì•˜ì„ë•Œ í˜¸ì¶œí•¨
 	/// </summary>
 	/// <param name="acceptEvent"></param>
 	void OnAccepted(CAsyncTcpEvent* acceptEvent);

@@ -1,4 +1,4 @@
-
+﻿
 #ifndef FUZZER_TEST_INIT_H_
 #define FUZZER_TEST_INIT_H_
 

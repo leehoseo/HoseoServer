@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 typedef unsigned short PacketSize_t;
 typedef unsigned short PacketId_t;

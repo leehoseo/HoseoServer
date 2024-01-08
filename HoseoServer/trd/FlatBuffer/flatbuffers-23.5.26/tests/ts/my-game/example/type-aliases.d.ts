@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 export declare class TypeAliases implements flatbuffers.IUnpackableObject<TypeAliasesT> {
     bb: flatbuffers.ByteBuffer | null;
     bb_pos: number;

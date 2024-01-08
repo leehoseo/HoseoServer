@@ -1,4 +1,4 @@
-@Tutorial(time: 5) {
+﻿@Tutorial(time: 5) {
   @Intro(title: "After having our code generated") {
     After generating the code from the previous section, we will know start creating our monster object.
     We will create a monster object called orc.

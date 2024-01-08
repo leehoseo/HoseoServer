@@ -1,4 +1,4 @@
-# TS Greeter example
+﻿# TS Greeter example
 
 The following is an example on how to run the TS grpc server. Make sure that you have `Typescript` installed
 

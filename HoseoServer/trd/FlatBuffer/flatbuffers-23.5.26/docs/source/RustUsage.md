@@ -1,4 +1,4 @@
-Use in Rust    {#flatbuffers_guide_use_rust}
+﻿Use in Rust    {#flatbuffers_guide_use_rust}
 ==========
 
 ## Before you get started

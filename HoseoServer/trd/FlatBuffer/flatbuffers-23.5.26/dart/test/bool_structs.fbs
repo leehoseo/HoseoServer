@@ -1,4 +1,4 @@
-// Test for #7355
+﻿// Test for #7355
 table Foo {
   my_foo : foo_properties;
 }

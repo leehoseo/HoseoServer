@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+﻿// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -285,7 +285,7 @@ fn store_map_index_into_it() {
 }
 #[test]
 fn utf8_snowman() {
-    let buf = singleton("snowman ☃︎");
+    let buf = singleton("snowman ?截");
     assert_eq!(
         &buf,
         &[
@@ -311,7 +311,7 @@ fn utf8_snowman() {
         ]
     );
     let r = Reader::get_root(buf.as_ref()).unwrap();
-    assert_eq!(r.get_str(), Ok("snowman ☃︎"));
+    assert_eq!(r.get_str(), Ok("snowman ?截"));
 }
 #[test]
 fn indirect_numbers() {

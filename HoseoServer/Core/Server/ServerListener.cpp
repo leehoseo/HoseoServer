@@ -1,4 +1,4 @@
-#include "ServerListener.h"
+ï»¿#include "ServerListener.h"
 #include "Network/AsyncDispatcher.h"
 //#include "Network/AsyncEvent.h"
 #include "Network/AsyncTcpComponent.h"
@@ -38,7 +38,7 @@ void CServerListener::Start()
 
 	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
 
-	// ÇÑ¹ø¿¡ ¹ŞÀ» ¼ö ÀÖ´Â Å¬¶óÀÌ¾ğÆ®ÀÇ ¼ö 4
+	// í•œë²ˆì— ë°›ì„ ìˆ˜ ìˆëŠ” í´ë¼ì´ì–¸íŠ¸ì˜ ìˆ˜ 4
 	for (int index = 0; index < 1; ++index)
 	{
 		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Accept);

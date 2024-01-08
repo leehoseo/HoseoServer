@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { TableA, TableAT } from '../../table-a.js';
 export declare class TableB implements flatbuffers.IUnpackableObject<TableBT> {
     bb: flatbuffers.ByteBuffer | null;

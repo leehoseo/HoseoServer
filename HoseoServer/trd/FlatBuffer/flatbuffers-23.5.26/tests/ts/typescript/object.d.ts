@@ -1,4 +1,4 @@
-import * as flatbuffers from 'flatbuffers';
+﻿import * as flatbuffers from 'flatbuffers';
 import { Abc } from '../foobar/abc.js';
 import { class_ as foobar_class_ } from '../foobar/class.js';
 import { Schema, SchemaT } from '../reflection/schema.js';
