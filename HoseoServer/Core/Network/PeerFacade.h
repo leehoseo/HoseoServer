@@ -1,9 +1,9 @@
 ﻿#pragma once
 
-class CAsyncTcpEventSink;
+class CAsyncEventSink;
 class CPeerFacade
 {
 public:
-	static void Disconnected(CAsyncTcpEventSink* sink);
+	static void Disconnected(CAsyncEventSink* sink);
 };
 

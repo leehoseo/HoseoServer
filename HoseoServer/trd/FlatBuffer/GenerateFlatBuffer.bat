@@ -1,11 +1,11 @@
-﻿SET solutionPath=%1
-SET outPath=%2
-SET fbs=%3
+﻿REM SET solutionPath=%1
+REM SET outPath=%2
+REM SET fbs=%3
 
-echo MakeFlat %fbs%
+REM echo MakeFlat %fbs%
 
-cd /d %solutionPath%trd\FlatBuffer
+REM cd /d %solutionPath%trd\FlatBuffer
 
-start "" "flatc.exe" -c -o %outPath%\Generated %outPath%\Fbs\%fbs%
+REM start "" "flatc.exe" -c -o %outPath%\Generated %outPath%\Fbs\%fbs%
 
-exit
+REM exit

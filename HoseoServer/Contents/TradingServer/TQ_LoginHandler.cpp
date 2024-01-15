@@ -1,7 +1,7 @@
 ﻿#include "TQ_LoginHandler.h"
 #include "Query/QuerySystem.h"
 
-int TQ_LoginHandler::Execute(CPeer* peer, uint8_t* buffer)
+int TQ_LoginHandler::Execute(CPeer* peer, uint8_t* buffer, int len)
 {
 	CPacketReader<TQ_Login> reader(buffer);
 

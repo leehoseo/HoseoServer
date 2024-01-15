@@ -1,20 +1,20 @@
 ﻿#include "pch.h"
-#include "ClientListener.h"
+#include "ClientNetworkPeer.h"
 #include "Network/AsyncDispatcher.h"
 #include "Network/AsyncTcpComponent.h"
 #include "Network/AsyncTcpEvent.h"
 #include "Network/Socket.h"
 #include "ClientConfig.h"
 
-CClientListener::CClientListener()
+CClientNetworkPeer::CClientNetworkPeer()
 {
 }
 
-CClientListener::~CClientListener()
+CClientNetworkPeer::~CClientNetworkPeer()
 {
 }
 
-void CClientListener::Start()
+void CClientNetworkPeer::ConnectToServer()
 {
 	CAsyncTcpComponent* component = GetComponent<CAsyncTcpComponent>();
 	if (nullptr == component)
@@ -40,7 +40,7 @@ void CClientListener::Start()
 	component->Connect(server_addr, New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Connect));
 }
 
-void CClientListener::OnConnectEvent(CAsyncTcpEvent* tcpEvent)
+void CClientNetworkPeer::OnConnectEvent(CAsyncTcpEvent* tcpEvent)
 {
 	CAsyncTcpComponent* component = GetComponent<CAsyncTcpComponent>();
 	if (nullptr == component)

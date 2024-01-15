@@ -1,7 +1,7 @@
 ﻿#include "TradeClientAppManager.h"
 #include "TradeClientHandlerSetup.h"
 #include "Network/AsyncDispatcher.h"
-#include "Client/ClientListener.h"
+#include "Client/ClientNetworkPeer.h"
 #include "Network/ListenSystem.h"
 
 CTradeClientAppManager::CTradeClientAppManager()
@@ -28,7 +28,7 @@ bool CTradeClientAppManager::Setup()
     g_AsyncDispatcher::GetInstance()->Start();
 
     // 데이터 세팅
-    g_ListenSystem::GetInstance()->Init(New(CClientListener));
+    g_ListenSystem::GetInstance()->Init(New(CClientNetworkPeer));
 
     return true;
 }

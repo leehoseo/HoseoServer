@@ -75,50 +75,24 @@ void CAsyncDispatcher::CIocpThread::Run()
 												, reinterpret_cast<LPOVERLAPPED*>(&buffer)
 												, ioByte);
 
-		if ( 0 < ioByte)
+		const DWORD lastError = GetLastError();
+		if ( 0 < ioByte && 0 != lastError)
 		{
-			int byte = 0;
-
-			// 이 개념은 아니다 손봐야함
-			int handled = 0;
-			// 처리 가능한 바이트 수
-			int total = 0; //m_RecvEvent->TotalBytes + ioByte;
-
-
-			while (handled < total)
+			int result = buffer->m_Owner->Execute(sink);
+			if (result <= 0)
 			{
-				int result = buffer->m_Owner->Execute(sink);
-				//int result = m_Marshaller->Unmarshall(this, m_RecvEvent->Buffer + handled, total - handled);
-				if (result <= 0)
-				{
-					CPeerFacade::Disconnected(dynamic_cast<CAsyncTcpEventSink*>(sink));
-					break; // 더 이상 읽을 수 있는 것이 없거나, 에러가 발생
-				}
-				else if (result > 0)
-				{
-					handled += result; // 정상 처리
-				}
+				CPeerFacade::Disconnected(sink);
+				break; // 더 이상 읽을 수 있는 것이 없거나, 에러가 발생
 			}
 
-			// 남은 것이 있다면 앞쪽으로 옮겨준다.
-			//if (mySocket->GetErrorCount() == 0 && 0 < handled && handled < total)
-			//{
-			//	memmove(m_RecvEvent->Buffer, m_RecvEvent->Buffer + handled, total - handled);
-			//}
-
-			if (nullptr != buffer)
+			if (ioByte != result)
 			{
-				byte = buffer->m_Owner->Execute(sink);
-			}
-
-			if (byte != ioByte)
-			{
-				// 문제 있나..?
+				// 무슨 문제일까...
 			}
 		}
 		else
 		{
-			CPeerFacade::Disconnected(dynamic_cast<CAsyncTcpEventSink*>(sink));
+			CPeerFacade::Disconnected(sink);
 		}
 	}
 }

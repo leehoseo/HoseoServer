@@ -21,10 +21,13 @@
     <ClInclude Include="ClientAppManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ClientListener.h">
+    <ClInclude Include="ClientNetworkPeer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ClientConfig.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerThread.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,10 +38,13 @@
     <ClCompile Include="ClientAppManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ClientListener.cpp">
+    <ClCompile Include="ClientNetworkPeer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="ClientConfig.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkerThread.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

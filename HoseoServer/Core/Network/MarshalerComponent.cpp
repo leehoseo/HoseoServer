@@ -36,5 +36,5 @@ int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer)
 	CPacket::GetBody(buffer, packetBody);
 
 	// 패킷 핸들러 처리
-	return handler->Execute(peer, packetBody);
+	return handler->Execute(peer, packetBody, size);
 }

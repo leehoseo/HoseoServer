@@ -1,10 +1,10 @@
 ﻿#include "PeerFacade.h"
-#include "AsyncTcpEventSink.h"
+#include "AsyncEventSink.h"
 #include "Peer.h"
 
-void CPeerFacade::Disconnected(CAsyncTcpEventSink* sink)
+void CPeerFacade::Disconnected(CAsyncEventSink* sink)
 {
-	CPeer* peer = dynamic_cast<CPeer*>(sink);
+	CPeer* peer = static_cast<CPeer*>(sink);
 
 	peer->Disconnect();
 }

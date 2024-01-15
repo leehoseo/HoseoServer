@@ -80,6 +80,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)immediate\Lib\$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)immediate\Obj\$(Configuration)\$(MSBuildProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)Core;$(SolutionDir)Core\Base;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -128,6 +131,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -163,6 +168,7 @@
     <ClInclude Include="Delegate.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="Lock.h" />
     <ClInclude Include="MemoryEntity.h" />
     <ClInclude Include="MemorySystem.h" />
     <ClInclude Include="MemoryUtil.h" />
@@ -182,6 +188,7 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="InputSystem.cpp" />
+    <ClCompile Include="Lock.cpp" />
     <ClCompile Include="MemoryEntity.cpp" />
     <ClCompile Include="MemorySystem.cpp" />
     <ClCompile Include="pch.cpp">

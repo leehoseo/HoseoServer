@@ -184,8 +184,8 @@ bool CSocket::Recv(CAsyncTcpEvent* recvEvent)
 
 	WSABUF* wsaBuffer = recvEvent->GetWsaBuffer();
 	
-	wsaBuffer->buf = (char*)recvEvent->GetBuffer() + recvEvent->GetTotalSize();
-	wsaBuffer->len = sizeof(recvEvent->GetBuffer()) - recvEvent->GetTotalSize();
+	wsaBuffer->buf = (char*)recvEvent->GetBuffer() + recvEvent->GetProceedingSize();
+	wsaBuffer->len = recvEvent->GetMaxBufferSize() - recvEvent->GetProceedingSize();
 	
 	WSARecv(GetHandle(), wsaBuffer, 1, &recvBytes, &flags, &recvEvent->GetTag(), NULL);
 
@@ -199,7 +199,7 @@ bool CSocket::Send(CAsyncTcpEvent* sendEvent)
 
 	WSABUF* wsaBuffer = sendEvent->GetWsaBuffer();
 	wsaBuffer->buf = (char*)sendEvent->GetBuffer();
-	wsaBuffer->len = sizeof(sendEvent->GetBuffer());
+	wsaBuffer->len = sendEvent->GetMaxBufferSize();
 
 	WSASend(GetHandle(), wsaBuffer, 1, &sendBytes, flags, &sendEvent->GetTag(), NULL);
 

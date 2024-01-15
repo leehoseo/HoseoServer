@@ -7,5 +7,5 @@ public:
 	CHandler();
 	virtual ~CHandler();
 public:
-	virtual int Execute(CPeer* peer, uint8_t* buffer);
+	virtual int Execute(CPeer* peer, uint8_t* buffer, int len);
 };

@@ -28,7 +28,8 @@ public:
 	CSocket* GetSocket() const { return m_Socket; };
 	void SetSocket(CSocket* socket) { m_Socket = socket; }
 
-	const int GetTotalSize() const { return m_TotalSize; }
+	const int GetProceedingSize() const { return m_ProceedingSize; }
+	const int GetMaxBufferSize() const { return m_MaxBufferSize; }
 	
 	uint8_t* GetBuffer() { return m_Buffer; };
 	void SetBuffer(uint8_t* buffer) { m_Buffer = buffer; };
@@ -41,6 +42,12 @@ private:
 	EventType m_Type;
 
 	uint8_t* m_Buffer;
-	int m_TotalSize;
+
+	// event가 다루는 버퍼의 최대 사이즈
+	int m_MaxBufferSize;
+
 	WSABUF m_WsaBuffer;
+
+	// event가 진행중인 크기
+	int m_ProceedingSize;
 };

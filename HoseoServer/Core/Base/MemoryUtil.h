@@ -9,4 +9,4 @@ namespace MemoryUtil
 
 #include "MemoryUtil.hpp"
 
-#define New(name , ...) MemoryUtil::Alloc<name>(##__VA_ARGS__)
+#define New(name , ...) MemoryUtil::Alloc<name>(__VA_ARGS__)
