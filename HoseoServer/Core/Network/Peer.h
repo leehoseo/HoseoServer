@@ -1,12 +1,12 @@
 ﻿#pragma once
 
-#include "Base/Entity.h"
 #include "AsyncTcpEventSink.h"
 
 class CSendPolicy;
 class CSocket;
 class CAsyncTcpEvent;
-class CPeer : public CEntity, public CAsyncTcpEventSink
+
+class CPeer : public CAsyncTcpEventSink
 {
 public:
 	CPeer();
