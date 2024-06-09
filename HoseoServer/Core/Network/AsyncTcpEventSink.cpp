@@ -15,12 +15,10 @@ void CAsyncTcpEventSink::OnAcceptEvent(CAsyncTcpEvent* tcpEvent)
 
 void CAsyncTcpEventSink::OnConnectEvent(CAsyncTcpEvent* tcpEvent)
 {
-	return;
 }
 
-int CAsyncTcpEventSink::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
+void CAsyncTcpEventSink::OnReceiveEvent(bool result, int ioByteSize, CAsyncTcpEvent* tcpEvent)
 {
-	return 0;
 }
 
 void CAsyncTcpEventSink::OnSendEvent(CAsyncTcpEvent* tcpEvent)

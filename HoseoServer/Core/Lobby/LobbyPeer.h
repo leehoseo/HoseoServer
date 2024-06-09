@@ -16,6 +16,6 @@ public:
 	/// </summary>
 	/// <param name="tcpEvent"> 받은 이벤트 </param>
 	/// <returns>성공시 처리한 바이트 수</returns>
-	virtual int OnReceiveEvent(CAsyncTcpEvent* tcpEvent);
+	virtual void OnReceiveEvent(bool result, int ioByteSize, CAsyncTcpEvent* tcpEvent);
 };
 

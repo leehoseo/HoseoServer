@@ -36,7 +36,13 @@ void CClientNetworkPeer::ConnectToServer()
 	u_short port = g_ClientConfig::GetInstance()->m_LoginPort;
 
 	server_addr.sin_port = htons(port);
-	inet_pton(AF_INET, addr.c_str(), &server_addr.sin_addr.s_addr);
+
+	// 주소 변환 및 설정
+	if (inet_pton(AF_INET, addr.c_str(), &server_addr.sin_addr) <= 0)
+	{
+		return;
+	}
+
 	component->Connect(server_addr, New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Connect));
 }
 

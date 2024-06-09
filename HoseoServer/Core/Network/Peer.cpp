@@ -4,6 +4,7 @@
 #include "AsyncTcpEvent.h"
 #include "AsyncDispatcher.h"
 #include "SendPolicy.h"
+#include "PeerFacade.h"
 
 CPeer::CPeer()
 {
@@ -17,16 +18,42 @@ CPeer::~CPeer()
 {
 }
 
-int CPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
+void CPeer::OnReceiveEvent(bool result, int ioByteSize, CAsyncTcpEvent* tcpEvent)
 {
 	CMarshalerComponent* marshaler = GetComponent<CMarshalerComponent>();
 
-	int size = marshaler->UnMarshal(this, tcpEvent->GetBuffer());
+	if (true == result && 0 < ioByteSize)
+	{
+		int total = tcpEvent->GetProceedingSize() + ioByteSize;
+		int handled = 0;
 
+		while (handled < total)
+		{
+			int result = marshaler->UnMarshal(this, tcpEvent->GetBuffer() + handled, total - handled);
+
+			if (result <= 0)
+			{
+				break;
+			}
+			else
+			{
+				handled += result;
+			}
+		}
+
+		// 처리 못한 byte는 앞으로 넘겨준다.
+		memmove(tcpEvent->GetBuffer(), tcpEvent->GetBuffer() + handled, total - handled);
+
+		tcpEvent->SetProceedingSize(total - handled);
+
+	}
+	else
+	{
+		CPeerFacade::Disconnected(this);
+	}
+	
 	CAsyncTcpComponent* tcpComponent = GetComponent<CAsyncTcpComponent>();
 	tcpComponent->Recv();
-	
-	return size;
 }
 
 void CPeer::OnAccepted(CAsyncTcpEvent* tcpEvent)

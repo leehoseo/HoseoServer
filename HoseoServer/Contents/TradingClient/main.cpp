@@ -10,7 +10,7 @@ int main()
 	g_TradeClientAppManager::GetInstance()->Setup();
 
 	// 서버 연결 시작
-	g_ListenSystem::GetInstance()->Start();
+	//g_ListenSystem::GetInstance()->Start();
 
 	// main 스래드는 하는일 없다.
 	g_AsyncDispatcher::GetInstance()->Join();

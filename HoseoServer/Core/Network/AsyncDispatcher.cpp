@@ -43,14 +43,14 @@ bool CAsyncDispatcher::Associate(CAsyncTcpEventSink* sink, CSocket* socket)
 	return nullptr != CreateIoCompletionPort((HANDLE)socket->GetHandle(), m_Iocp->GetHandle(), (ULONG_PTR)sink, 0);
 }
 
-void CAsyncDispatcher::Enqueue(CAsyncEventSink* sink, CAsyncEvent::Tag* buffer)
+bool CAsyncDispatcher::Enqueue(CAsyncEventSink* sink, CAsyncEvent::Tag* tag)
 {
-	PostQueuedCompletionStatus(m_Iocp->GetHandle(), 0, (ULONG_PTR)sink, (LPOVERLAPPED)(buffer));
+	return PostQueuedCompletionStatus(m_Iocp->GetHandle(), 0, (ULONG_PTR)sink, (LPOVERLAPPED)(tag));
 }
 
-void CAsyncDispatcher::Dequeue(ULONG_PTR* sink, LPOVERLAPPED* buffer, DWORD& ioByte)
+bool CAsyncDispatcher::Dequeue(ULONG_PTR* sink, LPOVERLAPPED* tag, DWORD& ioByte)
 {
-	GetQueuedCompletionStatus(m_Iocp->GetHandle(), &ioByte, sink, buffer, INFINITE);
+	return GetQueuedCompletionStatus(m_Iocp->GetHandle(), &ioByte, sink, tag, INFINITE);
 }
 
 
@@ -67,28 +67,18 @@ void CAsyncDispatcher::CIocpThread::Run()
 	while (true)
 	{
 		CAsyncEventSink* sink = nullptr;
-		CAsyncEvent::Tag* buffer = nullptr;
-		DWORD ioByte = 0;
+		CAsyncEvent::Tag* tag = nullptr;
+		DWORD ioByteSize = 0;
 
-		g_AsyncDispatcher::GetInstance()->Dequeue(
+		bool result = g_AsyncDispatcher::GetInstance()->Dequeue(
 												  reinterpret_cast<ULONG_PTR*>(&sink)
-												, reinterpret_cast<LPOVERLAPPED*>(&buffer)
-												, ioByte);
+												, reinterpret_cast<LPOVERLAPPED*>(&tag)
+												, ioByteSize);
 
 		const DWORD lastError = GetLastError();
-		if ( 0 < ioByte && 0 != lastError)
+		if (nullptr != tag && (0 == lastError || ERROR_IO_PENDING == lastError))
 		{
-			int result = buffer->m_Owner->Execute(sink);
-			if (result <= 0)
-			{
-				CPeerFacade::Disconnected(sink);
-				break; // 더 이상 읽을 수 있는 것이 없거나, 에러가 발생
-			}
-
-			if (ioByte != result)
-			{
-				// 무슨 문제일까...
-			}
+			tag->m_Owner->Execute(result, ioByteSize, sink);
 		}
 		else
 		{

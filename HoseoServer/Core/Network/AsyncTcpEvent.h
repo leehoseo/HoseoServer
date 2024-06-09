@@ -21,14 +21,15 @@ public:
 	virtual ~CAsyncTcpEvent();
 
 public:
-	virtual int Execute(CAsyncEventSink* sink);
-	
+	virtual void Execute(bool result, int ioByteSize, CAsyncEventSink* sink);
+
 public:
 	EventType GetType() { return m_Type; }
 	CSocket* GetSocket() const { return m_Socket; };
 	void SetSocket(CSocket* socket) { m_Socket = socket; }
 
-	const int GetProceedingSize() const { return m_ProceedingSize; }
+	int GetProceedingSize() const { return m_ProceedingSize; }
+	void SetProceedingSize(int proceedingSize) { m_ProceedingSize = proceedingSize; }
 	const int GetMaxBufferSize() const { return m_MaxBufferSize; }
 	
 	uint8_t* GetBuffer() { return m_Buffer; };

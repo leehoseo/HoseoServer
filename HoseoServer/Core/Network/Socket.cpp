@@ -139,14 +139,21 @@ bool CSocket::Accept(CSocket* newSocket, CAsyncTcpEvent* acceptEvent)
 {
 	DWORD outputBuffer{ 0 };
 	DWORD receivedByte{ 0 };
-	//const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
-	//	0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetTag()));
+	const bool result = ::AcceptEx(GetHandle(), newSocket->GetHandle(), (PVOID)&outputBuffer,
+		0, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16, &receivedByte, (LPOVERLAPPED)(&acceptEvent->GetTag()));
+
+	/*if (nullptr == Network::lpfnAcceptEx)
+	{
+		if (false == Network::LinkSocketFunc(WSAID_ACCEPTEX, &Network::lpfnAcceptEx, GetHandle()))
+		{
+		}
+	}
 
 
 	 const bool result = Network::lpfnAcceptEx(GetHandle(), newSocket->GetHandle()
 											, (PVOID)acceptEvent->GetBuffer(), (sizeof(sockaddr_in) + 16) * 2, sizeof(sockaddr_in) + 16, sizeof(sockaddr_in) + 16
 											, &receivedByte
-											, (LPOVERLAPPED)(&acceptEvent->GetTag()));
+											, (LPOVERLAPPED)(&acceptEvent->GetTag()));*/
 	return result;
 }
 
@@ -162,8 +169,7 @@ bool CSocket::Connect(sockaddr_in& addr, CAsyncTcpEvent* connectEvent)
 	wsaBuffer->len = sizeof(connectEvent->GetBuffer());
 
 
-	const bool result = Network::lpfnConnectEx(GetHandle(), reinterpret_cast<SOCKADDR*>(&addr), sizeof(addr)
-		, (PVOID)wsaBuffer, wsaBuffer->len, NULL, &connectEvent->GetTag());
+	const bool result = ::connect(GetHandle(), reinterpret_cast<SOCKADDR*>(&addr), sizeof(addr));
 	
 	return result;
 }

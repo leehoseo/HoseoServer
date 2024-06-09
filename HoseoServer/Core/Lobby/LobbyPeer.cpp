@@ -8,9 +8,9 @@ CLobbyPeer::~CLobbyPeer()
 {
 }
 
-int CLobbyPeer::OnReceiveEvent(CAsyncTcpEvent* tcpEvent)
+void CLobbyPeer::OnReceiveEvent(bool result, int ioByteSize, CAsyncTcpEvent* tcpEvent)
 {
 	// 로비용 패킷 검증 로직
 
-	return __super::OnReceiveEvent(tcpEvent);
+	__super::OnReceiveEvent(result, ioByteSize, tcpEvent);
 }

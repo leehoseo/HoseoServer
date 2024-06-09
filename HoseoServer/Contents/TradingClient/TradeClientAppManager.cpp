@@ -27,8 +27,10 @@ bool CTradeClientAppManager::Setup()
 
     g_AsyncDispatcher::GetInstance()->Start();
 
+    CClientNetworkPeer* peer = New(CClientNetworkPeer);
+    peer->ConnectToServer();
     // 데이터 세팅
-    g_ListenSystem::GetInstance()->Init(New(CClientNetworkPeer));
+    //g_ListenSystem::GetInstance()->Init(New(CClientNetworkPeer));
 
     return true;
 }

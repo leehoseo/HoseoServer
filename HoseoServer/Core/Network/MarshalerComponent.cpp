@@ -10,8 +10,13 @@ void CMarshalerComponent::Init()
 {
 }
 
-int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer)
+int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer, int ioByte)
 {
+	if (ioByte < sizeof(PacketHeader))
+	{
+		return 0;
+	}
+
 	// 암호화 여부
 	
 	// 패킷 처리
@@ -20,7 +25,7 @@ int CMarshalerComponent::UnMarshal(CPeer* peer, uint8_t* buffer)
 	CPacket::GetId(buffer, id);
 	CPacket::GetSize(buffer, size);
 
-	if (sizeof(buffer) < size)
+	if (ioByte < size)
 	{
 		return 0;
 	}

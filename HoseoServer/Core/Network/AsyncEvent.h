@@ -19,7 +19,7 @@ public:
 	Tag& GetTag();
 
 public:
-	virtual int Execute(CAsyncEventSink* sink);
+	virtual void Execute(bool result, int ioByteSize, CAsyncEventSink* sink);
 
 private:
 	Tag m_Body;

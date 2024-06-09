@@ -39,7 +39,7 @@ void CServerListener::Start()
 	g_AsyncDispatcher::GetInstance()->Associate(this, component->GetSocket());
 
 	// 한번에 받을 수 있는 클라이언트의 수 4
-	for (int index = 0; index < 1; ++index)
+	for (int index = 0; index < 2; ++index)
 	{
 		CAsyncTcpEvent* acceptEvent = New(CAsyncTcpEvent, CAsyncTcpEvent::EventType::Accept);
 		PostAccept(acceptEvent);

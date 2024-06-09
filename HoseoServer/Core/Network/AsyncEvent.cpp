@@ -16,8 +16,7 @@ CAsyncEvent::Tag& CAsyncEvent::GetTag()
 	return m_Body;
 }
 
-int CAsyncEvent::Execute(CAsyncEventSink* sink)
+void CAsyncEvent::Execute(bool result, int ioByteSize, CAsyncEventSink* sink)
 {
 	// 뭐 없당
-	return 0;
 }
